@@ -3,4 +3,6 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 
 
 ## OpenCV for beginners - Last Updated: July 25 2024
-* Reference: https://www.youtube.com/watch?v=eDIj5LuIL4A
+OpenCV (Open Source Computer Vision Library) is crucial to learn because it provides a comprehensive and efficient collection of algorithms for computer vision and image processing tasks. Its extensive functionality enables developers to perform complex tasks such as object detection, face recognition, and image transformations with relative ease. OpenCV's wide adoption in both academic research and industry projects makes it a valuable tool for anyone pursuing a career in machine learning, deep learning, or computer vision, ensuring that the skills acquired are both practical and highly relevant to current technological demands.
+## Git - Last Updated: July 27 2024
+Learning Git is crucial because it is the most widely used version control system in the software industry, enabling efficient collaboration and management of code changes. With Git, multiple developers can work on the same project simultaneously without overwriting each other's work, track changes to the codebase over time, and easily revert to previous versions if needed. Mastering Git ensures smoother project workflows, better code quality, and is an essential skill for professional development in any software-related field.
