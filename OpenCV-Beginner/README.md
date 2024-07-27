@@ -1,5 +1,5 @@
 # Overview
-In this project, we reinforce the foundation of traditional image processing in OpenCV. Based on the Computer Vision <a href=\"https://coggle.it/diagram/ZO5EUOut86Irr5hc/t/computer-vision-roadmap/760d909a1f28af1782645ff9b5af1dfd4481ce08bf258b4b54f868d7f3a1b8d5\">Roadmap</a> and <a href=\"https://www.youtube.com/watch?v=eDIj5LuIL4A\">OpenCV tutorial</a>, we take some notes which might help beginners to better comprehend what the OpenCV can do and its application.
+In this project, we reinforce the foundation of traditional image processing in OpenCV. Based on the Computer Vision [Roadmap](https://coggle.it/diagram/ZO5EUOut86Irr5hc/t/computer-vision-roadmap/760d909a1f28af1782645ff9b5af1dfd4481ce08bf258b4b54f868d7f3a1b8d5) and [OpenCV tutorial](https://www.youtube.com/watch?v=eDIj5LuIL4A), we take some notes which might help beginners to better comprehend what the OpenCV can do and its application.
 
 ## What are images?
 * In Python, images are nparrays, we can call the shape attribute to have (height, width, number of channels). 
