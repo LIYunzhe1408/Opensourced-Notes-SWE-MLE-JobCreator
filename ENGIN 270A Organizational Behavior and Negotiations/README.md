@@ -126,7 +126,6 @@ Slow down and use OST to evaluate ideas before rushing to a decision.
 ## Solving conflict
 Conflict is a natural part of team building & collaboration. We need to be cognizant of it, and then minimize and prevent it from escalating rather than avoiding it altogether.
 
-
 To better understand how to handle conflicts, Tuckman’s model is introduced to show phases of team development.
 - Team members talked about different ideas in the STORMING phase where team effectiveness might be lowered but holds potential for further collaboration. In a big team or an organization, there may be just 1-2 people do this to collect members’ ideas. 
 - After performing well, most current teams probably stop there and start from the beginning for another project. Instead of this, working with the same team on another project can save time and sustain effectiveness.
