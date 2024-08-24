@@ -130,10 +130,10 @@ Conflict is a natural part of team building & collaboration. We need to be cogni
 To better understand how to handle conflicts, Tuckman’s model is introduced to show phases of team development.
 - Team members talked about different ideas in the STORMING phase where team effectiveness might be lowered but holds potential for further collaboration. In a big team or an organization, there may be just 1-2 people do this to collect members’ ideas. 
 - After performing well, most current teams probably stop there and start from the beginning for another project. Instead of this, working with the same team on another project can save time and sustain effectiveness.
-![](/Tuckman model.png)
+  <img src="./images/Tuckman model.png">
 
 How to handle different ideas is difficult, Thomas-Kilmann proposed a conflict model. Assertive means one person shows confidence in the idea. This model can be regarded as a strategy for conflict management.
-![](/Compromising model.png)
+<img src="./images/Compromising model.png">
 
 Additionally, listening to others is of vital importance because we need to keep in mind that what we say, what others’ hear, and what we really mean are totally different which frequently causes conflicts.
 
@@ -142,7 +142,7 @@ Additionally, listening to others is of vital importance because we need to keep
 
 ## Building a high-functioning team
 Cognitive diversity refers to the variety of ways people think, including how they process information, view the world, and make decisions. A cognitively diverse and inclusive team is more likely to meet financial targets, be high-performing, innovative and agile, and achieve better business outcomes.
-![](/high-functioning team.png)
+<img src="./images/high-functioning team.png">
 
 Before building this team, we need to foster an inclusive environment that demonstrates psychological safety.
 > This is a situation where everyone is safe to take risks, voice their thoughts, and ask judgment-free questions. A culture where managers provide air cover and create safe zones so employees can let down their guard.
