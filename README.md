@@ -10,7 +10,7 @@ Learning Git is crucial because it is the most widely used version control syste
 
 
 ## Soft skills
-### [ENGIN 270A Organizational Behavior & Negotiations](ENGIN 270A Organizational Behavior and Negotiations/) - Last Updated: August 24 2024
+### [ENGIN 270A Organizational Behavior & Negotiations](ENGIN%20270A%20Organizational%20Behavior%20and%20Negotiations/) - Last Updated: August 24 2024
 > Instructed by Janel Wellborn
 
 The ability to effectively navigate an organization and influence others is critical for those aspiring to leadership positions in virtually any field – in order to secure project funding, drive cross-functional delivery, enable continuous improvement, and maximize employee engagement.  Students in this course will examine and apply organizational concepts & frameworks applicable within today’s companies – from small startups to large Fortune 100 enterprises. In particular, this course will highlight topics in implicit leadership, situational leadership, decision-making & driving alignment, cross-functional collaboration, change management, building & leading teams.  Using an interdisciplinary approach consisting of course readings, case studies, guest speaker, and exercises, students will be able to practice relevant skills and develop organizational strategies.
