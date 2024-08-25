@@ -196,8 +196,12 @@ Looking for a FIT BY ASKING QUESTIONS rather than saying nothing about the quest
 Priority tier 2 questions can be asked in the follow-up email after or before the interview.
 
 
-Closing the loop
-I don’t know, but I will find ways for it.
+If you are the leader, 
+- you should lead with curiosity but not ego(== demonstrate humility). 
+- To create empathy, immersing oneself into another person's job is difficult. So hearing other's stories. 
+- Always closing the loop: 
+  - I don’t know, but I will find ways for it.
+> If you have some power, then your job is to empower somebody else.
 
 
 Salary negotiation =
