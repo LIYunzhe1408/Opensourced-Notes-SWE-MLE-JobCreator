@@ -171,7 +171,7 @@ In summary, reading alone does not lead to mastery. Applying what you learn to y
 <br>
 <br>
 
-## Appendix - Supporting Materials(From opinions in the book)
+# Appendix - Supporting Materials(From opinions in the book)
 > - 📕 Main Point: The central idea or key message of the text.
 > - 😀 Subpoint: Supporting arguments or details related to the main point
 > - 🔥 Mistake: Incorrect practices or approaches.
@@ -179,11 +179,11 @@ In summary, reading alone does not lead to mastery. Applying what you learn to y
 > - 😭 Example of Mistake: Specific examples illustrating incorrect practices.
 > - 😄 Example of Solution: Specific examples demonstrating effective solutions.
 
-### Recommendation:
+## Recommendation:
 The essence of the internet is to “meet a variety of user needs and thereby create value.” This requires accurate analysis of user experience needs, coordination to achieve results, responsibility for user experience, and ensuring that the company's strategic goals are met. The methodology for creating new positions is essential.
 
-### Product Value and User Pain Points (How to Launch a Product from Core Value)
-#### Ideas and Solutions
+## Product Value and User Pain Points (How to Launch a Product from Core Value)
+### Ideas and Solutions
 📕 First, discuss the product model, i.e., whether the logic of meeting the needs is feasible. Consider the rationality of product design (product model verification matrix), profitability, scalability, and implementation feasibility.
 
 - 😀 Use “why would users want to use your product” as the core consideration, utilizing the product model verification matrix.
@@ -206,7 +206,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 - 😀 Determine which products and features are easy to handle, which are challenging, and which are out of reach. Understand “why you are doing this?” to clarify “do you have the capability to execute this plan?” and “what is your advantage over others?”
 - 🔥 Don’t focus solely on creating the “best” product without considering if you have the capability to build it. ***Don't only see the splendor of the skyscraper without considering the condition of the construction team.***
 - 
-#### Find Out What Users Really Want
+### Find Out What Users Really Want
 📕 It is unreasonable to build everything based on every idea; instead, identify the core value of the product that can solve user problems. The core value should be clear and help users to leave satisfied! Analyze user problems thoroughly to ensure that you are solving real issues and aim to exceed user expectations.
 
 - 😀 The core value is that if users leave, the problem is not genuinely solved. It helps discover the optimal (most recognized by users, most commercially valuable) features, unify logical functionality design, and make users aware of the product.
@@ -225,7 +225,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 ---
 - 😀 Since there is a cost for users to switch to your product, problems should be solved beyond expectations. The benefits of exceeding expectations (X) need to be greater than the psychological and actual costs of switching (Y1 and Y2, such as registration time and membership points), ensuring X > Y1 + Y2.
 
-#### MVP and Pain Points
+### MVP and Pain Points
 📕 The Minimal Viable Product (MVP) is a low-cost method to validate whether a **product model** and **business model** are feasible. It involves: 1. Meeting user needs; 2. Creating commercial value. Early-stage products or modules should focus on core functionalities rather than being all-encompassing. To ensure that the functionalities designed in the product model are accepted by users, it's best to quickly launch them to the market for validation. The core value of a product is to solve user problems, and the sooner it's available to users, the quicker it can address their pain points through continuous optimization. MVPs require theoretical consideration of the product model and practical proof of its validity.
 
 > "Don’t use tactical diligence to cover up strategic laziness." — Lei Jun
@@ -248,8 +248,8 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 - 💧 MVP should focus on core features and determine advanced features based on research, data, and interviews.
     ![](./Fig-Chinese/Fig-6.png "Figure 6. Graph before and after introducing photographers to take pictures for Airbnb")
 
-### Requirement Analysis and Feature Design（how to design new features with users' new needs in the product development）
-#### Dive-deep users' needs
+## Requirement Analysis and Feature Design（how to design new features with users' new needs in the product development）
+### Dive-deep users' needs
 📕 Distinguishing between Wants and Needs is crucial. Wants are features users would like to see, while Needs are specific problems that the product must solve. Understanding the true underlying needs is essential.
 
 - 😀 Scenario-Based Approach: Immerse yourself in real user scenarios and discuss needs based on data and examples, rather than relying solely on common sense and logical assumptions. Consider specific scenes, particular users, and real events rather than formulas, charts, or quotes. Think about the time, place, task, plot, and environment. How and under what circumstances does the user solve the problem? Immersing in the scenario helps more accurately identify whether a demand is genuine or a pseudo-need.
@@ -261,7 +261,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 - 😄 Example: Surface Need: Weight loss; Deep Need: Desire for an attractive physique; Human Nature Need: Vanity.
     ![Figure 3. Examples of human nature needs](./Fig-English/Fig-3.png "Figure 3. Examples of human nature needs")
 
-#### User Research
+### User Research
 📕 User Research is a method to understand users and guide product design and optimization based on research findings. It involves gathering information through both qualitative and quantitative approaches.
 
 - 😀 Define Objectives: Before collecting information, determine what aspects of the user need to be understood. User research should be designed considering three aspects: ensuring the objective is met (whether subjective or objective information is needed), rational design, and sample control.
@@ -296,8 +296,8 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
   - User Attributes: Analyzes user composition (e.g., WIFI vs. 4G, iOS vs. Android).
 
 ---
-😀 Output Conclusions: User research should yield valuable conclusions, such as detailed user profiles and interview summaries. Quantitative conclusions involve analyzing data results.
-🔥 Data Trap: Low user click-through rates do not necessarily indicate a poor feature. For example, a delivery app with low usage might reveal that:
+- 😀 Output Conclusions: User research should yield valuable conclusions, such as detailed user profiles and interview summaries. Quantitative conclusions involve analyzing data results.
+- 🔥 Data Trap: Low user click-through rates do not necessarily indicate a poor feature. For example, a delivery app with low usage might reveal that:
 
   - Feature positioning aligns with expectations.
   - Experienced users find it helpful.
@@ -305,7 +305,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
   - Issues include poor guidance, unclear visual effects, and outdated heat maps.
 - 💧 Application: Use the conclusions to guide further optimization.
 
-#### User Experience
+### User Experience
 📕 User Experience (UX): Focuses on ensuring that the product meets user needs in a convenient, comfortable, and efficient manner.
 
 - 😀 11 UX Principles:
@@ -325,8 +325,8 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 - 😀 Copywriting: Should be clear and unambiguous rather than just engaging. Simplify text and avoid ambiguity.
 - 💧 Validation: Use trial users to verify the effectiveness of the copy.
 
-### Product Management
-#### Document
+## Product Management
+### Document
 📕 Documentation: Product managers need to understand the methods for solving problems (e.g., design architecture, information flow, data structure) but do not need to implement them immediately.
 
 - 😀 Purpose of Documentation: To efficiently convey and record product functionality. Good documentation should be logically coherent, free of undefined details, and have high readability.
@@ -335,7 +335,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
   - Business Process Logic: Use flowcharts and state transitions.
   - Functional Descriptions: Detail logic and consequences (e.g., order cancellation policies).
 
-#### Requirement
+### Requirement
 📕 Demand Lifecycle: Manages the transition from product design to implementation. The process includes gathering requirements, discussing and assigning, feasibility review, development, and review.
 
 - 😀 Requirement Gathering: Document and evaluate requirements for future reference. Criteria include:
@@ -358,16 +358,7 @@ The essence of the internet is to “meet a variety of user needs and thereby cr
 - 😀 During the development phase, create a two-dimensional matrix by combining the prioritized requirements from various sources (P) and the prioritized requirements after feasibility review (D). Analyze the cost-effectiveness of the requirements to guide development.
 
 
-#### 兴趣和热情
-- 😀产品或团队的管理者要有责任心
-  -    不缺席重要场合（重要节点的配研发人员熬夜、重要比赛场合等）。任何“可能需要”他在的场合，他都应该在。
-  -    排除影响进度的问题（组长和管理层对设计方案吵架，主动劝和，否则影响进度）
-  -    主动填充缺失环节，某件事情没有人做但又需要人去做的时候，能充当临时替补（如经纬汇搬椅子、摆摊看摊位、货拉拉搬航空箱）
-- 🔥当每次想说没有兴趣的时候，要反思是不是只是因为遇到了困难。很重要，多次想要退队的根因。
-- 💧克服掉这一次的困难，再不断去尝试克服更多困难，长期以往，就发现在这件事情上足够擅长了
-
-
-#### Workflow
+### Workflow
 📕Avoid: 1. Doing tasks that should be handled by others; 2. Overlooking methods to avoid redundant work. As a leader, you may not need to perform the tasks of a team member, but you must understand their work.
 
 - 😀 Collaboration: When issues arise, resolve them within a reasonable scope rather than proving who is right or wrong logically. Collaborate based on the principle of mutual benefit. Achieve basic consensus privately before meetings, and ensure meetings produce conclusions or solutions with documented discussion points and decisions.
@@ -406,7 +397,7 @@ Problem and background for better understanding;
   - Designated responsible person;
   - Solution phases (corresponding to sub-problems), objectives, and validation methods for assessing effectiveness. Ensure execution by providing all necessary information, understanding collaborators' perspectives, and regularly monitoring and reviewing outcomes.
 
-#### Communication
+### Communication
 - 😀 Effective communication involves: 
   1. Quickly and accurately understanding others' information; 
   2. Clearly expressing your own information;
@@ -415,7 +406,7 @@ Problem and background for better understanding;
 - 💧 Expression: Clearly state your main points. Outline key points first, provide a brief overview, and then elaborate. **Spontaneous Retelling** to ensure understanding. At the beginning, clarify your objectives (e.g., "I want to discuss xx topics and come up with a solution"). Use visual aids like whiteboards or paper to structure and explain.
 - 💧 Communication mindset: **If you notice unusual behavior or expressions from collaborators, address it directly through conversation instead of making assumptions or overinterpreting**. Avoid focusing on winning or losing, and refrain from bringing up past disagreements in a negative light.
 
-#### Growth
+### Growth
 - 😀 Aesthetic Appreciation: If a work is aesthetically pleasing, people may appreciate it from different perspectives, but if it's unattractive, experts will agree on its flaws. Explore design sites like Dribbble and Behance.
   - Demand Analysis: Design and execute a comprehensive demand discovery plan based on product positioning and market conditions (including purpose, methods, and presentation).
   - Product Design: Use demand analysis and theoretical methods to design excellent products (not just usable).
@@ -423,7 +414,7 @@ Problem and background for better understanding;
   - Industry Knowledge: Systematically summarize and organize industry knowledge.
 - 💧 Focus on “If you were in this position, how would you do it?” Consider details in team management and provide specific, quantifiable descriptions in projects.
 
-#### Interest and Passion
+### Interest and Passion
 - 😀 Product or team managers should be responsible:
   - Attend important events (e.g., crucial development stages or major competitions).
   - Address issues impacting progress (e.g., resolving disputes between team members).
