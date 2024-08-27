@@ -23,4 +23,6 @@ We are empowered with the proficiency in verbal leadership, through discussions 
 ### [Product Management](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product) - Last Updated: August 26 2024
 > This is a book review. Book author: Fei Liu
 
+The original Chinese version is now available [here.](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product/ChineseVersion.md)
+
 This book, from the perspective of a product manager, introduces the values and practical methodologies that a product manager needs throughout the entire cycle from idea to product. It helps better define product features, analyze requirements, foster team collaboration, and manage updates and iterations. In my view, this not only aids product managers in quickly getting started but also serves as a valuable supplement of soft skills for tech professionals, entrepreneurs, and student team leaders. It broadens their approach to considering problems, thinking through issues, and finding solutions. If you’re looking for a roadmap to turn ideas into products, this book offers a comprehensive approach from conceptualizing ideas to creating actionable plans, along with management and collaboration techniques for producing usable products.
