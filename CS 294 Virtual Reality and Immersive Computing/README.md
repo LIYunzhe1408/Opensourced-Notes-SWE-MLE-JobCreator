@@ -19,3 +19,7 @@
 
 # Install Unity and Complete [Tutorial](https://learn.unity.com/tutorial/unity-essentials-install-unity-1?pathwayId=664b6225edbc2a01973f4f19&missionId=664bdda6edbc2a09177bccae#66509becedbc2a2cd2c75bff)
 Due: September 5, 2024
+
+1. First download Unity Hub at https://unity.com/download. A file will download named **UnityHubSetup.exe**
+2. Launch the installer and follow the instruction to install and launch Unity Hub
+3. Install the Unity Editor(**2022.3.43f1 LTS** for mine) as shown in the Unity Hub, which will take a while.

@@ -7,8 +7,10 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 
 This course covers theoretical foundations and engineering principles for augmented and virtual reality. We learn necessary material in computer vision, computer graphics, and human-computer interaction to understand modern AR/VR hardware and software stacks, and write their own applications.
 
-### [EECS 206A Introduction to Robotics]()
+### [EECS 206A Robotics](EECS%20206A%20Robotics/) - In Progress
+> Instructed by Prof. Roberto Horowitz
 
+An introduction to the kinematics, dynamics, and control of robot manipulators, robotic vision, and sensing. The course will cover forward and inverse kinematics of serial chain manipulators, the manipulator Jacobian, force relations, dynamics and control-position, and force control. Proximity, tactile, and force sensing. Network modeling, stability, and fidelity in teleoperation and medical applications of robotics.
 
 ### [OpenCV for beginners](OpenCV-Beginner/) - Completed
 OpenCV (Open Source Computer Vision Library) is crucial to learn because it provides a comprehensive and efficient collection of algorithms for computer vision and image processing tasks. Its extensive functionality enables developers to perform complex tasks such as object detection, face recognition, and image transformations with relative ease. OpenCV's wide adoption in both academic research and industry projects makes it a valuable tool for anyone pursuing a career in machine learning, deep learning, or computer vision, ensuring that the skills acquired are both practical and highly relevant to current technological demands.
