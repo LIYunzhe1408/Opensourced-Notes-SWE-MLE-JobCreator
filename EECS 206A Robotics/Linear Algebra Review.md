@@ -8,7 +8,9 @@
 - $\mathbb{R}$ denotes the set of all real numbers.
 - $\mathbb{R}^n$ denotes the set of all **ordered** $n$-tuples (or vectors) of real numbers.
 - Mathematically, an element $x$ in $\mathbb{R}^n$ can be written as: 
-    $$x=(x_{1}, x_{2}, ..., x_{n})$$
+    
+    $$x=(x_{1}, x_{2}, ..., x_{n})$$ 
+    
     where each $x_{i}$ (for $i=1,2, ..., n$) is a real number $x_{i}\in\mathbb{R}$
 - For example, in $\mathbb{R}^3$, each point is represented by an ordered triple of real numbers. $(-1, -2, 3)$ and $(4, 0, -1)$ are points in $\mathbb{R}^3$.
 
@@ -247,4 +249,121 @@ To calculate the determinant of a matrix, the method depends on the size of the 
 - If a matrix has two identical rows or columns, its determinant is zero
 
 # Eigenvalues and Eigenvectors
+## Definition
+For a **square matrix** $A$ of size $n\times{n}$:
+- A non-zero vector $v$ is called an eigenvector of $A$ if it satisfies the equation:
+    $$Av=\lambda{v}$$
+    where $\lambda$ is a scalar known as the eigenvalue corresponding to the eigenvector $v$
+
+Attention:
+  - **The eigenvector $v$ does not change direction under the transformation represented by $A$, it only gets scaled by $\lambda$.**
+
+## Calculation: 
+1. Finding the eigenvalues
+   - Eigenvalues $\lambda$ are found by solving the characteristic equation:
+        $$det(A-\lambda{I})=0$$
+        This equation results in a polynomial of degree $n$ (known as the characteristic polynomial), which can be solved to find $n$ eigenvalues
+2. Finding the eigenvectors
+    - Once the eigenvalues $\lambda$ are determined, the corresponding eigenvectors $v$ are found by solving the system:
+        $$(A-\lambda{I})v=0$$
+        This system is a **homogeneous linear system**. The solutions to this system (excluding the trivial solution $v=0$) give the eigenvectors corresponding to the eigenvalue $\lambda$.
+
+### Examples
+Consider the matrix:
+$$A=\begin{bmatrix}
+  4 & 1 \\ 2 & 3
+\end{bmatrix}$$
+1. Find the Characteristic Equation
+   $$det(A-\lambda{I})=det\begin{bmatrix}
+    4-\lambda & 1 \\ 2 & 3-\lambda
+   \end{bmatrix}$$
+   The determinant is :
+   $$(4-\lambda)(3-\lambda)-2$$
+   Expand this:
+   $$(4-\lambda)(3-\lambda)-2=12-4\lambda-3\lambda+\lambda^2-2=\lambda^2-7\lambda+10$$
+   The characteristic equation is :
+   $$\lambda^2-7\lambda+10=0$$
+2. Solve for Eigenvalues
+   - Using the quadratic formula $\lambda=\frac{-b\pm{\sqrt{b^2-4ac}}}{2a}$
+   - $\lambda_{1}=5, \ \lambda_{2}=2$
+3. Find the Eigenvectors
+   - For $\lambda_{1}=5$, 
+     - solve $(A-5I)v=0$:
+        $$
+          \begin{bmatrix}
+              4 & 1 \\ 2 & 3
+          \end{bmatrix}-5
+          \begin{bmatrix}
+              1 & 0 \\ 0 & 1
+          \end{bmatrix})
+          \begin{bmatrix}
+              x \\ y
+          \end{bmatrix}=
+          \begin{bmatrix}
+              0 \\ 0
+          \end{bmatrix}
+        $$
+      - This simplifies to:
+          $$
+          \begin{bmatrix}
+            -1 & 1 \\ 2 & -2
+          \end{bmatrix}
+          \begin{bmatrix}
+            x \\ y
+          \end{bmatrix}=
+          \begin{bmatrix}
+            0 \\ 0
+          \end{bmatrix}
+          $$
+      - From the first row: $-x+y=0\Rightarrow y=x$. Let $x=1$, then $y=1$. An eigenvector corresponding to $\lambda_{1}=5$ is
+          $$v_{1}=\begin{bmatrix}
+            1 \\ 1
+          \end{bmatrix}$$
+   - For $\lambda_{2}=2$, 
+     - Solve $(A-2I)v=0$:
+        $$
+          \begin{bmatrix}
+              4 & 1 \\ 2 & 3
+          \end{bmatrix}-2
+          \begin{bmatrix}
+              1 & 0 \\ 0 & 1
+          \end{bmatrix})
+          \begin{bmatrix}
+              x \\ y
+          \end{bmatrix}=
+          \begin{bmatrix}
+              0 \\ 0
+          \end{bmatrix}
+        $$
+      - This simplifies to:
+          $$
+          \begin{bmatrix}
+            2 & 1 \\ 2 & 1
+          \end{bmatrix}
+          \begin{bmatrix}
+            x \\ y
+          \end{bmatrix}=
+          \begin{bmatrix}
+            0 \\ 0
+          \end{bmatrix}
+          $$
+      - From the first row: $2x+y=0\Rightarrow y=-2x$. Let $x=1$, then $y=-2$. An eigenvector corresponding to $\lambda_{1}=2$ is
+          $$v_{2}=\begin{bmatrix}
+            1 \\ -2
+          \end{bmatrix}$$
+
+## Properties
+1. The sum of the eigenvalues of a matrix $A$ is equal to the trace(the sum of its diagonal elements) of $A$:
+   $$\sum^{n}_{i=1}\lambda_{i}=Tr(A)$$
+2. The product of the eigenvalues of a matrix $A$ is equal to the determinant of $A$
+   $$\prod^{n}_{i=1}\lambda_{i}=det(A)$$
+3. ***[TBD]*** If a matrix has ***distinct eigenvalues***, its corresponding eigenvectors are ***linearly independent***.
+4. For Diagonal Matrix and Triangular Matrix, the eigenvalues are the elements on the main diagonal.
+5. If $\lambda$ is an eigenvalue of $A$, then $\frac{1}{\lambda}$ is an eigenvalue of the matrix $A^{-1}$, provided $A$ is invertible.
+6. The eigenvalues of a matrix $A$ and its transpose $A^{\mathsf{T}}$ are the same.
+7. ***[TBD]*** If $A$ and $B$ are similar matrices (i.e., $A=PBP^{-1}$), they have the same eigenvalues.
+8. ***[TBD]*** If $Q$ is an orthogonal matrix, its eigenvalues lie on the unit circle in the complex plane; they have a magnitude of 1.
+9. ***[TBD]*** A real symmetric matrix $A$ can be orthogonally diagonalized; it has real eigenvalues, and there exists an orthogonal matrix $Q$ such that $Q^{\mathsf{T}}AQ=D$, where $D$ is a diagonal matrix with eigenvalues on the diagonal.
+
+# Orthogonal Diagonalization
 To be continued.
