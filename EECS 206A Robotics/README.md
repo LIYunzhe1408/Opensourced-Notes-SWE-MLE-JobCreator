@@ -32,6 +32,6 @@
 <br>
 
 # Linear Algebra Review
-Refer to [Linear Algebra review](/Linear%20Algebra%20Review.md).
+Refer to [Linear Algebra review](Linear%20Algebra%20Review.md).
 
 Due: 11:59pm, September 3, 2024 
