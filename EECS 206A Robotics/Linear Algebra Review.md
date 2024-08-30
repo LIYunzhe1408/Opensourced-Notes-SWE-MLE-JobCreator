@@ -366,4 +366,53 @@ $$A=\begin{bmatrix}
 9. ***[TBD]*** A real symmetric matrix $A$ can be orthogonally diagonalized; it has real eigenvalues, and there exists an orthogonal matrix $Q$ such that $Q^{\mathsf{T}}AQ=D$, where $D$ is a diagonal matrix with eigenvalues on the diagonal.
 
 # Orthogonal Diagonalization
-To be continued.
+Orthogonal diagonalization is a process used to diagonalize a symmetric matrix using an orthogonal matrix. Diagonalization simplifies many matrix computations and provides insights into the properties of linear transformations.
+
+A matrix $A$ of size $n\times{n}$ is said to be orthogonally diagonalizable if there exists an orthogonal matrix $Q$ and a diagonal matrix $D$ such that:
+$$A=QDQ^{\mathsf{T}}$$
+or equivalently:
+$$Q^{\mathsf{T}}AQ=D$$
+where A is a symmetric matrix, D is a diagonal matrix, and Q is an orthogonal matrix.
+## Steps for orthogonal diagonalization
+Input: A symmetric matrix $\Rightarrow$ Output: A diagonal matrix & An orthogonal matrix
+1. Find the Eigenvalues and Eigenvectors of $A$
+    - Solve $det(A-\lambda{I})=0$ to find eigenvalues $\lambda_{1}, \lambda_{2}, ..., \lambda_{n}$
+    - For each eigenvalue $\lambda_{i}$, find the corresponding eigenvector by solving $(A-\lambda_{i}{I})v=0$
+2. Normalize the Eigenvectors
+    $$v=\frac{v}{\left|\left|{v}\right| \right|}$$
+3. Form the Orthogonal Matrix by using normalized eigenvectors as columns
+    - Since the eigenvectors are orthonormal (orthogonal and of unit length), $Q$ will be orthogonal.
+4. Construct  the Diagonal Matrix.
+
+## Properties
+1. Only symmetric matrices can be orthogonally diagonalized.
+2. Eigenvectors corresponding to distinct eigenvalues of a symmetric matrix are orthogonal. [Proof 1]
+
+
+# QR Decomposition
+QR decomposition (or QR factorization) is a technique in linear algebra that decomposes a matrix into a product of two matrices: an orthogonal (or unitary) matrix and an upper triangular matrix. This decomposition is widely used in numerical methods, particularly for solving linear systems, eigenvalue problems, and least squares fitting.
+## Definition
+For a given matrix $A$ of size $m\times{n}$ (with $m\ge{n}$), the QR decomposition is:
+$$A=QR$$
+where $Q$ is an $m\times{n}$ orthogonal matrix, meaning $Q^{\mathsf{T}}Q=I$, and $R$ is an $m\times{n}$ upper triangular matrix
+
+## Calculation
+- Gram-Schmidt process
+
+## Properties
+To be continued
+
+
+# Knowledge to backup
+1. Orthogonal matrix: A real square matrix whose rows and columns are orthonormal vectors.  $Q^{\mathsf{T}}Q=I$
+2. Diagonal matrix: A matrix in which the entries outside the main diagonal are all zero; the term usually refers to square matrices. **Eigenvalues are on its diagonal.**
+3. Symmetric matrix: A matrix that is equal to its transpose. $A^{\mathsf{T}}=A$
+4. [Proof 1]
+
+   ![](LinearAlgebraImages/Proof-1.png "Proof 1")
+   
+   - For the point 3 in the Proof 1, proof 1-1 is presented 
+    
+    [Proof 1-1]
+
+    ![Proof 1-1](LinearAlgebraImages/Proof-1-1.png "Proof 1-1")
