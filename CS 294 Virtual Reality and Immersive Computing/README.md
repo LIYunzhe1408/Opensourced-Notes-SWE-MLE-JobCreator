@@ -23,3 +23,10 @@ Due: September 5, 2024
 1. First download Unity Hub at https://unity.com/download. A file will download named **UnityHubSetup.exe**
 2. Launch the installer and follow the instruction to install and launch Unity Hub
 3. Install the Unity Editor(**2022.3.43f1 LTS** for mine) as shown in the Unity Hub, which will take a while.
+4. Download and open the [Unity Essentials Project](https://unity-connect-prd.storage.googleapis.com/20240813/5c857af5-ff52-4283-95b5-9798751e8501/Unity_Essentials_Download.zip) from Unity Hub.
+5. Explore the Unity Editor Interface.
+  1. Project Window
+     - Drag the slider at the bottom right corner of the Project window all the way to the left to see assets in a list without names' getting cut off.
+     - Choose a Scene.
+  2. Hierarchy Window: The Hierarchy window is where you organize all the things in your game world. These things are called GameObjects.
+  3. Scene View and Game View
