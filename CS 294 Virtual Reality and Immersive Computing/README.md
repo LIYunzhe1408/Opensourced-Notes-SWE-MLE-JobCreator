@@ -39,3 +39,15 @@ Due: September 5, 2024
 3. Move and Rotate
     - Press **W** key to activate **Move** tool
     - Press **E** key to activate **Rotate** tool
+
+## 3D Essentials
+1. Add instance of prefabs. and Transform component to position a GameObject
+2. Create and edit own Material, use Physical Material, and add Rigidbody component.
+      -  The **Transform** component sets position, rotation, and scale of the ball.
+      -  The **Mesh Filter** component determines the shape of the GameObject by using 3D model mesh which is a wireframe.
+      -  The **Mesh Render** controls the external appearance of the ball, we need to find the material applying to the ball.
+      -  The **Sphere Collider** component defines the physical boundaries of GameObjects for collision purposes, relating to Physics Material.
+      -  The **Mesh Collider** component adds physical properties for mesh.
+      -  The **Rigidbody** component integrates the ball into Unity's physics system.
+3. Arrange GameObjects in parent-child relationships and save it as prefabs.
+4. Ctrl+Shift+F aligns the camera with my current view.
