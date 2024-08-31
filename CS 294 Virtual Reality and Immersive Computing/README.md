@@ -51,3 +51,5 @@ Due: September 5, 2024
       -  The **Rigidbody** component integrates the ball into Unity's physics system.
 3. Arrange GameObjects in parent-child relationships and save it as prefabs.
 4. Ctrl+Shift+F aligns the camera with my current view.
+
+![](./Images/3D%20Essentials%20with%20Campanile%20Bell%20and%20Iron%20Man.png)
