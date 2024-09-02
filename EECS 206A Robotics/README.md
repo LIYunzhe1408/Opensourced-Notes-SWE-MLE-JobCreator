@@ -19,7 +19,7 @@
     - What is this?
   - Submission: https://www.gradescope.com/courses/568334
 - Labs:
-  - TBD More info needed.
+  - Thursday 11AM-2PM Cory 105
 - Midterms
   - There will be two midterms covering the course material, on Thursday, October 3, and Thursday, November 21. The midterms will be held in person during class time. Students will be allowed a cheat sheet.
 - Bridge Sections
@@ -31,7 +31,13 @@
 <br>
 <br>
 
-# Linear Algebra Review
-Refer to [Linear Algebra review](Linear%20Algebra%20Review.md).
+# Background Knowledge
+## Linear Algebra
+Refer to [Linear Algebra review](./Linear%20Algebra/Linear%20Algebra%20Review.md).
 
-Due: 11:59pm, September 3, 2024 
+If Linear Algebra is widely used in VR/AR, this section will be moved out to the parent folder.
+
+## Ordinary Differential Equation
+Refer to [Ordinary Differential Equation basics](./Ordinary%20Differential%20Equation/ODE%20basics.jpg).
+
+If Ordinary Differential Equation is widely used in VR/AR, this section will be moved out to the parent folder.
