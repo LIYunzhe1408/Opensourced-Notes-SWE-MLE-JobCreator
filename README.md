@@ -1,6 +1,18 @@
 # Opensourced-Notes-SWE-MLE-JobCreator
 This repo aimed at documenting the learning of necessary requirements in the CV/ML job market, covering Git, OpenCV, Deep Learning for computer vision, and etc. It will keep updating.
 
+## Dashboard
+### Technical Skills
+- **In Progress**: [Virtual Reality and Immersive Computing](CS%20294%20Virtual%20Reality%20and%20Immersive%20Computing/)
+- **In Progress**: [Robotics](EECS%20206A%20Robotics/)
+- Completed: OpenCV
+- Completed: Git
+### Soft Skills
+- **In Progress**: [Storytelling](ENGIN%20295%20Storytelling/)
+- Completed: Organizational Behavior & Negotiations
+- Completed: R&D Technology Management & Ethics
+- Completed: Product Management
+
 ## Technical Skills
 ### [CS 294 Virtual Reality and Immersive Computing](CS%20294%20Virtual%20Reality%20and%20Immersive%20Computing/) - In Progress
 > Instructed by [Prof. Allen Yang](https://people.eecs.berkeley.edu/~yang/)
@@ -12,10 +24,10 @@ This course covers theoretical foundations and engineering principles for augmen
 
 An introduction to the kinematics, dynamics, and control of robot manipulators, robotic vision, and sensing. The course will cover forward and inverse kinematics of serial chain manipulators, the manipulator Jacobian, force relations, dynamics and control-position, and force control. Proximity, tactile, and force sensing. Network modeling, stability, and fidelity in teleoperation and medical applications of robotics.
 
-### [OpenCV for beginners](OpenCV-Beginner/) - Completed
+### [OpenCV for beginners](OpenCV-Beginner/) - Completed at July 27 2024
 OpenCV (Open Source Computer Vision Library) is crucial to learn because it provides a comprehensive and efficient collection of algorithms for computer vision and image processing tasks. Its extensive functionality enables developers to perform complex tasks such as object detection, face recognition, and image transformations with relative ease. OpenCV's wide adoption in both academic research and industry projects makes it a valuable tool for anyone pursuing a career in machine learning, deep learning, or computer vision, ensuring that the skills acquired are both practical and highly relevant to current technological demands.
 
-### [Git](Git/) - Completed
+### [Git](Git/) - Completed at July 27 2024
 Learning Git is crucial because it is the most widely used version control system in the software industry, enabling efficient collaboration and management of code changes. With Git, multiple developers can work on the same project simultaneously without overwriting each other's work, track changes to the codebase over time, and easily revert to previous versions if needed. Mastering Git ensures smoother project workflows, better code quality, and is an essential skill for professional development in any software-related field.
 
 <br>
@@ -26,7 +38,7 @@ Learning Git is crucial because it is the most widely used version control syste
 
 We will leverage the art of storytelling to engage diverse audiences with memorable, lasting narratives. Whether describing key trends in science and tech, advocating for developments in our field of specialty, or chronicling our own professional journey, we will learn how to promote our groundbreaking ideas across forums and formats.
 
-### [Organizational Behavior & Negotiations](ENGIN%20270A%20Organizational%20Behavior%20and%20Negotiations/) - Last Updated: August 24 2024
+### [Organizational Behavior & Negotiations](ENGIN%20270A%20Organizational%20Behavior%20and%20Negotiations/) - Completed at August 24 2024
 > Instructed by Prof. Janel Wellborn
 
 The ability to effectively navigate an organization and influence others is critical for those aspiring to leadership positions in virtually any field – in order to secure project funding, drive cross-functional delivery, enable continuous improvement, and maximize employee engagement.  Students in this course will examine and apply organizational concepts & frameworks applicable within today’s companies – from small startups to large Fortune 100 enterprises. In particular, this course will highlight topics in implicit leadership, situational leadership, decision-making & driving alignment, cross-functional collaboration, change management, building & leading teams.  Using an interdisciplinary approach consisting of course readings, case studies, guest speaker, and exercises, students will be able to practice relevant skills and develop organizational strategies.
@@ -39,7 +51,7 @@ The ability to effectively navigate an organization and influence others is crit
 5.  Using the Opportunity-Solution Tree to externalize our thinking, examining our thinking, and critiquing our thinking.
 6.  Embrace diversity to cover our blind spots.
 
-### [R&D Technology Management & Ethics](ENGIN%20270B%20R-D%20Technology%20Management%20and%20Ethics/) - Last Updated: August 25 2024
+### [R&D Technology Management & Ethics](ENGIN%20270B%20R-D%20Technology%20Management%20and%20Ethics/) - Completed at August 25 2024
 > Instructed by Prof. Matthew Rappaport
 
 We are empowered with the proficiency in verbal leadership, through discussions of technology and business case studies. We exposure to a wide variety of managerial approaches, technologies, personalities, and business models. Topics include technology management, Intellectual Property basics and strategy, ethics, and leadership. We are required to employ technical and qualitative analysis while digesting and dissecting case studies, in-class projects, and guest speaker presentations. Class discussions focus on issues raised in case studies, including analysis, brainstorming, diagnosis, and recommendations. We strengthen the ability to extend on previous points, backup assertions with data and analysis, link contributions to previous comments, speak clearly and concisely.
@@ -53,7 +65,7 @@ We are empowered with the proficiency in verbal leadership, through discussions 
 6.  Be clear about the industry rivalries.
 7.  Meet more people, build more connections, and embrace the cohort.
 
-### [Product Management](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product) - Last Updated: August 26 2024
+### [Product Management](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product) - Completed at August 26 2024
 > This is a book review. Book author: Fei Liu
 
 The original Chinese version is now available [here.](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product/ChineseVersion.md)
