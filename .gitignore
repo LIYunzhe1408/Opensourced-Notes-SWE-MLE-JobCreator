@@ -16,6 +16,7 @@ GitHubToken/
 # Large size files #
 ###################
 .mp4
+*.m4a
 /**/**/*.mp4
 
 # Compiled source #
