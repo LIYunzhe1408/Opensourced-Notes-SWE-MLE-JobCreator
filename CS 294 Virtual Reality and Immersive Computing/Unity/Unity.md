@@ -33,5 +33,21 @@
 
 ![](./Figures/3D%20Essentials%20with%20Campanile%20Bell%20and%20Iron%20Man.png)
 
+# Audio Essentials
+1. One tip for this part is that you need ensure the audio clip in the asset end with .mp3, or the import module will raise an issue and you cannot find it in audio source component.
+2. More audio in [Unity Asset Store](https://assetstore.unity.com/)
+
+# Program Essentials
+1. The structure of the default script
+
+    ![](./Figures/StructureOfDefaultScript.png)
+2. Use generative AI to simulate anything.
+
+# 2D Essentials
+1. main camera is in orthographic mode instead of perspective mode of 3D scene.
+2. it can be helpful to use the aspect ratio that your game's users will see on their devices
+3. Add circle collider and square collider respectively.
+
+
 # Reference
 1. [Tutorial to Unity](https://learn.unity.com/tutorial/unity-essentials-install-unity-1?pathwayId=664b6225edbc2a01973f4f19&missionId=664bdda6edbc2a09177bccae#66509becedbc2a2cd2c75bff)
