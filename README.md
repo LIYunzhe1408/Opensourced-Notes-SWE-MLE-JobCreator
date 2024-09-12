@@ -5,6 +5,7 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 ### Technical Skills
 - **In Progress**: [Virtual Reality and Immersive Computing](CS%20294%20Virtual%20Reality%20and%20Immersive%20Computing/)
 - **In Progress**: [Robotics](EECS%20206A%20Robotics/)
+- **In Progress**: [ROS](ROS/)
 - Completed: OpenCV
 - Completed: Git
 ### Soft Skills
@@ -23,6 +24,10 @@ This course covers theoretical foundations and engineering principles for augmen
 > Instructed by Prof. Roberto Horowitz
 
 An introduction to the kinematics, dynamics, and control of robot manipulators, robotic vision, and sensing. The course will cover forward and inverse kinematics of serial chain manipulators, the manipulator Jacobian, force relations, dynamics and control-position, and force control. Proximity, tactile, and force sensing. Network modeling, stability, and fidelity in teleoperation and medical applications of robotics.
+
+### [ROS](ROS/) - In Progress
+The Robot Operating System (ROS) is a set of open-source tools and libraries that help developers and researchers build and reuse code for robotics applications. ROS is not an operating system in the traditional sense, but rather a middleware that operates on top of a conventional operating system such as Linux.
+
 
 ### [OpenCV for beginners](OpenCV-Beginner/) - Completed at July 27 2024
 OpenCV (Open Source Computer Vision Library) is crucial to learn because it provides a comprehensive and efficient collection of algorithms for computer vision and image processing tasks. Its extensive functionality enables developers to perform complex tasks such as object detection, face recognition, and image transformations with relative ease. OpenCV's wide adoption in both academic research and industry projects makes it a valuable tool for anyone pursuing a career in machine learning, deep learning, or computer vision, ensuring that the skills acquired are both practical and highly relevant to current technological demands.
