@@ -9,6 +9,7 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 - Completed: OpenCV
 - Completed: Git
 ### Soft Skills
+- **In Progress**: [Interview](Interview/)
 - **In Progress**: [Storytelling](ENGIN%20295%20Storytelling/)
 - Completed: Organizational Behavior & Negotiations
 - Completed: R&D Technology Management & Ethics
@@ -38,6 +39,11 @@ Learning Git is crucial because it is the most widely used version control syste
 <br>
 
 ## Soft skills
+### [Interview](Interview/) - In Progress
+> Youtube: https://www.youtube.com/@hackbearterry/videos
+
+Content covers topics from how to use LeetCode, how to interview like a pro, how to get yourself a decent package, and etc.
+
 ### [Storytelling](ENGIN%20295%20Storytelling/) - In Progress
 > Instructed by Prof. Margaret Kolb
 
