@@ -3,11 +3,12 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 
 ## Dashboard
 ### Technical Skills
-- **In Progress**: [Virtual Reality and Immersive Computing](CS%20294%20Virtual%20Reality%20and%20Immersive%20Computing/)
 - **In Progress**: [Robotics](EECS%20206A%20Robotics/)
 - **In Progress**: [ROS](ROS/)
 - Completed: OpenCV
 - Completed: Git
+- Completed: Unity
+
 ### Soft Skills
 - **In Progress**: [Interview](Interview/)
 - **In Progress**: [Storytelling](ENGIN%20295%20Storytelling/)
@@ -16,10 +17,6 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 - Completed: Product Management
 
 ## Technical Skills
-### [CS 294 Virtual Reality and Immersive Computing](CS%20294%20Virtual%20Reality%20and%20Immersive%20Computing/) - In Progress
-> Instructed by [Prof. Allen Yang](https://people.eecs.berkeley.edu/~yang/)
-
-This course covers theoretical foundations and engineering principles for augmented and virtual reality. We learn necessary material in computer vision, computer graphics, and human-computer interaction to understand modern AR/VR hardware and software stacks, and write their own applications.
 
 ### [EECS 206A Robotics](EECS%20206A%20Robotics/) - In Progress
 > Instructed by Prof. Roberto Horowitz
@@ -35,6 +32,9 @@ OpenCV (Open Source Computer Vision Library) is crucial to learn because it prov
 
 ### [Git](Git/) - Completed at July 27 2024
 Learning Git is crucial because it is the most widely used version control system in the software industry, enabling efficient collaboration and management of code changes. With Git, multiple developers can work on the same project simultaneously without overwriting each other's work, track changes to the codebase over time, and easily revert to previous versions if needed. Mastering Git ensures smoother project workflows, better code quality, and is an essential skill for professional development in any software-related field.
+
+### [Unity](Unity/) - Completed at September 4 2024
+Unity is a real-time 3D development platform used to create and launch games, simulations, and other interactive experiences.
 
 <br>
 
