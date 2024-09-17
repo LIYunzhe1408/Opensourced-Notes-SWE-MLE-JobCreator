@@ -32,6 +32,26 @@
 <br>
 
 # Background Knowledge
+## Linear Algebra Python Usage
+`np.outer` computes the outer product of two vectors. Commonly used in $ww^{\mathsf{T}}$ situations.
+```
+# Calculate ww^T
+w = np.array([1, 2, 3])
+result = np.outer(w, w)
+
+# result = [[1 2 3]
+#                 [2 4 6]
+#                 [3 6 9]]
+```
+`np.dot` is versatile for scalar, vector, and matrix operations; acts like matrix multiplication for 2-D arrays. Commonly used in $\hat{w}v$
+
+`np.cross` is commonly used for $\hat{w}v=w\times{v}$
+
+```
+w_hat = skew_3D(w)
+np.dot(w_hat, v) = np.cross(w, v)
+```
+
 ## Linear Algebra
 Refer to [Linear Algebra review](./Linear%20Algebra/Linear%20Algebra%20Review.md).
 
