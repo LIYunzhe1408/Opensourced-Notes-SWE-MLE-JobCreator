@@ -1,0 +1,20 @@
+Thoughts:
+Use hashmap or equivalent structures to record number of appearences.
+
+New data structure in python:
+collections.Counter([list]): dict subclass for counting hashable objects
+
+
+Solution1: not time efficient, not space efficient
+1. Choose a data structure to contain data. List is okay, but search will be O(n)
+2. Split two sentences into two separate ones.
+3. Traverse one sentence s1
+4. Traverse the other sentence s2
+5. Traverse hashmap and choose the ones with value of 1.
+
+Optimized Solution1: not time efficient
+1. Choose a data structure to contain data. List is okay, but search will be O(n)
+2. Split two sentences into two separate ones and extend into 1.
+3. Traverse the extended sentence
+5. Traverse hashmap and choose the ones with value of 1.
+
