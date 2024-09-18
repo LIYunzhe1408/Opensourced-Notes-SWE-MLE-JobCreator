@@ -19,6 +19,10 @@ I am a Computer Science master student from UC Berkeley, currently I am working 
   - I'd like to clarify sth I just mentioned to make sure it is accurate
 
 ## Ask questions
+1. Why you choose to work at xx, what motivates you the most.
+2. If you think of a couple of folks who are successful in your company, what are some traits they have in common.
+
+To Be Continued.
 
 <br>
 <br>

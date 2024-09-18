@@ -30,9 +30,9 @@ Number of degree: 2
 ```
 Explanation: 
 - The word `computer science` has a hyperlink(i.e. https://en.wikipedia.org/wiki/Computer_science) in the url1 as shown in the figure 1
-    ![figure 1](url1.png)
+    ![figure 1](./Figures/url1.png)
 - Click `computer science`, we get to a new page. Then the word `planning` has a hyperlink(i.e. https://en.wikipedia.org/wiki/Planning) as shown in the figure 2. Then click it we will get to url2.
-    ![figure 2](urlMiddle.png) 
+    ![figure 2](./Figures/urlMiddle.png) 
 - Before getting exactly to the url2, we click twice, so this defining the number of degree.
 
 # Questions
