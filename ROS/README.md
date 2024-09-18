@@ -117,3 +117,12 @@ Topics are typically used to exchange a continuous stream of data, the service a
 3. Call the service by `rosservice call [service] [arguments]`
     - eg1: `rosservice call /clear` without any arguments
     - eg2: Run `rosservice type /spawn` to find the datatype of `/spawn` service. Then run `rospack find turtlesim` to locate the turtlesim package. Then open the `Spawn.srv` service definition, located in the package's /srv subfolder. Finally, call the `/spawn` service to create a new turtle by `rosservice call /spawn 2.0 2.0 1.2 "newturtle"`
+
+
+## Write publisher and subscriber Nodes
+### Key takeaways
+1. `rosservice call /service [arg1] [arg2] [arg3]` is equal to `rosrun [pkg_name] [clientFileName].py`
+2. Every time revise the `.msg` or `.srv` file, remake the whole directory.
+3. If you want to use a msg data type, remember to import it in your py file.
+    - e.g. `from my_chatter.msg import TimestampString`
+4. service is a double-communication channel, while message is single-communication channel.
