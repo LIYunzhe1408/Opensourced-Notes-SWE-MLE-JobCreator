@@ -24,6 +24,23 @@ I am a Computer Science master student from UC Berkeley, currently I am working 
 
 To Be Continued.
 
+## Behavior Questions
+### Question Examples
+1. Tell me about a time when you had to manage a technical project with multiple stakeholders. What challenges arose, and how did you meet them? 
+
+2. Tell me about a time when you had to manage conflict within a team while working on a technical project or assignment. 
+
+3. Tell me about a time when challenges pertaining to engineering ethics, inclusion, or diversity became central for you in a professional context, and how you responded. 
+
+4. Tell me about a time when you were on a team and had difficulty meeting a deadline. What did you do?
+### STAR
+Transform open-ended unstructured questions and turn them into succinct, focused, and purposeful responses. **STAR** method is effective to make your responses memorable.
+1. Start with the situation, introduce only the most important details to provide context. Practice grabbing the attention and setting the scene all within 40 words or less. Why you are doing the task? Why it's so important.
+2. As far as the task, you might think of it as the target. Describe the changes you intend on making based on the Situation at hand. Again, try 40 words or less. Set your task apart from someone else's. Signpost: "My task was ..."
+3. Next comes your action. **<u>Remember to speak about your action instead of the team's action</u>**. Use the pronoun I to do so.
+4. As far as the result, talk to the benefits you have achieved. Try **quantifying** those benefits. Make it known how your actions have shaped your team and its future. Relate the result back to the interview question if possible.
+
+
 <br>
 <br>
 <br>
@@ -36,3 +53,4 @@ To Be Continued.
 4. How to interview like a pro: https://www.youtube.com/watch?v=ASXM4-CQG8o
 5. How to be a qualified entry level coder: https://www.youtube.com/watch?v=feJf1if-r1M
 6. Behavior Questions: https://www.youtube.com/watch?v=0xKLVJuBRCU
+7. STAR for BQ: https://youtu.be/49PbmmTGfAA?si=iiVeOx4wEnMtQR7Y
