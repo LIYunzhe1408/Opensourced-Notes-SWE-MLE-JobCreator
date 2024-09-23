@@ -1,9 +1,12 @@
 ## Comments
 This is summarized from the review of L2 and HW1.
 
-![](./rot.jpg)
-
 ### Key tips
+![](./Figures/rotation.jpg)
+![](./Figures/GeneralMotion.png)
+![](./Figures/RigidBodyMotion-Twist.png)
+![](./Figures/RigidBodyMotion-Twist-2.png)
+![](./Figures/RigidBodyMotion-Screw.png)
 ![](./Figures/tips.jpg)
    
 
