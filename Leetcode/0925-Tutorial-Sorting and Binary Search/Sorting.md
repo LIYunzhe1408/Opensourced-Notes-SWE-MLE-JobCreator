@@ -52,8 +52,70 @@ $O(2n)$/exponential time < $O(n!)$/also-exponential time < $∞$
 ![](./Figures/growth_rates.png)
 
 ## 3 $O(N^{2})$ Comparison-based Sorting
-* Bubble Sort
-* Selection Sort
-* Insertion Sort
+Examples are based on ascending order. From small to large.
 
 They compare pairs of elements of the array and decide whether to swap them or not.
+### Bubble Sort
+1. Assume array length is N. Compare adjacent pair of items
+2. Swap the item if they are out of order
+3. Repeat step 1 and 2 until comparing the last pair(i.e. array[N-2] and array[N-1]), then the last item will be the smallest/largest one
+4. Reduce comparison length by 1(i.e. from 0 to N-2, then 0 to N-3) until reduced to 1.
+```python
+def bubbleSort(array):
+    N = len(array) 
+    for end in range(N - 1, 1, -1):
+        for i in range(end - 1):
+            if array[i] > array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i] # Swap if out of order
+                swapped = True
+        if swapped: # Optimization, terminate early if no pair was swapped, which means the array is sorted.
+            break
+    return array
+```
+### Selection Sort
+Thoughts are similar to Bubble but w/ o/ several swaps.
+1. Select the index of the minimal item.
+2. Swap it with the **first** available index.
+3. Repeat step 1 and 2 until the end
+```python
+def selectionSort(array):
+    N = len(array)
+    for i in range(N-1):
+        smallest = i + A[i:].index(min(A[i:])) # This is O(N)
+        array[smallest], array[i] = array[i], array[smallest]
+    return array
+```
+### Insertion Sort
+Imagine you now have one poker card and gonnna pick several cards one by one.
+1. Pick next card and compare it with the sequence of the last pick.
+2. Insert it into the proper order.
+3. Repeat 1 and 2.
+* Best Cases: Sorted list, no shifting of the inner loop will be needed. $O(N)$
+* Worst Cases: Reversed list, every inner iteration will run the whole array. $O(N^2)$
+```python
+def insertSort(array):
+    N = len(array) # how many cards I have
+    
+    for i in range(1, N - 1):
+        picked_card = array[i]
+        j = i - 1
+        while picked_card < array[j] and j >= 0: # This replaces the for loop, because the loop should be break when the order is sorted. Using for loop will be too tedious using if statement.
+            array[j+1] = array[j]
+            j -= 1
+
+        # for j in range(i-1, -1, -1):
+        #     if picked_card < array[j]:
+        #         array[j+1] = array[j]
+        #     else:
+        #         break
+        array[j] = picked_card
+    return array
+```
+
+## 4 $O(N\log{N})$ Comparison-based Sorting
+* Merge Sort
+* Quick Sort and its Randomized version.
+
+These sorting algorithms are usually implemented recursively, use Divide and Conquer problem solving paradigm, and run in $O(N log N)$ time for Merge Sort and $O(N log N)$ time in expectation for Randomized Quick Sort.
+
+https://visualgo.net/en/sorting?slide=11
