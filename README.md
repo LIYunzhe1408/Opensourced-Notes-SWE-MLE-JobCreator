@@ -5,6 +5,7 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 ### Technical Skills
 - **In Progress**: [Robotics](EECS%20206A%20Robotics/)
 - **In Progress**: [ROS](ROS/)
+- **In Progress**: [LeetCode](Leetcode/)
 - Completed: OpenCV
 - Completed: Git
 - Completed: Unity
