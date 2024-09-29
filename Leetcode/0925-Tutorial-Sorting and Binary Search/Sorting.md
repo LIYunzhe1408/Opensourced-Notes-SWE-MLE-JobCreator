@@ -60,31 +60,17 @@ They compare pairs of elements of the array and decide whether to swap them or n
 2. Swap the item if they are out of order
 3. Repeat step 1 and 2 until comparing the last pair(i.e. array[N-2] and array[N-1]), then the last item will be the smallest/largest one
 4. Reduce comparison length by 1(i.e. from 0 to N-2, then 0 to N-3) until reduced to 1.
-```python
-def bubbleSort(array):
-    N = len(array) 
-    for end in range(N - 1, 1, -1):
-        for i in range(end - 1):
-            if array[i] > array[i+1]:
-                array[i], array[i+1] = array[i+1], array[i] # Swap if out of order
-                swapped = True
-        if swapped: # Optimization, terminate early if no pair was swapped, which means the array is sorted.
-            break
-    return array
-```
+
+Code refer to [here](./bubbleSort.py)
+
 ### Selection Sort
 Thoughts are similar to Bubble but w/ o/ several swaps.
 1. Select the index of the minimal item.
 2. Swap it with the **first** available index.
 3. Repeat step 1 and 2 until the end
-```python
-def selectionSort(array):
-    N = len(array)
-    for i in range(N-1):
-        smallest = i + A[i:].index(min(A[i:])) # This is O(N)
-        array[smallest], array[i] = array[i], array[smallest]
-    return array
-```
+
+Code refer to [here](./selectionSort.py)
+
 ### Insertion Sort
 Imagine you now have one poker card and gonnna pick several cards one by one.
 1. Pick next card and compare it with the sequence of the last pick.
@@ -92,30 +78,73 @@ Imagine you now have one poker card and gonnna pick several cards one by one.
 3. Repeat 1 and 2.
 * Best Cases: Sorted list, no shifting of the inner loop will be needed. $O(N)$
 * Worst Cases: Reversed list, every inner iteration will run the whole array. $O(N^2)$
-```python
-def insertSort(array):
-    N = len(array) # how many cards I have
-    
-    for i in range(1, N - 1):
-        picked_card = array[i]
-        j = i - 1
-        while picked_card < array[j] and j >= 0: # This replaces the for loop, because the loop should be break when the order is sorted. Using for loop will be too tedious using if statement.
-            array[j+1] = array[j]
-            j -= 1
 
-        # for j in range(i-1, -1, -1):
-        #     if picked_card < array[j]:
-        #         array[j+1] = array[j]
-        #     else:
-        #         break
-        array[j] = picked_card
-    return array
-```
+Code refer to [here](./insertSort.py)
 
 ## 4 $O(N\log{N})$ Comparison-based Sorting
 * Merge Sort
 * Quick Sort and its Randomized version.
 
 These sorting algorithms are usually implemented recursively, use Divide and Conquer problem solving paradigm, and run in $O(N log N)$ time for Merge Sort and $O(N log N)$ time in expectation for Randomized Quick Sort.
+
+### Divide and Conquer Paradigm
+* Divide step: Divide the large, original problem into smaller sub-problems and recursively solve the smaller sub-problems,
+* Conquer step: Combine the results of the smaller sub-problems to produce the result of the larger, original problem.
+
+### Merge Sort
+Merge Sort is a Divide and Conquer sorting algorithm.
+
+The divide step is simple: Divide the current array into two halves (perfectly equal if N is even or one side is slightly greater by one element if N is odd) and then recursively sort the two halves.
+
+The conquer step is the one that does the most work: Merge the two (sorted) halves to form a sorted array, using the merge sub-routine
+
+#### Merge
+Given an array of $N$ items, the **merge operation** in the **Merge Sort** will:
+1. Merge each pair of individual element (which is by default, sorted) into sorted arrays of 2 elements,
+2. Merge each pair of sorted arrays of 2 elements into sorted arrays of 4 elements, Repeat the process...,
+3. Final step: Merge 2 sorted arrays of $N$/2 elements (for simplicity of this discussion, we assume that $N$ is even) to obtain a fully sorted array of $N$ elements.
+
+Given two sorted array, $A$ and $B$, of size $N_1$ and $N_2$, we can efficiently merge them into one larger combined sorted array of size $N$ = $N_1$+$N_2$, in $O(N)$ time.
+> This is achieved by simply comparing the front of the two arrays and take the smaller of the two at all times. However, this simple but fast O(N) merge sub-routine will need additional array to do this merging correctly.
+```python
+def mergeOperation(array, low, mid, high):
+    # subArray1 = a[low, mid], subArray2 = a[mid+1, high]
+    left, right = low, mid+1
+    b = []
+
+    while left <= mid and right <= high:
+        if array[left] < array[right]:
+            b.append(array[left])
+            left += 1
+        else:
+            b.append(array[right])
+            right += 1
+    
+    while (left <= mid):
+        b.append(array[left])
+        left += 1
+    while (right <= high):
+        b.append(array[right])
+        right += 1
+    
+    for i in range(len(b)):
+        array[low + i] = b[i] 
+```
+#### Complexity Analysis
+When we call merge(a, low, mid, high), we process k = (high-low+1) items.
+* There will be at most k-1 comparisons.
+* There are k moves from original array a to temporary array b and another k moves back.
+
+In total, number of operations inside merge sub-routine is < 3k-1 = O(k).
+![](./Figures/callMerge.png)
+
+#### Pros and Cons
+* The most important good part of Merge Sort is its $O(N \log{N})$ performance guarantee, regardless of the original ordering of the input. 
+* Merge Sort is therefore very suitable to sort extremely large number of inputs as $O(N \log{N})$ grows much slower than the $O(N^2)$ sorting algorithms
+* It requires additional $O(N)$ storage during merging operation, thus not really memory efficient and not in-place
+
+#### Complete Implementation in Python
+[Refer to here](./mergeSort.py)
+
 
 https://visualgo.net/en/sorting?slide=11
