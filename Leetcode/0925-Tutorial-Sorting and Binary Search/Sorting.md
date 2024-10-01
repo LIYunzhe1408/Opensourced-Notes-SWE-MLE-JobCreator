@@ -146,5 +146,12 @@ In total, number of operations inside merge sub-routine is < 3k-1 = O(k).
 #### Complete Implementation in Python
 [Refer to here](./mergeSort.py)
 
+### Quick Sort
+1. Choose an item p (known as the pivot)
+2. Then partition the items of A[i..j] into three parts: A[i..m-1], A[m], and A[m+1..j].
+   * A[i..m-1] (possibly empty) contains items that are smaller than (or equal to) p.
+   * A[m] = p, i.e., index m is the correct position for p in the sorted order of array a.
+   * A[m+1..j] (possibly empty) contains items that are greater than (or equal to) p.
+3. Then, recursively sort the two parts.
 
 https://visualgo.net/en/sorting?slide=11
