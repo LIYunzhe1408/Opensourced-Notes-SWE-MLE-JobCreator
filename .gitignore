@@ -12,6 +12,7 @@ GitHubToken/
 # Useless #
 ##################
 .idea
+Leetcode/0925-Tutorial-Sorting and Binary Search/__pycache__/
 
 # Large size files #
 ###################

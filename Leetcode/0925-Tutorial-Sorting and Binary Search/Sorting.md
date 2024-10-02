@@ -154,4 +154,11 @@ In total, number of operations inside merge sub-routine is < 3k-1 = O(k).
    * A[m+1..j] (possibly empty) contains items that are greater than (or equal to) p.
 3. Then, recursively sort the two parts.
 
+#### For non-randomized pivot situation
+* Worst Case: If the list is already sorted, it will be like bubble sort which means that every time, we can just leave the first element and sort the rest. It will take $O(N^2)$
+* Best Case: It occurs when partition always splits the array into 2 equal halves.  e.g. `4 1 3 2 6 5 7` 
+    It will take $O(N\log{N})$
+
+Example for first round sort:
+![](./Figures/QuickSortExample.jpg)
 https://visualgo.net/en/sorting?slide=11
