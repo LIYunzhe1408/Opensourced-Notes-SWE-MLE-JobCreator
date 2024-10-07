@@ -13,7 +13,7 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 ### Soft Skills
 - **In Progress**: [Interview](Interview/)
 - **In Progress**: [Storytelling](ENGIN%20295%20Storytelling/)
-- **In Progress**: [Project Management](ENGIN%20270A%20Teaming%20and%20Project%20Management/)
+- **In Progress**: [Project Management](ENGIN%20270C%20Teaming%20and%20Project%20Management/)
 - Completed: Organizational Behavior & Negotiations
 - Completed: R&D Technology Management & Ethics
 - Completed: Product Management
@@ -51,7 +51,7 @@ Content covers topics from how to use LeetCode, how to interview like a pro, how
 
 We will leverage the art of storytelling to engage diverse audiences with memorable, lasting narratives. Whether describing key trends in science and tech, advocating for developments in our field of specialty, or chronicling our own professional journey, we will learn how to promote our groundbreaking ideas across forums and formats.
 
-### [Teaming and Project Management](ENGIN%20270A%20Teaming%20and%20Project%20Management/) - In Progress
+### [Teaming and Project Management](ENGIN%20270C%20Teaming%20and%20Project%20Management/) - In Progress
 > Instructed by Prof. Nima Shomali
 
 ### [Organizational Behavior & Negotiations](ENGIN%20270A%20Organizational%20Behavior%20and%20Negotiations/) - Completed at August 24 2024
