@@ -2,12 +2,12 @@
 This is summarized from the review of L2 and HW1.
 
 ### Key tips
-![](./Figures/RB%20Rotation.jpg)
-![](./Figures/RBGeneral%20Motion.jpg)
-![](./Figures/Twist-1.jpg)
-![](./Figures/Twist-2.jpg)
-![](./Figures/Screw.jpg)
-![](./Figures/tips.jpg)
+![](../Figures/RB%20Rotation.jpg)
+![](../Figures/RBGeneral%20Motion.jpg)
+![](../Figures/Twist-1.jpg)
+![](../Figures/Twist-2.jpg)
+![](../Figures/Screw.jpg)
+![](../Figures/tips.jpg)
    
 
 # Rigid Body Motion
