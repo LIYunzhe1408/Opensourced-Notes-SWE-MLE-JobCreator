@@ -1,4 +1,7 @@
-# Background Knowledge
+## Notes
+* [Rigid Body Motion](./Notes/Rigid%20Body%20motion/)
+* [Computer Vision](./Notes/Computer%20Vision/)
+
 ## Linear Algebra Python Usage
 `np.outer` computes the outer product of two vectors. Commonly used in $ww^{\mathsf{T}}$ situations.
 ```
