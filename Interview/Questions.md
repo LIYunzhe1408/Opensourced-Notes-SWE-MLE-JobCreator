@@ -36,11 +36,11 @@ Have you ever solved problems for customers? How you find the problem? What's th
 
 [How you navigate the problem? -> Generate a plan -> Actions -> Results]
 When I was xxxx, we were approaching an important regional competition, we could image that we had to deal with multiple integrations for stability. We have a conflict about priority of the task.
-The CV Lead said they were almost there to develop powerful features and shoot the target accurately, while I estimate they will spend much more time to deploy, and we will have little time for stability test.
+The **CV Lead** said they were almost there to develop powerful features and shoot the target accurately, while I estimate they will spend much more time to deploy, and we will have little time for stability test.
 My plan was simple, I gave computer vision members 3 days to release an MVP, if they can do that, then I will let them deploy on all robots, if not, their feature will not be developed further, and all time will be allocated to stability test.
 Finally, they didn't do that in 3 days, and stability tests were fully implemented and several bugs were fixed. As a result, we won the 3rd place in the tournament and even completely defeat those teams having computer vision system but not stable.
 
-When I was interned in ..., we were at the beginning of the new milestone, and negotiating the goals and deliverables with the client. As a product manager,
+When I was interned in ..., we were at the beginning of the **new milestone**, and negotiating the goals and deliverables with the client. As a product manager,
 I had to communicate with our R&D team, road test team, VP, and vehicle coordinators to scope our deliverables nad also understand the features they want to build.
 It was challenging because, you know, customers always wants a million things that they wanna do 2x numbers of road test cases for a newly proposed feature, 
 and there's a finite amount of resources and time that we can allocate. My plan was to go ahead and helped the customer understand and prioritize the feasibility of the newly-proposed 
@@ -48,7 +48,7 @@ features and the stability of generalization feature for delivery.
 
 ## Leaders are right, a lot
 1. Tell me a time you made a mistake in judgment made a bad decision.
-When I was the team lead in a robotics team, I realize the drone or the aerial robot will be essential for us. I recruited a member who showed several profolio about drones in his
+When I was the team lead in a robotics team, I realize the **drone** or the aerial robot will be essential for us. I recruited a member who showed several profolio about drones in his
 previous experience and was recommended a professor. As he was a phD and I had to coordinate resources for other robots, I let him develop by himself and check his progress once a week.
 Though he showed me the code and the his future plan, I didn't see the drone fly even once before the competition. $3,000 were invested for him, but nothing was progressed.
 From this failure, I realized that every project should have a quantified outcome for several stages, like OKR, and checked the difference between objectives and the actual progress. Then 
@@ -62,6 +62,11 @@ then proposed it to my mentor and my line manager. To ensure we can deliver this
 in the last year to test its performance. I found it will be limited to some specific scenarios and optimized it to be more scalable. After showing this to my mentor and line manager, they were
 impressed and wrap my code to the R&D team to integrate it as a tool for internal use, saving 90% time for PM and ensure the accurate calculation.
 
+## [Weakness](https://www.linkedin.com/pulse/%E9%9D%A2%E8%AF%95%E4%B8%AD%E8%A2%AB%E9%97%AE%E5%88%B0%E4%BD%A0%E6%9C%80%E5%A4%A7%E7%9A%84%E7%BC%BA%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%E6%80%8E%E4%B9%88%E7%A0%B4-hong-cheng-cfa/)
+I have a hard time letting a project go or sharing a task with others because I’m always convinced that I can do it all on my own and that asking for help will be taken as a sign of weakness. This has led to me taking on projects that have overwhelmed me and resulted in me being frustrated and angry. It hasn’t been easy learning to let go, but I’ve been working on trusting others and sharing the responsibilities for projects and as a result, have been able to really accomplish some incredible things. (source: theinterviewguys.com）
+
+
+
 ## Tell me about a time when you have a Challenge
 [exp]
 We were onboarding one of the largest clients, we could image at that time we had to deal with multiple integrations and work with a team, at that time they were [challenge]
@@ -71,6 +76,7 @@ So my plan was simple, I went ahead and helped the customer understand and prior
 And then we can iterate and build more features after that.
 In the end, we were able to deliver the project a week earlier than we originally planned for and the MVP was a success. We were able to scope the next version of the product with the customer and eventually build a very productive working relationship with them.
 
+jin pei smart good attitude work hard learned a lot
 
 ## Reference:
 https://docs.google.com/document/d/112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrpMlmnsiMNiA/edit

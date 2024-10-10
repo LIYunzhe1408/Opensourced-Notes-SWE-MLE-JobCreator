@@ -1,9 +1,12 @@
 import autogen
 
+with open('key.txt', 'r') as file:
+    key = file.read()
+
 config_list = [
     {
         'model': 'gpt-4o-mini',
-        'api_key': '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'
+        'api_key': key
     }
 ]
 
@@ -22,7 +25,7 @@ user_proxy = autogen.UserProxyAgent(
     name="user_proxy",
     human_input_mode="TERMINATE",
     max_consecutive_auto_reply=10, # Too high, infinite loop
-    is_termination_msg=lambda x: x.get("content", "").rstrip().endswitch("TERMINATE"),
+    # is_termination_msg=lambda x: x.get("content", "").rstrip().endswitch("TERMINATE"),
     code_execution_config=False,
     llm_config=llm_config,
     system_message="Reply TERMINATE if the task has been solved."
@@ -42,12 +45,6 @@ user_proxy.initiate_chat(
 # # See https://microsoft.github.io/autogen/docs/FAQ#set-your-api-endpoints
 # # and OAI_CONFIG_LIST_sample
 # # config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST")
-# config_list = [
-#     {
-#         'model': 'gpt-4o-mini',
-#         'api_key': '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'
-#     }
-# ]
 # # You can also set config_list directly as a list, for example, config_list = [{'model': 'gpt-4', 'api_key': '<your OpenAI API key here>'},]
 # assistant = AssistantAgent("assistant", llm_config={"config_list": config_list})
 # user_proxy = UserProxyAgent("user_proxy", code_execution_config={"work_dir": "coding", "use_docker": False}) # IMPORTANT: set to True to run code in docker, recommended
