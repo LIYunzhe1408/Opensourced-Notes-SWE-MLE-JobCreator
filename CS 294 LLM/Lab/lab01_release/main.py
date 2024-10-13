@@ -34,8 +34,6 @@ def calculate_overall_score(restaurant_name: str, food_scores: List[int], custom
     # {"Applebee's": 5.048}
     # NOTE: be sure to that the score includes AT LEAST 3  decimal places. The public tests will only read scores that have 
     # at least 3 decimal places.
-    food_scores = [1, 2, 3, 4, 5]
-    customer_service_scores = [1, 2, 3, 4, 5]
     result = 0.0
     for i in range(len(food_scores)):
         result += np.sqrt(food_scores[i]**2 * customer_service_scores[i]) * 1 / (len(food_scores) * np.sqrt(125))
@@ -82,15 +80,15 @@ def main(user_query: str):
                                         max_consecutive_auto_reply=1)
 
     scoring_agent = ConversableAgent(name="scoring_agent",
-                                        system_message="Score a specific restaurant.",
+                                        system_message="Score a specific restaurant, providing restaurant_name, food_score, and service_score. "
+                                                       "Based on the calculation result, Return in the format of : the average food quality score is xx. in one line",
                                         llm_config=llm_config,
-                                        human_input_mode="NEVER",
-                                        max_consecutive_auto_reply=1)
+                                        human_input_mode="NEVER")
 
     data_fetch_agent.register_for_llm(name="fetch_restaurant_data", description="Fetches the reviews for a specific restaurant.")(fetch_restaurant_data)
     scoring_agent.register_for_llm(name="calculate_overall_score", description="calculate overall score")(calculate_overall_score)
     entrypoint_agent.register_for_execution(name="fetch_restaurant_data")(fetch_restaurant_data)
-    entrypoint_agent.register_for_execution(name="calculate overall score")(calculate_overall_score)
+    entrypoint_agent.register_for_execution(name="calculate_overall_score")(calculate_overall_score)
 
 
     # TODO
@@ -111,16 +109,16 @@ def main(user_query: str):
                 "message": "These are fetched reviews for the specific restaurant",
                 "max_turns": 1,
                 "summary_method": "reflection_with_llm",
-                # "summary_args": {"summary_prompt": "Show the score strictly follows the dictionary format: {restaurant_name: xx, review_number: xx, food_score: xx, customer_service_score: xx}"},
+                "summary_args": {"summary_prompt": "Show the score strictly follows the dictionary format: {restaurant_name: xx,  food_score_list: [], customer_service_score_list: []}"},
             },
             {
                 "recipient": scoring_agent,
-                "message": "These are scores information for the specific restaurant, calculate the score by the formula: SUM(sqrt(food_scores[i]**2 * customer_service_scores[i]) * 1/(N * sqrt(125)) * 10. Give me the final score",
+                "message": "These are scores information for the specific restaurant",
                 "max_turns": 2,
             }
         ]
     )
-    print("First Chat Summary: ", result[1].summary)
+    # print("First Chat Summary: ", result[1].summary)
     
 # DO NOT modify this code below.
 if __name__ == "__main__":

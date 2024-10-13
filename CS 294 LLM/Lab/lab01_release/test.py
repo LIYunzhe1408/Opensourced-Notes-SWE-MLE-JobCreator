@@ -25,7 +25,7 @@ def contains_num_with_tolerance(text: str, pattern: float, tolerance: float=0) -
 def public_tests():
     queries = [
     "What is the overall score for taco bell?",
-    "What is the overall score for In N Out?",
+    "What is the overall score for In-n-Out?",
     "How good is the restaurant Chick-fil-A overall?",
     "What is the overall score for Krispy Kreme?",
     ]
