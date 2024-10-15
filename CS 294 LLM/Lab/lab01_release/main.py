@@ -4,7 +4,6 @@ import numpy as np
 from autogen import ConversableAgent
 import sys
 import os
-import numpy
 
 def fetch_restaurant_data(restaurant_name: str) -> Dict[str, List[str]]:
     # This function takes in a restaurant name and returns the reviews for that restaurant. 

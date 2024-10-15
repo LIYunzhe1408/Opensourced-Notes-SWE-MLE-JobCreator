@@ -1,0 +1,7 @@
+https://github.com/All-Hands-AI/OpenHands
+
+Writing Code will be less important.
+Develop SW is powerful.
+Editting code, running code, and browering website is exactly what programmer do. Credential information? Maybe just a little specific agents.
+
+General agents will cover most tasks, but considering other concerns, delegating a small portion of agents to do specific works will be promising.
