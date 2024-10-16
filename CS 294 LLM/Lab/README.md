@@ -1,7 +1,7 @@
-#Key takeaways
-- [Building a pipeline using AutoGen](#Building a pipeline using AutoGen)
-- [Prompt Hacking](#Prompt Hacking)  //* ***Recursive Injection***
-- [Defensive Measures](#Defensive Measures)
+# Key takeaways
+- [Building a pipeline using AutoGen](#Building%20a%20pipeline%20using%20AutoGen)
+- [Prompt Hacking](#Prompt%20Hacking)  //* ***Recursive Injection***
+- [Defensive Measures](#Defensive%20Measures)
 
 ## Building a pipeline using AutoGen
 
