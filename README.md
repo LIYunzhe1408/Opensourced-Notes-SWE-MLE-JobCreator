@@ -2,6 +2,9 @@
 This repo aimed at documenting the learning of necessary requirements in the CV/ML job market, covering Git, OpenCV, Deep Learning for computer vision, and etc. It will keep updating.
 
 ## Dashboard
+### Projects
+- **In Progress**: [Orderly: Make Drive-Thru Interaction Smoothly](https://github.com/JJJasperl/CalHack11.0)
+
 ### Technical Skills
 - **In Progress**: [Robotics](EECS%20206A%20Robotics/)
 - **In Progress**: [ROS](ROS/)
