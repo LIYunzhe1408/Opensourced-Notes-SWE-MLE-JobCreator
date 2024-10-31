@@ -80,7 +80,7 @@ y2 = y1 + target_position[1]
 
 ## Checkpoint 3
 ### Controller
-``python
+```python
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)  # Publish to the cmd_vel topic
 tfBuffer = tf2_ros.Buffer()  # Initialize a buffer
 tfListener = tf2_ros.TransformListener(tfBuffer)  # Initialize a transform listener
