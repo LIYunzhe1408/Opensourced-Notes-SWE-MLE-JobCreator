@@ -1,0 +1,11 @@
+- Intent: Today, I'm gonna talk about xxx
+- Key message: Surgical robots with high autonomy will come to reality in the next decade.
+
+I will introduce this topic in 3 main points.
+1. Goal/Benefit: Why we need this. -> visual: success rate surpass surgeon in some specific procedures.
+2. Previous Bottlenecks: Learning algo, few platform, ...
+3. Current Solutions: Market is large; leading companies + uni -> possible.
+
+What you can look forward:
+* less xxx
+* better xxx
