@@ -61,3 +61,82 @@ HSV is more robust to lighting changes and allows us to focus on the Hue, which 
         return X, Y, Z
     ```
 6. Run `rosrun rviz rviz` and add an Image object in RVIZ
+
+## Checkpoint 2
+### Bézier curve
+```python
+def bezier_curve(p0, p1, p2, p3, t):
+    """Calculate a point on a cubic Bezier curve defined by p0, p1, p2, and p3 at parameter t."""
+    return (1 - t)**3 * p0 + 3 * (1 - t)**2 * t * p1 + 3 * (1 - t) * t**2 * p2 + t**3 * p3
+```
+### Curved Traj
+```python
+tfBuffer = tf2_ros.Buffer()  # Initialize a buffer
+tfListener = tf2_ros.TransformListener(tfBuffer)  # Initialize a transform listener
+trans = tfBuffer.lookup_transform('world', 'turtlebot', rospy.Time(0))
+x2 = x1 + target_position[0]
+y2 = y1 + target_position[1]
+```
+
+## Checkpoint 3
+### Controller
+``python
+pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)  # Publish to the cmd_vel topic
+tfBuffer = tf2_ros.Buffer()  # Initialize a buffer
+tfListener = tf2_ros.TransformListener(tfBuffer)  # Initialize a transform listener
+
+prev_time = rospy.get_time()  # Initialize time
+integ = np.array([0, 0])  # Initialize integral term as a zero array
+derivative = np.array([0, 0])  # Initialize derivative term as a zero array
+previous_error = np.array([0, 0]) 
+
+
+# Prepare waypoint for transformation to base_link frame
+waypoint_trans = PoseStamped()
+waypoint_trans.pose.position.x = waypoint[0]
+waypoint_trans.pose.position.y = waypoint[1]
+waypoint_trans.pose.position.z = 0  # Assuming the waypoint is on the ground
+
+# Set orientation based on the current yaw angle
+quat = quaternion_from_euler(0, 0, baselink_yaw)
+waypoint_trans.pose.orientation.x = quat[0]
+waypoint_trans.pose.orientation.y = quat[1]
+waypoint_trans.pose.orientation.z = quat[2]
+waypoint_trans.pose.orientation.w = quat[3]
+
+waypoint_in_base_link = do_transform_pose(waypoint_trans, trans_odom_to_base_link)
+
+
+# Calculate error
+x_error = waypoint_in_base_link.pose.position.x
+y_error = waypoint_in_base_link.pose.position.y
+error = np.array([x_error, y_error])
+
+ # Integral term
+integ += error * dt  # Sum error over time
+integral = np.dot(Ki, integ).squeeze()
+
+# Derivative term
+error_deriv = (error - previous_error) / dt
+derivative = np.dot(Kd, error_deriv).squeeze()
+
+previous_error = error
+prev_time = curr_time
+
+pub.publish(control_command)
+
+# Stopping condition: Check if the waypoint is close enough
+if np.linalg.norm(error) < 0.05:  # If within 5 cm of target
+    print("Moving to next waypoint in trajectory")
+    return
+
+def planning_callback(msg):
+    try:
+        trajectory = plan_curved_trajectory((msg.pose.position.x, msg.pose.position.y))  # Plan trajectory to target
+    
+        # Loop over waypoints and call the controller function on each waypoint
+        for waypoint in trajectory:
+            controller((waypoint[0], waypoint[1]))
+
+rospy.Subscriber("/move_base_simple/goal", PoseStamped, planning_callback)
+```
