@@ -1,0 +1,6 @@
+1. Squeeze header
+2. Some skills are not gaming changing: numpy, matplotlib
+3. Quantify bullet points: MB, GB video, fps...
+4. Focus on metric enhancement 8%, ...
+5. Add py2neo
+6. section: work experience, project, research
