@@ -72,7 +72,7 @@ Oct 30
 Questions
 1. [Two sums](https://leetcode.com/problems/two-sum/description/)
 2. [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-3. Product of self.
+3. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/submissions/)
 
 ### Oct 31
 Reading:
