@@ -10,7 +10,7 @@
 | Nov 5  | Recursion  | <span style="color:red">**NA**      |
 
 ## Array 
-Oct 30
+Oct 30 - Nov 6
 1. Overview
    1. Arrays hold values of the same type at contiguous memory locations.
    2. Two things to conern: index / position, element itself.
@@ -73,6 +73,10 @@ Questions
 1. [Two sums](https://leetcode.com/problems/two-sum/description/)
 2. [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 3. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/submissions/)
+4. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/submissions/)
+5. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/submissions/)
+6. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/submissions/)
+7. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/)
 
 ### Oct 31
 Reading:
