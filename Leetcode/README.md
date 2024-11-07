@@ -77,8 +77,28 @@ Questions
 5. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/submissions/)
 6. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/submissions/)
 7. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/)
+8. [3Sum](https://leetcode.com/problems/3sum/submissions/)
 
-### Oct 31
+### Nov 7
 Reading:
 * [Coding interview cheatsheet: Best practices before, during and after](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/)
 * [Top techniques to approach and solve coding interview questions](https://www.techinterviewhandbook.org/coding-interview-techniques/)
+  1. Try going through all the common data structures and applying them to the problem. These are the data structures to keep in mind and try, in order of frequency they appear in coding interview questions:
+     * Hash Maps: Useful for making lookup efficient.
+     * Graphs: If the data is presented to you as associations between entities
+     * Stack and Queue: Parse a string with nested properties (such as a mathematical equation)
+     * Heap: Question involves scheduling/ordering based on some priority. Also useful for finding the max K/min K/median elements in a set.
+     * Tree: Store strings in a space-efficient manner and look for the existence of strings
+  2. routines
+     * Sorting
+     * Binary search: Useful if the input array is sorted and you need to do faster than O(n) searches
+     * Sliding window
+     * Two pointers
+     * Union find
+     * BFS/DFS
+     * Traverse from the back
+     * Topological Sorting
+  3. Optimize:
+     * Time complexity
+     * Do even less work: two passes of the array -> single passes
+     * Use less space
