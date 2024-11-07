@@ -2,6 +2,20 @@
 This repo aimed at documenting the learning of necessary requirements in the CV/ML job market, covering Git, OpenCV, Deep Learning for computer vision, and etc. It will keep updating.
 
 ## Dashboard
+| Skills&Projects                                                                           | Status     |
+| :---------------------------------------------------------------------------------------  | :--------: |
+| [Orderly: Make Drive-Thru Interaction Smoothly](https://github.com/JJJasperl/CalHack11.0) | <span style="color:yellow"> In Progress |
+| [LeetCode](Leetcode/)                                                                     | <span style="color:yellow"> In Progress |
+| [Interview](Interview/)                                                                   | <span style="color:yellow"> In Progress |
+| [Storytelling](ENGIN%20295%20Storytelling/)                                               | <span style="color:yellow"> In Progress     |
+| [Project Management](ENGIN%20270C%20Teaming%20and%20Project%20Management/)                | <span style="color:yellow"> In Progress      |
+| [OpenCV](OpenCV-Beginner/)                                                                | <span style="color:green"> **Closed** |
+| [Git](Git/)                                                                               | <span style="color:green"> **Closed**  |
+| [Unity](Unity/)                                                                           | <span style="color:green"> **Closed**  |
+| [Organizational Behavior & Negotiations](ENGIN%20270A%20Organizational%20Behavior%20and%20Negotiations/)  | <span style="color:green"> **Closed**  |
+| [R&D Technology Management & Ethics](ENGIN%20270B%20R-D%20Technology%20Management%20and%20Ethics/)        | <span style="color:green"> **Closed**  |
+| [Product Management](Product%20Management-Book%20review-From%20the%20idea%20to%20the%20product)           | <span style="color:green"> **Closed**  |
+
 ### Projects
 - **In Progress**: [Orderly: Make Drive-Thru Interaction Smoothly](https://github.com/JJJasperl/CalHack11.0)
 
