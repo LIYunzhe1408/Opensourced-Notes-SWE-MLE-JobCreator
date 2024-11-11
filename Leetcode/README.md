@@ -1,8 +1,8 @@
-# Week 1: October 30 - Nov 6
+# Week 1: October 30 - Nov 10
 | Date   | Topics     | Status                              |
 | :----: | :--------: | :---------------------------------: |
 | Oct 30 | Array      | <span style="color:green">**Check** |
-| Oct 31 | Array      | <span style="color:red">**NA**      |
+| Oct 31 | Array      | <span style="color:green">**Check** |
 | Nov 1  | String     | <span style="color:red">**NA**      |
 | Nov 2  | String     | <span style="color:red">**NA**      |
 | Nov 3  | Hash Table | <span style="color:red">**NA**      |
@@ -10,7 +10,7 @@
 | Nov 5  | Recursion  | <span style="color:red">**NA**      |
 
 ## Array 
-Oct 30 - Nov 6
+Oct 30 - Nov 10
 1. Overview
    1. Arrays hold values of the same type at contiguous memory locations.
    2. Two things to conern: index / position, element itself.
@@ -78,6 +78,8 @@ Questions
 6. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/submissions/)
 7. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/)
 8. [3Sum](https://leetcode.com/problems/3sum/submissions/)
+9. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/submissions/)
+10. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/submissions/)
 
 ### Nov 7
 Reading:
@@ -102,3 +104,6 @@ Reading:
      * Time complexity
      * Do even less work: two passes of the array -> single passes
      * Use less space
+
+## String
+Nov 10 - TBD
