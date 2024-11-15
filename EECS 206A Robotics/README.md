@@ -1,7 +1,12 @@
-## Notes
-* [Rigid Body Motion](./Notes/Rigid%20Body%20motion/)
-* [Computer Vision](./Notes/Computer%20Vision/)
-* [Velocity](./Notes/Velocity/)
+## Dashboard
+| Topics | Status| Takeaways |
+| :---- | :-------- | :--------------------------------- |
+| [Rigid Body Motion](./Notes/Rigid%20Body%20motion/)| <span style="color:green">**Check** | Change position in 3D space.|
+| [Computer Vision](./Notes/Computer%20Vision/)| <span style="color:green">**Check** | Camera model, intrinsic matrix, map points with two cameras.|
+| [Velocity](./Notes/Velocity/)| <span style="color:green">**Check**      | Map the point to its time derivatives.|
+| [Jacobian](./Notes/Jacobian/)| Problem sets are under reviewed.|Map the angle changes of joints to body/spatial velocity. |
+| [Dynamics]()  | Not Start | |
+| [Control]()  | Not Start  | |
 
 ## Linear Algebra Python Usage
 `np.outer` computes the outer product of two vectors. Commonly used in $ww^{\mathsf{T}}$ situations.
