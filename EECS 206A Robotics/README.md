@@ -4,8 +4,9 @@
 | [Rigid Body Motion](./Notes/Rigid%20Body%20motion/)| <span style="color:green">**Check** | Change position in 3D space.|
 | [Computer Vision](./Notes/Computer%20Vision/)| <span style="color:green">**Check** | Camera model, intrinsic matrix, map points with two cameras.|
 | [Velocity](./Notes/Velocity/)| <span style="color:green">**Check**      | Map the point to its time derivatives.|
-| [Jacobian](./Notes/Jacobian/)| Problem sets are under reviewed.|Map the angle changes of joints to body/spatial velocity. |
-| [Dynamics]()  | Not Start | |
+| [Jacobian](./Notes/Jacobian/)| <span style="color:green">**Check**      | Map the angle changes of joints to body/spatial velocity. Singularity & how to measure|
+| [Dynamics](./Notes/Dynamics)  | Ready to start | |
+| [3D Lagrangian]()  | Not Start | |
 | [Control]()  | Not Start  | |
 
 ## Linear Algebra Python Usage
