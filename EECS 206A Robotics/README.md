@@ -5,8 +5,8 @@
 | [Computer Vision](./Notes/Computer%20Vision/)| <span style="color:green">**Check** | Camera model, intrinsic matrix, map points with two cameras.|
 | [Velocity](./Notes/Velocity/)| <span style="color:green">**Check**      | Map the point to its time derivatives.|
 | [Jacobian](./Notes/Jacobian/)| <span style="color:green">**Check**      | Map the angle changes of joints to body/spatial velocity. Singularity & how to measure|
-| [Dynamics](./Notes/Dynamics)  | Ready to start | |
-| [3D Lagrangian]()  | Not Start | |
+| [Dynamics](./Notes/Dynamics) | <span style="color:green">**Check** | How a robot deals with force: Dynamics. Use Lagrangian dynamics to replace complicated Newton-Euler dynamics |
+| [3D Lagrangian](./Notes/3D-Lagrangian/)  | Ready to start | |
 | [Control]()  | Not Start  | |
 
 ## Linear Algebra Python Usage
