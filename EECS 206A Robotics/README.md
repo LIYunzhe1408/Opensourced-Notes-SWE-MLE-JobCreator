@@ -6,8 +6,8 @@
 | [Velocity](./Notes/Velocity/)| <span style="color:green">**Check**      | Map the point to its time derivatives.|
 | [Jacobian](./Notes/Jacobian/)| <span style="color:green">**Check**      | Map the angle changes of joints to body/spatial velocity. Singularity & how to measure|
 | [Dynamics](./Notes/Dynamics) | <span style="color:green">**Check** | How a robot deals with force: Dynamics. Use Lagrangian dynamics to replace complicated Newton-Euler dynamics |
-| [3D Lagrangian](./Notes/3D-Lagrangian/)  | Ready to start | |
-| [Control]()  | Not Start  | |
+| [3D Lagrangian](./Notes/3D-Lagrangian/)  | <span style="color:green">**Check** | A 3D object still has inertial matrix even though it not rotates, but doesn't have rotational energy |
+| [Control](./Notes/Control/)  | <span style="color:green">**Check**  | Determine how the object will move (controllability), linearize the system and determine the control input. |
 
 ## Linear Algebra Python Usage
 `np.outer` computes the outer product of two vectors. Commonly used in $ww^{\mathsf{T}}$ situations.
