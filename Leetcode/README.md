@@ -101,6 +101,7 @@ Nov 10 - TBD
 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/submissions/)| Sort is time consuming, hashmap is the best | Nov 11, 2024 |
 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/submissions/)|  Two pointers move inward and check alnum in the loop   | Nov 13, 2024 |
 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/)| Sliding window using 2 pointers to represent boundaries | Nov 17, 2024 |
+| [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/submissions/) | Work on | Nov 22, 2024 |
 
 ### Tricks
 1. Uppercase to lowercase for string: `s.lower()`. 
