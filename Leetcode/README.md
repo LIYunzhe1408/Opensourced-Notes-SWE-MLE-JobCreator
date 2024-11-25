@@ -95,7 +95,7 @@
      * Use less space
 
 ## String
-Nov 10 - TBD
+Nov 10 - Nov 24
 | Questions                                                     | Summary    |   Solved On                         |
 | :-------------------------------------------                  | :--------  | :---------------------------------  |
 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/submissions/)| Sort is time consuming, hashmap is the best | Nov 11, 2024 |
@@ -193,3 +193,19 @@ Ways to determine if a string is a palindrome:
 When a question is about counting the number of palindromes, a common trick is to have two pointers that move **outward**, **away from the middle**. Note that palindromes can be even or odd length. For each middle pivot position, you need to check it twice - once that includes the character and once without the character.
 * For substrings, you can terminate early once there is no match
 * For subsequences, use dynamic programming as there are overlapping subproblems.
+
+
+## Hash Table
+Nov 24 - TBD
+A hash table uses a hash function on an element to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
+
+Hashing is the most common example of a space-time tradeoff.
+
+### Resolve hash collision
+* Separate chaining - A linked list is used for each value
+* Open addressing
+
+### Time complexity
+* Search: $O(1)$
+* Insert: $O(1)$
+* Remove: $O(1)$
