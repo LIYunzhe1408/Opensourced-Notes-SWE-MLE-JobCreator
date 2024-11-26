@@ -197,6 +197,14 @@ When a question is about counting the number of palindromes, a common trick is t
 
 ## Hash Table
 Nov 24 - TBD
+
+| Questions                                                     | Summary    |   Solved On                         |
+| :-------------------------------------------                  | :--------  | :---------------------------------  |
+| [Ransom Note](https://leetcode.com/problems/ransom-note/submissions/)| Hashmap to count appearance times./ Sort the string may help but waste time | Nov 25, 2024 |
+
+### Tricks
+1. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
+
 A hash table uses a hash function on an element to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
 Hashing is the most common example of a space-time tradeoff.
