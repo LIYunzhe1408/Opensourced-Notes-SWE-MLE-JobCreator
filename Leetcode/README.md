@@ -202,10 +202,18 @@ Nov 24 - TBD
 | :-------------------------------------------                  | :--------  | :---------------------------------  |
 | [Ransom Note](https://leetcode.com/problems/ransom-note/submissions/)| Hashmap to count appearance times./ Sort the string may help but waste time | Nov 25, 2024 |
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/submissions/)| Hashmap + sort. | Nov 26, 2024 |
+| [LRU Cache](https://leetcode.com/problems/lru-cache/submissions/)| Usage of OrderedDict | Dec 1, 2024 |
 
 ### Tricks
 1. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
 2. Use `ord(character)` to convert a single character to integer.
+3. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
+   1. `ordered_dict.move_to_end('c', last=True)`
+   2. `ordered_dict.popitem(last=True)`: pop the most recently added element
+   3. It's a `list` that combines the features of `dict` and order-preserving behavior of a `list`
+   4. Why Not Just Use a List of Tuples?
+      1. Efficient Lookups
+      2. Easy Modification
 
 A hash table uses a hash function on an element to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
