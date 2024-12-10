@@ -18,3 +18,8 @@
      * Steve Jobs: 1955
      * Eric Schmidt: 1955
      * Bill Joy: 1954
+### The Trouble With Genius
+1. A boy's IQ does a little help if he is faced with a formful of clever boys.
+2. IQ test shows the threshold regions on IQ's scale, determining that when past a certain point higher or lower counts less.
+3. Convergence test -> analytical, divergence test -> creativity
+4. Intelligence and achievements are far from correlated.
