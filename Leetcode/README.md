@@ -203,6 +203,7 @@ Nov 24 - TBD
 | [Ransom Note](https://leetcode.com/problems/ransom-note/submissions/)| Hashmap to count appearance times./ Sort the string may help but waste time | Nov 25, 2024 |
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/submissions/)| Hashmap + sort. | Nov 26, 2024 |
 | [LRU Cache](https://leetcode.com/problems/lru-cache/submissions/)| Usage of OrderedDict | Dec 1, 2024 |
+| [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/submissions/)| list+map = set | Dec 15, 2024 |
 
 ### Tricks
 1. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
