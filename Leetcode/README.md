@@ -204,6 +204,7 @@ Nov 24 - TBD
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/submissions/)| Hashmap + sort. | Nov 26, 2024 |
 | [LRU Cache](https://leetcode.com/problems/lru-cache/submissions/)| Usage of OrderedDict | Dec 1, 2024 |
 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/submissions/)| list+map = set | Dec 15, 2024 |
+| [First Missing Positive](https://leetcode.com/problems/first-missing-positive/submissions/)| Search for number existence with constraints of `len(nums)` | Dec 18, 2024 |
 
 ### Tricks
 1. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
