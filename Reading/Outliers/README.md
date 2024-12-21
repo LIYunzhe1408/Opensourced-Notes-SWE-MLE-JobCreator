@@ -23,3 +23,7 @@
 2. IQ test shows the threshold regions on IQ's scale, determining that when past a certain point higher or lower counts less.
 3. Convergence test -> analytical, divergence test -> creativity
 4. Intelligence and achievements are far from correlated.
+5. General intelligence and practical intelligence are orthogonal
+6. Parenting style of concerted cultivation V.S. accomplishment of natural growth. The former one make child learning teamwork, how to cope in highly structured settings, how to interact comfortably with adults, how to speak up when she needs to. It's somehow a sense of entitlement which means the child has the right to pursue their own individual preference and to actively manage interactions in institutional settings.
+   e.g. Robert Oppenheimer V.S. Chris Langan
+7. The community around children will prepare them properly or improperly for the world.
