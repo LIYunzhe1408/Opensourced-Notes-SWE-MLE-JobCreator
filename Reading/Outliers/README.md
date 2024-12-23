@@ -27,3 +27,6 @@
 6. Parenting style of concerted cultivation V.S. accomplishment of natural growth. The former one make child learning teamwork, how to cope in highly structured settings, how to interact comfortably with adults, how to speak up when she needs to. It's somehow a sense of entitlement which means the child has the right to pursue their own individual preference and to actively manage interactions in institutional settings.
    e.g. Robert Oppenheimer V.S. Chris Langan
 7. The community around children will prepare them properly or improperly for the world.
+
+### The Three Lessons of Joe Flom
+1. The importance of being a Jewish
