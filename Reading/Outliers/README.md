@@ -30,3 +30,4 @@
 
 ### The Three Lessons of Joe Flom
 1. The importance of being a Jewish
+2. The demographic of birth year matters
