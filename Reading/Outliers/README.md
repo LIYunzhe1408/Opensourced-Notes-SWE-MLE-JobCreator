@@ -29,5 +29,15 @@
 7. The community around children will prepare them properly or improperly for the world.
 
 ### The Three Lessons of Joe Flom
-1. The importance of being a Jewish
-2. The demographic of birth year matters
+* Jewish immigrations -> Hard Work and Persistence
+* Perfect birth date -> blessedly small generation
+* Family garment industry / Meaningful work(autonomy + complexity + effort&reward) -> boot camp for professions in persuasion & initiative & market search
+
+## Legacy
+### Harlan, Kentucky
+* Cultural legacy means a lot, with the example of fighting over honor and reaction experiments of northerners and southerners under insulting
+* The tradition and attitudes we inherit from our forebears can play the same role.
+
+### The ethnic theory of plane crashes
+* Crashes are much more likely to be the result of an accumulation of minor difficulties and trivial malfunctions.
+* Cultural legacy affect intention to speak up and challenge others when he finds something wrong. Individualism-collectivism scale and Power distance index are introduced.
