@@ -22,6 +22,8 @@ This repo aimed at documenting the learning of necessary requirements in the CV/
 ### Soft Skills
 | Name                                                                           | Status     | Takeaways |
 | :---------------------------------------------------------------------------------------  | :--------: | :---------|
+| [Industry Analysis](Leadership/Industry%20Analysis/)                                                                   | <span style="color:yellow"> In Progress | |
+| [Marketing](Leadership/Marketing/)                                                                   | <span style="color:yellow"> In Progress | |
 | [Interview](Interview/)                                                                   | <span style="color:yellow"> In Progress | Content covers topics from how to use LeetCode, how to interview like a pro, how to get yourself a decent package, and etc.  Reference: https://www.youtube.com/@hackbearterry/videos\ |
 | [Storytelling](Leadership/Storytelling/)                                               | <span style="color:green"> **Closed**     | Leverage the art of storytelling to engage diverse audiences with memorable, lasting narratives. Whether describing key trends in science and tech, advocating for developments in our field of specialty, or chronicling our own professional journey, we will learn how to promote our groundbreaking ideas across forums and formats. |
 | [Project Management](/Leadership/Teaming%20and%20Project%20Management/)                | <span style="color:green"> **Closed**      |
