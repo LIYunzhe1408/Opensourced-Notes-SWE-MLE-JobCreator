@@ -1,0 +1,1 @@
+1. Teradyne case: A Form 10-K is an annual report detailing a public company's business and financial condition. 10-Ks are useful for investors because they give a comprehensive look at how a company is performing. While they can be hundreds of pages long, you can usually find the most relevant information in a few key sections.
