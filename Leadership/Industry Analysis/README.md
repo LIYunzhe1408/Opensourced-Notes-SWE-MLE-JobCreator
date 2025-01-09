@@ -7,3 +7,24 @@
    * End customers: Companies and Private Individuals who **own** excavators 
    * OEMs (Original Equipment Manufacturers): Excavator **manufacture**rs partnering with Engcon to integrate tiltrotators into their products or facilitate easier installation
    * Channel customers: dealers that serves as a link between excavator manufacturers, tiltrotator manufacturers, and end customers
+
+### Align Technology Inc
+* Industry: Clear Aligner
+* When considering the value chain: keep it intuitive and simple. Lost of details is fine.
+* business: 
+  * clear aligner - 83%
+  * Software system and service
+* Buyers:
+  * Channel customers: orthodontists, general dental practitioner
+  * Diverse -> Bargaining power is low
+* Supplier:
+  * resin&polymer: single source
+  * optic component for scanner: sole/single
+  * Bargaining power: high
+* threat of new entrants:
+  * IP issues are critical, as they have issued several patents.
+  * Financial and legal problems make it challenging for new entrants
+* Substitutes:
+  * No treatment
+  * traditional brace
+  * High
