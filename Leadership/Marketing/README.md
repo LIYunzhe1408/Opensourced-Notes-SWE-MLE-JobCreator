@@ -20,3 +20,9 @@
 1. A prototype is a preliminary version of a product or service, while a pretotype is a quick experiment to test ideas
 2. Entrepreneurship is to apply innovation to bring new ideas to fruition. Persistence + Inspiration
 3. Use full time to brainstorm to add as much ideas as possible. Set a timer and get ideas.
+
+
+### Lecture 4
+1. Use 6 principles when branding and ads
+2. https://gamma.app/ to create a branding idea
+3. ![alt text](image.png)
