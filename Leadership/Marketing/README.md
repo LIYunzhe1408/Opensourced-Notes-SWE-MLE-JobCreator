@@ -26,3 +26,8 @@
 1. Use 6 principles when branding and ads
 2. https://gamma.app/ to create a branding idea
 3. ![alt text](image.png)
+
+
+### Lecture 5
+* Grading Criteria
+    ![alt text](image-1.png)
