@@ -40,4 +40,8 @@
 
 ### The ethnic theory of plane crashes
 * Crashes are much more likely to be the result of an accumulation of minor difficulties and trivial malfunctions.
-* Cultural legacy affect intention to speak up and challenge others when he finds something wrong. Individualism-collectivism scale and Power distance index are introduced.
+* Cultural legacy affect intention to speak up and challenge others when he finds something wrong. Individualism-collectivism scale(Hofstede's Dimension) and Power distance index are introduced.
+* Pilots of Korean Airlines conducted social behavior and actions in the order of seniority or ranking. But hints are dangerous, they need commands.
+* There's no time unwinding underlying meaning of what others said. Speaker(generally take obligations in western) should speak up clearly and receivers(generally take obligations to unwind speakers' words) should not unwind meanings.
+* Those who are stuck in culture traps should be taken out and re-normed.
+* It is one thing to learn that in a classroom, and quite another to actually do it in the air.
