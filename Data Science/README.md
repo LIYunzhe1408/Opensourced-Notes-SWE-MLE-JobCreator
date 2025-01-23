@@ -22,4 +22,3 @@ Example about students' enrollment profile.
 1. Start with a question: Some questions for majors, year, etc
 2. Data Acquisition and Cleaning: `majors = pd.read_csv("data/major.csv")`
 3. Explanatory of data analysis: Peeking the data by `majors.head(20)` and `names.head(20)`
-4. 
