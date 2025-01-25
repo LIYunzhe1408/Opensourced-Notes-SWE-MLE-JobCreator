@@ -1,15 +1,47 @@
-# Part 1: October 30 - Nov 10
-| Date   | Topics     | Status                              |
-| :----: | :--------: | :---------------------------------: |
-| Oct 30 | Array      | <span style="color:green">**Check** |
-| Oct 31 | Array      | <span style="color:green">**Check** |
-| Nov 1  | String     | <span style="color:red">**NA**      |
-| Nov 2  | String     | <span style="color:red">**NA**      |
-| Nov 3  | Hash Table | <span style="color:red">**NA**      |
-| Nov 4  | Recursion  | <span style="color:red">**NA**      |
-| Nov 5  | Recursion  | <span style="color:red">**NA**      |
+## Syntax tips
+1. Uppercase to lowercase for string: `s.lower()`. 
+2. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
+    ```python
+    sfiltered = ''
 
-## Array (Oct 30 - Nov 10)
+    for char in s:
+        if (ord(char) >= 97 and ord(char) <= 122):
+            sfiltered += char
+    ```
+3. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
+4. `list` to `string`: `''.join(list)`
+5. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
+6. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
+7. Use `ord(character)` to convert a single character to integer.
+8. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
+   1. `ordered_dict.move_to_end('c', last=True)`
+   2. `ordered_dict.popitem(last=True)`: pop the most recently added element
+   3. It's a `list` that combines the features of `dict` and order-preserving behavior of a `list`
+   4. Why Not Just Use a List of Tuples?
+      1. Efficient Lookups
+      2. Easy Modification
+
+## Recursion
+Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. All recursive functions contains two parts:
+* A base case (or cases) defined, which defines when the recursion is stopped - otherwise it will go on forever!
+* Breaking down the problem into smaller subproblems and invoking the recursive call
+
+Always remember to always define a base case so that your recursion will end.
+* Like in fibonacci problem, `fib(0) = 0` and `fib(1) = 1` are base cases
+
+Point out that 
+* Recursion implicitly uses a stack. 
+* Hence all recursive approaches can be rewritten iteratively using a stack. 
+* Beware of cases where the recursion level goes too deep and causes a stack overflow.
+* The default limit in Python is 1000.
+
+Make sure you have enough base cases to cover all possible invocations of the recursive function
+Techniques
+
+### Questions
+1. [22 Exceed 15 minutes]Generate Parentheses: https://leetcode.com/problems/generate-parentheses/submissions/
+
+## Array
 | Questions                                                     | Summary    |   Solved On                         |
 | :-------------------------------------------                  | :--------  | :---------------------------------  |
 | [Two sums](https://leetcode.com/problems/two-sum/description/)| Return indices of two numbers. Index as a hash key | Oct 31, 2024 |
@@ -95,29 +127,12 @@
      * Use less space
 
 ## String
-Nov 10 - Nov 24
 | Questions                                                     | Summary    |   Solved On                         |
 | :-------------------------------------------                  | :--------  | :---------------------------------  |
 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/submissions/)| Sort is time consuming, hashmap is the best | Nov 11, 2024 |
 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/submissions/)|  Two pointers move inward and check alnum in the loop   | Nov 13, 2024 |
 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/)| Sliding window using 2 pointers to represent boundaries | Nov 17, 2024 |
 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/submissions/) | longest substring. Two pointer + sliding window + hashmap to record frequency | Nov 22, 2024 |
-
-### Tricks
-1. Uppercase to lowercase for string: `s.lower()`. 
-2. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
-    ```python
-    sfiltered = ''
-
-    for char in s:
-        if (ord(char) >= 97 and ord(char) <= 122):
-            sfiltered += char
-    ```
-3. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
-4. `list` to `string`: `''.join(list)`
-5. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
-
-Many tips that apply to arrays also apply to strings
 
 Common data structures for looking up strings
 - Trie/Prefix Tree
@@ -196,8 +211,6 @@ When a question is about counting the number of palindromes, a common trick is t
 
 
 ## Hash Table
-Nov 24 - TBD
-
 | Questions                                                     | Summary    |   Solved On                         |
 | :-------------------------------------------                  | :--------  | :---------------------------------  |
 | [Ransom Note](https://leetcode.com/problems/ransom-note/submissions/)| Hashmap to count appearance times./ Sort the string may help but waste time | Nov 25, 2024 |
@@ -206,17 +219,6 @@ Nov 24 - TBD
 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/submissions/)| list+map = set | Dec 15, 2024 |
 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/submissions/)| Search for number existence with constraints of `len(nums)` | Dec 18, 2024 |
 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/submissions/)| Hashmap + doubly linked list works best | Jan 4, 2025 |
-
-### Tricks
-1. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
-2. Use `ord(character)` to convert a single character to integer.
-3. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
-   1. `ordered_dict.move_to_end('c', last=True)`
-   2. `ordered_dict.popitem(last=True)`: pop the most recently added element
-   3. It's a `list` that combines the features of `dict` and order-preserving behavior of a `list`
-   4. Why Not Just Use a List of Tuples?
-      1. Efficient Lookups
-      2. Easy Modification
 
 A hash table uses a hash function on an element to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
