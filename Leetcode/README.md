@@ -40,6 +40,8 @@ Techniques
 
 ### Questions
 1. [22 Exceed 15 minutes]Generate Parentheses: https://leetcode.com/problems/generate-parentheses/submissions/
+2. [77 Exceed 15 minutes]Combination: https://leetcode.com/problems/combinations/submissions/. 
+   * > Reference of backtracking: https://www.geeksforgeeks.org/what-is-the-difference-between-backtracking-and-recursion/
 
 ## Array
 | Questions                                                     | Summary    |   Solved On                         |
