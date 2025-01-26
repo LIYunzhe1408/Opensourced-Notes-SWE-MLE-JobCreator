@@ -42,6 +42,9 @@ Techniques
 1. [22 Exceed 15 minutes]Generate Parentheses: https://leetcode.com/problems/generate-parentheses/submissions/
 2. [77 Exceed 15 minutes]Combination: https://leetcode.com/problems/combinations/submissions/. 
    * > Reference of backtracking: https://www.geeksforgeeks.org/what-is-the-difference-between-backtracking-and-recursion/
+3. [78 Exceed 15 minutes with trials] Subsets: https://leetcode.com/problems/subsets/
+   * Backtracking is leveraged. Decide to include or not include a specific number.
+   * Not a permutation, this is a subset
 
 ## Array
 | Questions                                                     | Summary    |   Solved On                         |
