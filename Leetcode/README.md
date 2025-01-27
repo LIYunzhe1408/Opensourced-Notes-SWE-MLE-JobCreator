@@ -21,6 +21,42 @@
       1. Efficient Lookups
       2. Easy Modification
 
+## [New]Sorting and searching
+Sorting is the act of rearranging elements in a sequence in order, either in numerical or lexicographical order, either ascending or descending. It helps i) make a set of data more readable; ii) make it easy to search or retrieve.
+* A number of sorting algos run in $O(n^2)$, they should not be used in interviews.
+* The sorted lists are called **permutations**(Order in the sequence matters).
+* Instead, sort the input using default sorting function so that **you can use binary searches on them**
+
+Binary search compares the target value with the middle element of the array, which informs the algorithm whether the target value lies in the left half or the right half, and this comparison proceeds on the remaining half until the target is found or the remaining half is empty.
+* On a sorted array of elements, searching can be done in faster than $O(n)$ time (typically in $O(\log{n})$) by using Binary Search.
+* Learning Resource: https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
+
+### Sorting Classifications
+Learning resource: https://medium.com/basecs/sorting-out-the-basics-behind-sorting-algorithms-b0a032873add
+> Algorithm is not that intimidating, but a manual of your code -- Vaidehi Joshi published in basecs
+* Time complexity
+* Space complexity
+* Recursive / Non-recursive
+* Comparison / Non-Comparison
+* Internal / External
+* Stability
+
+### [To be Continued]Time complexity
+You are unlikely to be asked to implement a sorting algo from scratch during an interview, it's good to know TC of different sorting algo.
+* The built-in algorithm is almost definitely $O(n\log{(n)})$. In Python, it's Timsort.
+
+Be aware of
+* Empty sequence
+* Sequence with one/two elements
+* Sequence containing duplicate elements
+* Binary Search should be the first thing that come to your mind when given a sorted order
+* Counting sort to deal with known range of values
+
+### Questions
+1. [704 Runtime exceed]Binary Search: https://leetcode.com/problems/binary-search/submissions/
+    * Be aware of correctly narrowing search range by assign `left=mid+1` and `right=mid-1`. Or will lead to infinite loop.
+    * For sequence with just one element, be aware of `left<=right` rather that just `left<right`
+
 ## Recursion
 Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. All recursive functions contains two parts:
 * A base case (or cases) defined, which defines when the recursion is stopped - otherwise it will go on forever!
