@@ -56,6 +56,8 @@ Be aware of
 1. [704 Runtime exceed]Binary Search: https://leetcode.com/problems/binary-search/submissions/
     * Be aware of correctly narrowing search range by assign `left=mid+1` and `right=mid-1`. Or will lead to infinite loop.
     * For sequence with just one element, be aware of `left<=right` rather that just `left<right`
+2. [33 Accepted in 12'59''] Search in rotated sorted array: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+    * Conduct binary search for sorted part each.
 
 ## Recursion
 Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. All recursive functions contains two parts:
