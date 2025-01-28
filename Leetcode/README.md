@@ -21,7 +21,25 @@
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Sorting and searching
+## [New]Matrix
+A matrix is a 2-dimensional array.
+* Corner Case:
+  * Empty matrix: Check that none of the arrays are 0 length
+  * $1\times{1}$ matrix
+  * Matrix with only one row or column
+
+Techniques that you should familiar with:
+* Creating an empty $N\times{M}$ matrix to make a copy of the matrix with the same size/dimensions that is initialized to empty values to store the visited state or dynamic programming table.**For Traversal or DP**
+  * `zero_matrix = [[0 for _ in range(len(matrix[0]))] for _ in range(len(matrix))]`
+  * Copying a matrix: `copied_matrix = [row[:] for row in matrix]`
+* Transposing a matrix: interchanging its rows into columns or columns into rows.
+  * For grid game that need to verify vertically and horizontally, one trick is to write code to verify the matrix for the horizontal cells, transpose the matrix, and reuse the logic for horizontal verification to verify originally vertical cells (which are now horizontal)
+  * `transposed_matrix = zip(*matrix)`
+
+
+
+
+## Sorting and searching
 Sorting is the act of rearranging elements in a sequence in order, either in numerical or lexicographical order, either ascending or descending. It helps i) make a set of data more readable; ii) make it easy to search or retrieve.
 * A number of sorting algos run in $O(n^2)$, they should not be used in interviews.
 * The sorted lists are called **permutations**(Order in the sequence matters).
@@ -41,9 +59,10 @@ Learning resource: https://medium.com/basecs/sorting-out-the-basics-behind-sorti
 * Internal / External
 * Stability
 
-### [To be Continued]Time complexity
+### Time complexity
 You are unlikely to be asked to implement a sorting algo from scratch during an interview, it's good to know TC of different sorting algo.
 * The built-in algorithm is almost definitely $O(n\log{(n)})$. In Python, it's Timsort.
+* Quick, merge, heapsort takes $O(n\log{(n)})$ time complexity
 
 Be aware of
 * Empty sequence
