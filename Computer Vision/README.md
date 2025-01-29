@@ -45,6 +45,22 @@ Perspective projection makes 3D to 2D.
   * Use many more than 6 points (ideally more than 20) and non coplanar.
   * How to estimate the lens distortion parameters?
   * How can we enforce $\alpha{u}=\alpha{v}$
-* To be continued
+  * Reprojection error. The Euclidean distance between an observed image point and the reprojected point. It's for non-linear calibration refinement.
+* Zhang's algorithm: Calibration from planar grids. More practical than tsai's calibration which requires world's 3D points are non-coplanar
+  * Different in applying DLT as the points are coplanar and then $Z_w=0$
+  * [Recheck slide 29 and the one in Tsai. Clarify the difference]
 
-Reprojection error. The Euclidean distance between an observed image point and the reprojected point. It's for non-linear calibration refinement.
+### Camera Localization
+Perspective from n Points: PnP. This is the problem of determining the 6DoF pose of a camera(position and orientation) with respect to the world frame from a set of 3D-2D point correspondences.
+* It assumes the camera to be **already calibrated**. Which indicates the pipeline of get image -> calibration -> find out location.
+* It's the $R$, $T$ part.
+
+It's important for computer vision in robotics because we need camera to give us inforamtion about the real world.
+
+
+## Biocular Stereopsis
+Disparity from eyes seeing a finger jump example. Triangularization.
+* [Confusion]We need two fixed camera with Parallel Optical axes (fixation at infinity), so that we don't need motor to move them.
+
+
+
