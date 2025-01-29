@@ -86,3 +86,83 @@ Modify index:
 
 ### Relationship
 We think of a `DataFrame` as a collection of `Series` that all share the same index.
+
+
+### Takeaway
+We explore the components of `DataFrame` which  is a collections of `Series` that all share the same index. We also learnt some basic operations on `Series` to analyze the data.
+
+
+## Lecture 3: Pandas II
+Utility functions in pandas
+* Extracting data using `.iloc`
+* Usage of `[]`
+
+
+### `loc` V.S. `iloc`
+`loc` function for label-based extraction
+* `elections.loc[1:10, ["Candidate", "Party"]]`: parameters are [row label, column label] or 
+* `elections.loc[[1, 2], ["Candidate", "Party"]]` for specific labels
+* The row argument can not be skipped, while the column argument can skip to indicate all columns
+
+`iloc` function for integer-based extraction
+* The integer means the position of the data in the `DataFrame`, counting from the 0. Basically it's equivalent to the index.
+* The arguments to `.iloc` can be
+  * A list: `elections.iloc[[1, 2, 3], [1, 2]]` grab the exact data.
+  * A slice(**exclusive** of the right hand side of the slice): `elections.iloc[[1, 2, 3], 0:3]`
+  * A single value. `elections.iloc[[1, 2, 3], 1]`
+
+When to use?
+* Safer and Readable: For `loc`, if data gets updated, rows shuffle, column shuffle, we do not want to rely on the position index.
+* Grab the median number in a sorted array or data. e.g. movie earning.
+
+### `[]` square bracket
+`[]` is for context-dependent extraction
+* Only takes one argument, which may be
+  * A slice of row numbers `iloc` A range of values->integer
+  * A list of of column labels `loc`. `elections[["Candidate", "Party"]]`
+  * A single column label `loc`
+
+Why use?
+* Make the code shorter
+
+Chaining
+* `weird['b'][1]` will give a whole column first and then choose the item
+
+### Conditional Selection
+how to automatically select `names[[True, False, True, True, False]]`?
+* Create a `Series` as a boolean series to filter the `DataFrame`
+  * `logical_operator = (names["Sex"] == 'F')`
+* `loc` can also work: `names.loc[names["Sex"] == 'F', :]`
+
+How to combine different conditions
+* `&` is `and`, `|` is `or`: `names[(names["Sex"] == 'F') | (names["Years"] < 2000)]`
+* Bitwise operation & | ^(XOR exclusive or) ~(not)
+
+
+Alternatives to direct boolean array selection
+* `.isin`: `names[names["Name"].isin(chosen_names)]` chosen_name is a list that is provided.
+* `.str.startwith`: `names[names["Name"].str.startwith("N")]`
+
+### Other operations on column
+Adding a column:
+* Use `[]` to reference the desired new column
+* assign this column to a `Series` of the appropriate length
+```python
+babyname_lengths = babynames["Name"].str.len()
+babynames["name_lengths"] = babyname_lengths
+```
+
+You can also:
+* Modify a column `babynames["name_lengths"] = babynames["name_lengths"]-1`
+* Rename a column `.rename(columns={"Original": "New"})`
+* Drop a column/row `.drop("Label", axis="columns")`
+
+
+### Utility functions
+* Average number: `np.mean(variable)`
+* `.shape` and `.size` is the capacity
+* `.describe()` provides the summary of the `DataFrame`. Also, `names["Sex"].describe()` is also callable on `Series`
+* `.sample()` random selection of rows from the `DataFrame`, it can be chained with `iloc` [Question] what is replacement?
+* `.value_counts()` counts the number of occurrences of each unique value in a `Series`
+* `.unique()` returns a array of every unique value in a `Series`
+* `Series.sort_values()` equals `DataFrame.sort_values(by=column_name)`
