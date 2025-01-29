@@ -36,7 +36,8 @@ Techniques that you should familiar with:
   * For grid game that need to verify vertically and horizontally, one trick is to write code to verify the matrix for the horizontal cells, transpose the matrix, and reuse the logic for horizontal verification to verify originally vertical cells (which are now horizontal)
   * `transposed_matrix = zip(*matrix)`
 
-
+### Questions
+1. [73 Accepted in 8'34''']Set Matrix Zeros: https://leetcode.com/problems/set-matrix-zeroes/submissions/
 
 
 ## Sorting and searching
