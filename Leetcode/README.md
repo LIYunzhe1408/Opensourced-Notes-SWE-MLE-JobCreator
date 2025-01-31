@@ -38,6 +38,8 @@ Techniques that you should familiar with:
 
 ### Questions
 1. [73 Accepted in 8'34''']Set Matrix Zeros: https://leetcode.com/problems/set-matrix-zeroes/submissions/
+2. [54 Exceed 15 min but correct idea]Spiral Matrix: https://leetcode.com/problems/spiral-matrix/submissions/
+    * Boundary matters a lot.
 
 
 ## Sorting and searching
