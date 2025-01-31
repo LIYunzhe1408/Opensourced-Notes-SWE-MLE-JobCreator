@@ -166,3 +166,27 @@ You can also:
 * `.value_counts()` counts the number of occurrences of each unique value in a `Series`
 * `.unique()` returns a array of every unique value in a `Series`
 * `Series.sort_values()` equals `DataFrame.sort_values(by=column_name)`
+
+
+## Lecture 4: Pandas III
+### Custom Sort
+Remember the method `names.sort_values(by="column_name", ascending=False)`.
+* Approach 2: Use the `key` argument. `lambda x: x.str.len()` where x is the input.
+* Approach 3: Use the `map` function.
+
+### Grouping
+Group together rows that fall under the same category. e.g. group together all rows from the same year. Or, you may use it to perform an operation that aggregates across all rows in the category, like sum up the total number of babies born in that year.
+* `groupby()` + `groupby().agg(sum)`
+* `sum`, `mean`, `max`... can be called in `agg`. Or customized functions can be called.
+* `max` will affect all columns, which lead to an entire row of the max for the specific group.
+![alt text](image-1.png)
+* `groupby('Year').count()` returns the number in a group. null value will not be counted.
+* Filter. `groupby().filter(f)` where `f = lambda sf: sf["num"].sum() > 10` sf is the whole table that is grouped. Output structure will be the same as the one before `groupby()` unless the elements are not been filtered.
+
+### Pivot table
+Group two or more columns of interest.
+
+
+### Joining Tables
+`pd.merge(left=xxx, right=xxx, left_on=, right_on=)` or `DataFrame.merge(right=xxxx, left_on=column_name, right_on=column)`
+
