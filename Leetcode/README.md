@@ -1,3 +1,8 @@
+# Coding interview preparation
+Author: Yunzhe Jonas Li  @ UC Berkeley\
+Email: liyunzhe.jonas@berkeley.edu
+
+
 ## Syntax tips
 1. Uppercase to lowercase for string: `s.lower()`. 
 2. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
@@ -21,7 +26,44 @@
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Matrix
+## [New]Linked List
+Linked List is used to represent **sequential** data.
+* A linear collection of `nodes` where data and a reference to next element are stored.
+* Each contains an address of next element.
+* Opposed to `Array`: Order is given by their physical placement in memory
+
+Linked List features:
+* $O(1)$ time complexity for insertion and deletion of a node.
+* $O(n)$ time complexity for access. Traverse is mandatory.
+
+There are 3 types of linked list:
+* Singly linked list: each node points to the next node and the last node points to `null`
+* Doubly linked list: each node has two pointers, `next` points to the next node and `prev` points to the previous node. The `prev` of the first node and the `next` of the last node points to `null`.
+* Circular linked list: A singly linked list where the last node points back to the first node. A circular doubly linked list variant is that the `prev` of the first node points to the last node and the `next` of the last points back to the first node.
+
+Corner cases need to pay attention:
+* empty linked list where the head is `null`
+* single node
+* two nodes
+* **linked list has cycles**: Clarify beforehand with the interviewer whether there can be a cycle in the list.
+  
+Techniques that are effective when coding and you should familiar with:
+* Dummy nodes: Add a placeholder at the head helps to handle many edge cases. In this way, operations will never be done on the head. Be sure to remember to remove them at the end of the operation.
+* Two pointers: 
+  * Get the $k^{th}$ from last node. One pointer is k nodes ahead of the other, when the one ahead reaches the end, the other is k nodes behind.
+  * Detect cycles. One pointer increments twice as much as the other, if two pointers meet, meaning that there is a cycle.
+  * Get the middle node. One pointer increments twice as much as the other, if the faster pointer reaches the end, the slower pointer will be at the middle.
+* Using space: Used for modifying the linked list in-place rather than creating a new linked list. Ideas can be borrowed from the `Reverse a linked list` question below.
+* Elegant modification operations:
+  * Truncate(Shorten/Cut off) a list - Set the `next` pointer to `null` at the last element
+  * Swap values of nodes - just swap value of the nodes as array, there's no need to swap the `next` pointer.
+  * Combine two lists - attach the head of the second list to the tail of the first list.
+
+### Questions
+1. [206 Accepted in 2 min after reviewing the idea] Reverse Linked List: https://leetcode.com/problems/reverse-linked-list/submissions/
+   * Solve in both recursively and iteratively. Recursive way need to review often.
+
+## Matrix
 A matrix is a 2-dimensional array.
 * Corner Case:
   * Empty matrix: Check that none of the arrays are 0 length
