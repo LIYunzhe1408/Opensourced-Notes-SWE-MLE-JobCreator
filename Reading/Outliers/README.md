@@ -45,3 +45,16 @@
 * There's no time unwinding underlying meaning of what others said. Speaker(generally take obligations in western) should speak up clearly and receivers(generally take obligations to unwind speakers' words) should not unwind meanings.
 * Those who are stuck in culture traps should be taken out and re-normed.
 * It is one thing to learn that in a classroom, and quite another to actually do it in the air.
+
+### Rice Paddies and Math tests
+Background: rice paddies is a complex system of dikes and has to be built(not opened up) around the field. Factors like trade-off between yield and how quickly it grew, how well it did in times of drought, how it fared in poor soil offer a slight difference to choose from.
+* Number-naming system is different in Western and Asian languages where the one in English is highly irregular, and the one in Asia is more logical. It helps asian students to learn faster. Then enjoy maths -> work harder -> have more classes -> more willing to do homework -> virtuous circle.
+* Being good at maths or not is rooted in a group's culture(legacy), doing nothing with IQ level.
+* A comparison between diligent peasants in China who work 3,000 hours a year and !Kung men and Europe men.
+* The life of a rice farmer, like the garment in NY that Jewish did, is meaningful
+  * There's a clear relationship between effort and reward, work more, get more.
+  * Complex
+  * Autonomous that the social system in EU was not likely supporting(low-paid slaves), Chinese peasants paid fixed rent fee regardless of harvest. -> did good + extra income
+* Example of a nurse spending 22 minutes on a math problem, persisting and figuring it out eventually.
+  * Success = persistence + doggedness + willingness to make sense of something
+* Cultural legacy shaped traits that affect a lot.
