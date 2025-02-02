@@ -62,6 +62,7 @@ Techniques that are effective when coding and you should familiar with:
 ### Questions
 1. [206 Accepted in 2 min after reviewing the idea] Reverse Linked List: https://leetcode.com/problems/reverse-linked-list/submissions/
    * Solve in both recursively and iteratively. Recursive way need to review often.
+2. [141 Accepted in 4'42''] Linked List Cycle: https://leetcode.com/problems/linked-list-cycle/submissions/
 
 ## Matrix
 A matrix is a 2-dimensional array.
