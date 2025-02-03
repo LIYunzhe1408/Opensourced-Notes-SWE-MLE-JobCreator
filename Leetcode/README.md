@@ -26,7 +26,44 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Linked List
+## [New]Queue
+Queue is a linear collection of elements, like array and linked list, that maintain elements in a sequence.
+* Addition of elements at **one end** of the sequence(`enqueue` operation), called tail, rear, or back of the queue.
+* Removal of elements from **the other end** (`dequeue` operation), called head or front of the queue.
+* This is an abstract data type and can be implemented using `array` or `singly linked list`.
+* The behavior is called `FIFO`(First In First Out). Analogy to people lining up in real life to wait for service or food.
+* **Breadth-first** search is commonly implemented using queues.
+
+Implementation in python is `queue`. And the time complexity of common operations are
+* enqueue: $O(1)$
+* dequeue: $O(1)$
+* front:  $O(1)$
+* back:  $O(1)$
+* isEmpty: $O(1)$
+
+You should be aware that
+* Most languages do not have a built-in `queue` class. You need to implement it using an array or a list with which the dequeue operation(assuming the front of the queue is on the left) will be $O(n)$ because it requires shifting all elements left by one.
+* In such case, you can flag this to the interviewer and say that you assume that there's a queue data structure to use which has an efficient dequeue operation.
+* Corner cases:
+  * empty queue
+  * queue with one item
+  * queue with two items
+
+### Questions
+1. [225 Exceed 15 min but accepted in 3'48'' after capture the idea] Implement stack using queues: https://leetcode.com/problems/implement-stack-using-queues/submissions/
+   * The idea is to keep newly entered element at the front of ‘q1’ so that pop operation dequeues from ‘q1’. ‘q2’ is used to put every new element in front of ‘q1’.
+  ```python
+  import queue
+  q = queue.Queue()
+  q.put(1)
+  q.get()
+  q.empty()
+  ```
+1. 
+
+
+
+## Linked List
 Linked List is used to represent **sequential** data.
 * A linear collection of `nodes` where data and a reference to next element are stored.
 * Each contains an address of next element.
