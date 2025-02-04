@@ -26,7 +26,36 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Queue
+## [New]Stack
+The stack is an abstract data type that supports:
+* `push`: insert a new element on the top of a stack
+* `pop`: remove and return the most recently added element, which is at the top of the stack
+
+As an abstract data type, it can be implemented using `array` or `singly linked list`
+
+The behavior of pushing and popping is called LIFO(Last In First Out), it's an analogy to a set of physical items stacked on top of each other.
+
+Stacks are an important way of supporting:
+* nested or recursive function calls.
+* used to implement `depth-first search`(remember `queue` is used for `breadth-first search`)
+* `depth-first search` can be implemented using recursion or a manual stack.
+
+The time complexity of 
+* `top/peek`, `push`, `pop`, `isEmpty` are all $O(1)$
+* `search` is $O(n)$
+
+Corner cases need to be careful:
+* Empty stack: popping from an empty stack
+* stack with one item
+* stack with two items
+
+### Questions
+1. [20 Accepted in 16'58''] Valid Parentheses: https://leetcode.com/problems/valid-parentheses/submissions/
+2. [232 Accepted in 11'28''] Implement Queue using Stacks: https://leetcode.com/problems/implement-queue-using-stacks/submissions/
+
+
+
+## Queue
 Queue is a linear collection of elements, like array and linked list, that maintain elements in a sequence.
 * Addition of elements at **one end** of the sequence(`enqueue` operation), called tail, rear, or back of the queue.
 * Removal of elements from **the other end** (`dequeue` operation), called head or front of the queue.
@@ -59,7 +88,6 @@ You should be aware that
   q.get()
   q.empty()
   ```
-1. 
 
 
 
