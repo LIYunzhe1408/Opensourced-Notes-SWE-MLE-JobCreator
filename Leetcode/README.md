@@ -26,7 +26,64 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Stack
+## [New]Tree
+A tree is an abstract data type that represents a hierarchical structure of a set of connected nodes. Each node can be connected to many children, but must be connected to exactly one parent, except for the root node that has no parent node.
+* An undirected `graph` without cycles.
+* Each node can be the root node of its own subtree, making recursion a useful for tree traversal
+* Binary tree will be usually asked in interviews as opposed to ternary(3 children) or N-ary(N children) trees.
+* Check out what is `Trie` in later sections which is an advanced tree used for efficiently sorting and searching strings.
+
+Common terms in a tree:
+* Neighbor: parent or child of a node
+* Ancestor: a node reachable by traversing its parent chaining
+* Descendent: a node in the node's subtree
+* Degree: number of children of a node
+* Degree of a tree: maximum degree of nodes in the tree
+* Distance: Number of edges along the shortest path between 2 nodes
+* Level/Depth: Number of edges along the unique path between a node and the root node
+* Width: Number of nodes in a level
+
+A binary tree is the tree where each node in it has a maximum of 2 children.
+* Complete binary tree: every level, except the last, is completely filled, and all nodes in the last level are as far left as possible.
+* Balanced binary tree: the left and the right subtrees of every node differ in height by no more than 1.
+* Traversal:
+  * In-order traversal: Left -> Root -> Right
+  * Pre-order traversal: Root -> Left -> Right
+  * Post-order traversal: Left -> Right -> Root
+
+Binary Search Tree: The in-order traversal will give all the elements in order.
+* Be very familiar with the properties of a BST and validating that a binary is a BST.
+* When a question involves a BST, the interviewer is usually looking for a solution which runs faster than $O(n)$
+* The Access, Search, Insert, and Remove of a BST is all $O(n)$
+
+In interview, you should be very familiar with:
+* pre-oder, in-order, post-order traversal recursively
+* and iterative approach as an extension because the interviewer may ask the candidate for this one if you finish writing the recursive approach too quickly
+* corner cases:
+  * empty Tree
+  * single node
+  * tree with two nodes
+  * very skewed tree (like a linked list)
+  
+Common routines that tree questions will make use of:
+* Insert value
+* Delete value
+* Count number of nodes in the tree
+* Whether a value is in the tree
+* Calculate the height of the tree
+* Binary Tree:
+  * Determine if it is a binary search tree
+  * Get Maximum value
+  * Get Minimum value
+
+Techniques that may be used to solve tree questions:
+* Recursion: When you notice the subtree problem can be used to solve the entire problem, try using recursion
+  * Always remember to check for the base case, usually where the node is `null`
+* Traversal by level: Breadth-first search
+* Summation of nodes: Be sure to check whether nodes can be negative.
+
+
+## Stack
 The stack is an abstract data type that supports:
 * `push`: insert a new element on the top of a stack
 * `pop`: remove and return the most recently added element, which is at the top of the stack

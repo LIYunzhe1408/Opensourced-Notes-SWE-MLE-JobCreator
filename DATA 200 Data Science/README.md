@@ -190,3 +190,34 @@ Group two or more columns of interest.
 ### Joining Tables
 `pd.merge(left=xxx, right=xxx, left_on=, right_on=)` or `DataFrame.merge(right=xxxx, left_on=column_name, right_on=column)`
 
+
+
+## Lecture 5: Data Wrangling
+EDA is unboxing data. Explanatory Data Analysis
+* We often prefer rectangular data
+  * Easy to manipulate and analyze
+  * Tables and matrices are two kinds of rectangular data
+
+Structure: How `.csv` or `.tsv` file works in python?
+* `.csv` file expects the delimiter of comma rather than semi-comma, while `.tsv` file expects the delimiter to be the `tab`.
+  * use `sep='\t'` in `pd.read_csv()` to indicate the separate delimiter is `tab`
+  * Why `.csv` or `.tsv`
+* `repr(string)` will make the string to be raw, when printing, you will know the exact content in the string.
+* When reading the csv file using pandas `pd.read_csv()`, assign `header=1` to indicate the header is the second row.
+* When merge, argument `left_on` and `right_on` are the columns that two dataframe going to match. If there are duplicate columns, suffixes `_x` and `_y` will be used to modify these columns. We can use `suffixes=('_case', '_population')` in the merge function to specify the suffix we want to have for duplicate columns
+* JSON(JavaScript Object Notation) is another important, non-rectangular, and commonly used structure
+  * A list of dictionaries. Basically they're nested dictionaries.
+  * The type of the output of `json.load(f)` is `dict`, use `.keys()` to grab the top level keys.
+  * Use panda to read json, `pd.read_json()`, then `pd.DataFrame()` to rectangularize a json data.
+
+Granularity: How fine is each datum
+* Fine grained: one row represents a person
+* Coarse grained: Mixing groups all together.
+* Rollup record = a summary of record
+* `.drop(0)` to drop the first row.
+* assign `thousand=','` when `pd.read_csv()` to tell the panda that every time seeing a comma, it's a sign of thousand format.
+
+Variable types: Quantitative and Qualitative(categorical)
+* Quantitative: numerical values. Price, temperature
+* Qualitative: Ordinal-grade level, age group(ordered). Nominal-Cal ID number, phone brand(unordered)
+* When storing time, we use the integer(seconds) that from the Jan 1 1970. Before that, it will be negative, after that, will be positive.
