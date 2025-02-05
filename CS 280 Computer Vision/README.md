@@ -95,3 +95,40 @@ What if we want solid models instead of just points(what we have solved)? Multi-
 * Voxel is a very expensice way to represent.
 * What about 4D reconstruction?
 
+## Dynamic Perspective
+Take differentiate -> movement in the scene. Movement is represented by $w$ and $t$. differentiate $X$, $Y$, $Z$ to movement in the world, then $x$, $y$ are movement in the image.
+* $T$ and $w$ are the movement of the object, but X,Y,Z are the points on the objects. not all points on the object are moving.
+* The movement in the image  plane is called optical flow.
+* Vectors are the image (Example 1, landing; Example 2: side window of a car)
+* Why the vector nearer to eyes are larger? because of the fact of the perspective projection of pinhole camera. $x=-\frac{fX}{Z}$. It's called motion parallelism.
+  * The motion in the scene may be same, but in the projection was different.
+
+(x,y) are the location of the pixel. (u, v) are 2-d vectors. (u,v)s are not constant. We want to figure the relationship between these two.
+* Vector field.
+* Dependence: XYZ, t, w
+
+How does a point X in the scene move?
+* The negative sign means the motion between are relatively countered
+* [Review Cross product]
+* Basically physics and math
+
+u = x dot, v = y dot. x = fX / Z, differentiate x. x dot = x dot z - x z dot / z^2
+* how to get x dot, y dot and z dot. -> When calculate x dot, plug the equation from physics to substitute y dot, and z dot
+* u is the horizontal component of the optical, v is the vertical component.
+* u and v are defined for x dot and y dot, then they are equivalent.
+* Assume the world is stationary and the rotation and translation are for the camera.
+* low case is for the image location. Z is the distance in the world, indicating that if the object is very far in the world, it will not move at all.
+
+Optical flow for pure translation
+* Along z axis. Move in constant speed. then t_z/Z is a constant. The flow gives the information of ratio rather than time and speed.
+* Along the optical axis. 
+
+
+Optical flow for general translation
+* the horizontal and the vertical component are zero
+* change x and y in terms of x' and y'
+* Use this location, call it Focus of Expansion? (0,0) if moving in Z
+* The location of FOE tells which direction you are moving towards.
+* Flow does not the actual speed, give the direction of contact?
+
+Rotation part gives no information of the scene but just the rotation.
