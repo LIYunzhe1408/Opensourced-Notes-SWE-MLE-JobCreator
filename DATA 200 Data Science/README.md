@@ -221,3 +221,8 @@ Variable types: Quantitative and Qualitative(categorical)
 * Quantitative: numerical values. Price, temperature
 * Qualitative: Ordinal-grade level, age group(ordered). Nominal-Cal ID number, phone brand(unordered)
 * When storing time, we use the integer(seconds) that from the Jan 1 1970. Before that, it will be negative, after that, will be positive.
+
+
+## Homework 2 notes
+1. In general, we strongly suggest having your filenames hard coded as string literals only once in a notebook. It is very dangerous to hardcode things twice because if you change one but forget to change the other, you can end up with bugs that are very hard to find.
+2. Often when working with zipped data, we'll never unzip the actual zip file. This saves space on our local computer. However, for this homework the files are small, so we're just going to unzip everything. This has the added benefit that you can look inside the CSV files using a text editor, which might be handy for understanding the structure of the files. The cell below will unzip the CSV files into a sub-directory called `data`.

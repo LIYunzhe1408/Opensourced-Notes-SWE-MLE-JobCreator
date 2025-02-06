@@ -86,6 +86,26 @@ Techniques that may be used to solve tree questions:
 1. [104 Accepted in 16'28''] Maximum Depth of Binary Tree: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/
    * Three solutions: Recursive DFS, Iterative DFS(Stack), BFS(Queue)
 2. [226 Accepted in 2'43''] Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/submissions/
+3. [235 Accepted in 29'02''] Lowest Common Ancestor: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/submissions/
+   * Solution 1: Record all ancestors and determine the lowest using recursive search in BST.
+     * Routine for search in BST: 
+    ```python
+    def search(root, key):
+  
+    # Base Cases: root is null or key 
+    # is present at root
+    if root is None or root.key == key:
+        return root
+    
+    # Key is greater than root's key
+    if root.key < key:
+        return search(root.right, key)
+    
+    # Key is smaller than root's key
+    return search(root.left, key)
+    ```
+    
+   * Solution 2: Process two target nodes together and identify the split node.
 
 
 ## Stack
