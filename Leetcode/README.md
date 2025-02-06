@@ -82,6 +82,11 @@ Techniques that may be used to solve tree questions:
 * Traversal by level: Breadth-first search
 * Summation of nodes: Be sure to check whether nodes can be negative.
 
+### Questions
+1. [104 Accepted in 16'28''] Maximum Depth of Binary Tree: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/
+   * Three solutions: Recursive DFS, Iterative DFS(Stack), BFS(Queue)
+2. [226 Accepted in 2'43''] Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/submissions/
+
 
 ## Stack
 The stack is an abstract data type that supports:
