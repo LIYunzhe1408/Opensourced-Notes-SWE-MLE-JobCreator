@@ -226,3 +226,38 @@ Variable types: Quantitative and Qualitative(categorical)
 ## Homework 2 notes
 1. In general, we strongly suggest having your filenames hard coded as string literals only once in a notebook. It is very dangerous to hardcode things twice because if you change one but forget to change the other, you can end up with bugs that are very hard to find.
 2. Often when working with zipped data, we'll never unzip the actual zip file. This saves space on our local computer. However, for this homework the files are small, so we're just going to unzip everything. This has the added benefit that you can look inside the CSV files using a text editor, which might be handy for understanding the structure of the files. The cell below will unzip the CSV files into a sub-directory called `data`.
+
+
+## Lecture 6: Text Wrangling and Regex(Regular expression)
+Potential issues in data:
+* Duplicate rows, columns -> Identify and ignore/drop
+* Labeling error -> apply corrections
+* Missing data -> 
+  * Keep as NaN: Good default, create a `Missing` category
+  * **Bad Default** Dangerous to drop, but you can after thinking why it's missing
+  * Imputation: Infer missing values: Mean/Median to replace NaN
+
+For text, we want to:
+* Canonicalization: covert data into a standard form.
+  * Extract patterns in text and change them to fit our expectation
+* Extract Information
+
+Regex Basics:
+* Concatenation: BAAB matches BAAB.  
+* BAB | BAAB matches BAB or BAAB = | is or
+* AB*A matches AA, ABA, ABBA = any numbers of B
+* (AB)*A matches A, ABA, ABABA = () is a group
+* .u.u.u. matches CUMULUS JUGULUM = .- look for any character other than \n
+* [A-Za-z] matches A, a, B = define a character class
+* AB+ matches AB, ABB, ABB + one or more
+* AB? matches A, AB = ? zero or one
+* AB{2} matches ABB = {x} repeat exactly x times
+* AB{0, 2} matches AB, ABB, A = {x, y} repeat between x and y times
+* ^abc matches abc 123 not 123 abc = matches beginning
+* abc$ matches 123 abc not abc 123 = matches the end of a string (Start with power, end with money)
+* 
+
+More on Character Classes
+* \w, \W(not): [A-Z] any uppercase letter between A and Z
+* \d, \D(not): [0-9] any digit between 0 and 9
+* \s, \S(not): [A-Za-z0-9] any letter any digit
