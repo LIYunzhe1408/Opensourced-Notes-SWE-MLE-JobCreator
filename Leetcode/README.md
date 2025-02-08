@@ -125,7 +125,8 @@ Topological Sort:
 * Return the result list if the length of result list is equal to the number of nodes.
 
 ### Questions
-
+1. [200 Accepted in 32'28''] Number of Islands: https://leetcode.com/problems/number-of-islands/submissions/
+   * DFS
 
 ## Tree
 A tree is an abstract data type that represents a hierarchical structure of a set of connected nodes. Each node can be connected to many children, but must be connected to exactly one parent, except for the root node that has no parent node.
