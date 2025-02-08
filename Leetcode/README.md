@@ -26,7 +26,108 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New]Tree
+## [New] Graph
+A graph is a structure containing a set of objects (vertices or nodes) where there can be edges between nodes.
+* Edges can be directed or undirected, optionally having values(a weighted graph)
+* Trees are undirected graph in which any two vertices are connected by exactly one edge and there are no cycles.
+* Used to build relationship between **unordered entities**
+    * Friendship between people: nodes are people, edges represent having a relationship
+    * Distance between locations: each node is a location, edges represent two locations are connected, values are distances
+
+Graph representations: you can be given a list of edges, and you should build your own graph from the edges so that you can perform a traversal on them.
+* Adjacency matrix: Rare
+* Adjacency list: Rare
+* Hash table of hash tables: simplest approach during algorithm interviews
+* In interview, graphs are commonly given in the input as 2D matrices where cells are the nodes and each cell can traverse to its adjacent cells(Up/down/left/right. Always ensure:
+  * current position is within the boundary
+  * current position has not been visited
+
+Time complexity:
+* DFS: $O(|V|+|E|)$
+* BFS: $O(|V|+|E|)$
+* Topological sort: $O(|V|+|E|)$
+
+You need to be aware that
+* In a graph that allows for cycles, handle cycles and keep a set of **visited** vertices when traversing
+* Always keep track of visited nodes, otherwise your code could end up in an infinite loop
+* Empty graph
+* graph with one or two nodes
+* disconnected graph
+* graph with cycles
+
+Algorithms for graph search:
+* Common: BFS, DFS
+* Uncommon: Topological Sort, Dijkstra's Algo
+* Almost Never: Bellman-Ford algorithm, Floyd-Warshall algorithm, Prim's algorithm, Kruskal's algorithm. Your interviewer likely doesn't know them either.
+
+Depth First Search: explores as far as possible along each branch before backtracking
+```python
+def dfs(matrix):
+    if not matrix:
+        return
+    
+    rows, cols = len(matrix), len(matrix[0])
+    visited = set()
+    directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
+
+    def traverse(i, j):
+        if (i, j) in visited:
+            return
+        
+        visited.add((i, j))
+        for direction in directions:
+            next_i, next_j = i + direction[0], j + direction[1]
+            if 0 <= next_i <= rows and 0 <= next_j <= cols:
+                # Any conditions that expected by specific questions
+                traverse(next_i, next_j)
+    for i in range(rows):
+        for j in range(cols):
+            traverse(i, j)
+```
+
+Breadth First Search: explores all directions at the present node
+```python
+from collections import deque
+
+def bfs(matrix):
+    if not matrix:
+        return
+    
+    rows, cols = len(matrix), len(matrix[0])
+    visited = set()
+    directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
+
+    def traverse(i, j):
+        queue = deque([(i, j)])
+        while queue:
+            curr_i, curr_j = queue.popleft()
+            if (curr_i, curr_j) not in visited:
+                visited.add((i, j))
+            for direction in directions:
+                next_i, next_j = i + direction[0], j + direction[1]
+                if 0 <= next_i <= rows and 0 <= next_j <= cols:
+                    # Any conditions that expected by specific questions
+                    queue.append((next_i, next_j))
+    for i in range(rows):
+        for j in range(cols):
+            traverse(i, j)
+```
+Topological Sort:
+* Initialize a `queue`, a nodes dictionary to store in/out degree/nodes' set for each node, and a result order list.
+  * In degree is the condition to determine whether this node has no dependence and can be added into the queue
+* Process every node to record their in degree and out nodes' set
+* Append all nodes that have 0 in degree into the queue.
+* When the queue is not empty
+  * Pop out the front node, check if this node the dependence of other nodes
+  * Decrement the in degree by one for the nodes that depends on this popped out node
+  * Append all nodes that have 0 in degree right now in to the queue.
+  * Append current popped out node into result list.
+* Return the result list if the length of result list is equal to the number of nodes.
+
+### Questions
+
+
+## Tree
 A tree is an abstract data type that represents a hierarchical structure of a set of connected nodes. Each node can be connected to many children, but must be connected to exactly one parent, except for the root node that has no parent node.
 * An undirected `graph` without cycles.
 * Each node can be the root node of its own subtree, making recursion a useful for tree traversal
