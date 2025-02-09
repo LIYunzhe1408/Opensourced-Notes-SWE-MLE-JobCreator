@@ -126,7 +126,9 @@ Topological Sort:
 
 ### Questions
 1. [200 Accepted in 32'28''] Number of Islands: https://leetcode.com/problems/number-of-islands/submissions/
-   * DFS
+   * DFS or BFS
+2. [733 Accepted in 9'23''] Flood Fill: https://leetcode.com/problems/flood-fill/submissions/
+   * BFS
 
 ## Tree
 A tree is an abstract data type that represents a hierarchical structure of a set of connected nodes. Each node can be connected to many children, but must be connected to exactly one parent, except for the root node that has no parent node.
