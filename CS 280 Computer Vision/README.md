@@ -94,6 +94,7 @@ What if we want solid models instead of just points(what we have solved)? Multi-
 
 * Voxel is a very expensice way to represent.
 * What about 4D reconstruction?
+* Relation between correspondences, camera(motion), 3D points(structure).
 
 ## Dynamic Perspective
 Take differentiate -> movement in the scene. Movement is represented by $w$ and $t$. differentiate $X$, $Y$, $Z$ to movement in the world, then $x$, $y$ are movement in the image.
