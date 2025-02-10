@@ -129,6 +129,43 @@ Topological Sort:
    * DFS or BFS
 2. [733 Accepted in 9'23''] Flood Fill: https://leetcode.com/problems/flood-fill/submissions/
    * BFS
+3. [542 Exceed 15'] 01 Matrix: https://leetcode.com/problems/01-matrix/submissions/
+   * Multi-source BFS
+   * Use single-source BFS when the problem focuses on one starting point: Shortest path in a maze, exploring a graph from one node
+   * Use multi-source BFS when multiple starting points are given, and results depend on finding the nearest or shortest distance to any of those starting points: Nearest distance from multiple 0 cells to all other cells, finding the closest fire station to all houses in a city grid.
+```python
+  from collections import deque
+
+  def multi_source_bfs(grid):
+      rows, cols = len(grid), len(grid[0])
+      visited = set()  # To track visited cells
+      queue = deque()  # Initialize the queue with all sources
+      
+      # Add all source cells (e.g., cells with value 0) to the queue
+      for r in range(rows):
+          for c in range(cols):
+              if grid[r][c] == 0:  # Assuming 0 is a source in this problem
+                  queue.append((r, c))
+                  visited.add((r, c))  # Mark as visited
+      
+      # Directions for moving up, down, left, right
+      directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+      
+      while queue:
+          r, c = queue.popleft()  # Dequeue the current cell
+          
+          # Process the cell (e.g., calculate distance or update state)
+          # Example: print(f"Processing cell ({r}, {c})")
+  
+          for dr, dc in directions:
+              nr, nc = r + dr, c + dc
+              
+              # Check if the neighbor is within bounds and not visited
+              if 0 <= nr < rows and 0 <= nc < cols and (nr, nc) not in visited:
+                  queue.append((nr, nc))  # Add neighbor to queue
+                  visited.add((nr, nc))  # Mark neighbor as visited
+```
+   
 
 ## Tree
 A tree is an abstract data type that represents a hierarchical structure of a set of connected nodes. Each node can be connected to many children, but must be connected to exactly one parent, except for the root node that has no parent node.
