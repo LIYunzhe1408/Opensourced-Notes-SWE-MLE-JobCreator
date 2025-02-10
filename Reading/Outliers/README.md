@@ -58,3 +58,18 @@ Background: rice paddies is a complex system of dikes and has to be built(not op
 * Example of a nurse spending 22 minutes on a math problem, persisting and figuring it out eventually.
   * Success = persistence + doggedness + willingness to make sense of something
 * Cultural legacy shaped traits that affect a lot.
+
+### Marita's Bargain
+1. over-study -> rest to enhance cognitive and analytical ability ^ conflict with asian's paddy(more plot more got) because the western rhythm of the agriculture season -> long summer vacation
+   * Insanity
+   * Mental disorder
+2. Kids in KIPP spend 50-60% more time learning than the traditional public school student
+3. More time in class will lead to:
+   * teacher can explain more things
+   * students can digest everything that's going on with better understanding and greater retention in slower pace
+   * **To let students see clear relationship between effort and reward**
+   * Get up early and spend more time in school.
+4. Outliers are those who have been given opportunities and who have the strength and presence of mind to seize them.
+
+### A Jamaican Story
+1. The success of outliers are products of history and community, of opportunities and legacy.
