@@ -26,7 +26,39 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Graph
+## [New] Heap
+A heap is a specialized `tree-based` data structure which is a completed tree that satisfies heap properties:
+* Max heap: In a max heap, the value of the root node must be **greatest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
+* Min heap: In a max heap, the value of the root node must be **smallest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
+
+In algorithm interviews, heaps and priority queues can be treated as the same data structure. As it is useful when
+* it is necessary to repeatedly remove the object with the highest(lowest) priority
+* need to be interspersed with removals of the root node. 
+* In `C++` and `Java`, use `PriorityQueue`, while in `python`, you can use `heapq`
+
+The time complexity is:
+* Find max/min: $O(1)$
+* Insert: $O(log(n))$
+* Remove: $O(log(n))$
+* Heapify(create a heap out of given array of elements): $O(n)$
+
+Techniques:
+* If you see a **top or lowest k** being mentioned in the question, it is usually a signal that a heap can be used to solve the problem.
+* If you require the top k elements use a Min Heap of size k. Iterate through each element, pushing it into the heap (for python `heapq`, invert the value before pushing to find the max). Whenever the heap size exceeds k, remove the minimum element, that will guarantee that you have the k largest elements.
+
+When to use heap and when to use sort?
+* Use a Heap (Priority Queue) when:
+  * Elements arrive dynamically and need to be processed incrementally.
+  * You need frequent access to the smallest/largest element.
+  * Only the top K elements are required.
+  * When we need to construct the final list dynamically instead of sorting all elements at once.
+* Use Sorting Later when:
+  * You already have all elements and only need a final sorted result.
+
+### Questions
+
+
+## Graph
 A graph is a structure containing a set of objects (vertices or nodes) where there can be edges between nodes.
 * Edges can be directed or undirected, optionally having values(a weighted graph)
 * Trees are undirected graph in which any two vertices are connected by exactly one edge and there are no cycles.

@@ -133,3 +133,11 @@ Optical flow for general translation
 * Flow does not the actual speed, give the direction of contact?
 
 Rotation part gives no information of the scene but just the rotation.
+
+
+## Image
+* Irradiance
+* The response at a pixel is propotional to $E\delta{A}\delta{t}$
+* Steradians
+* Camera measures image irradiance which is proportional to scene radiance in the direction of the camera.
+* Take lots of photos surrounding the object to capture light field, This is the basis of NeRF(Neural Radiance Field) reconstructions
