@@ -56,7 +56,8 @@ When to use heap and when to use sort?
   * You already have all elements and only need a final sorted result.
 
 ### Questions
-
+1. [23 Exceed 15'] Merge K Sorted List: https://leetcode.com/problems/merge-k-sorted-lists/submissions/
+   * min_heap to keep k elements rather than brute force
 
 ## Graph
 A graph is a structure containing a set of objects (vertices or nodes) where there can be edges between nodes.
