@@ -261,3 +261,32 @@ More on Character Classes
 * \w, \W(not): [A-Z] any uppercase letter between A and Z
 * \d, \D(not): [0-9] any digit between 0 and 9
 * \s, \S(not): [A-Za-z0-9] any letter any digit
+
+
+
+## Lecture 7: Visualization
+Goal of visualization
+* High-level overview of complex dataset
+* Help us understand data/result better
+* Communicate results/conclusions to others
+
+Distribution describes
+* The **set of values** that a variable can possibly take.
+* the **frequency** with which each value occurs
+* ... for a single variable.
+* The percentages should sum to 100%
+
+
+
+Several visualization methods
+* Bar plots
+  * import matplotlib    
+    * `import matplotlib.pyplot as plt`
+  * Use seaborn
+    * `import seaborn as sns`
+    * `sns.countplot(data=wb, x="Continent")`
+* Distribution of quantitative variables
+* Side-by-side box and violin plots.
+  * Quartiles
+  * interesting: the whisker in a box plot is not exactly the maximum or minimum value. They indicate the expected upper or lower bound of the data points, the points outside of them are outliers.
+* Histograms
