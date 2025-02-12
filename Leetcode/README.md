@@ -58,6 +58,9 @@ When to use heap and when to use sort?
 ### Questions
 1. [23 Exceed 15'] Merge K Sorted List: https://leetcode.com/problems/merge-k-sorted-lists/submissions/
    * min_heap to keep k elements rather than brute force
+2. [973 Accepted in 6'44''] K Closet Points to Origin: https://leetcode.com/problems/k-closest-points-to-origin/submissions/
+   * min_heap then pop -> $O(k\log{n})$ but space complexity is $O(n)$
+   * max_heap to keep k elements -> $O(n\log{k})$, space complexity is $O(k)$
 
 ## Graph
 A graph is a structure containing a set of objects (vertices or nodes) where there can be edges between nodes.
