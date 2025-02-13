@@ -26,7 +26,29 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Heap
+## [New] Trie
+A trie is a special tree(prefix tree) that makes searching and sorting strings more efficient.
+* Conduct searches
+* Provide autocomplete
+
+Be familiar with 
+* Implementing from scratch, a `Trie` class and its `add`, `remove`, and `search` methods.
+* Preprocess a dictionary of words(given in a list) into a tree, will improve the efficiency of searching for a word of length k, among n words. Searching becomes $O(k)$ instead of $O(n)$
+
+Be aware of corner cases:
+* Searching for a string in an empty trie.
+* Inserting empty strings into the trie.
+
+Time complexity:
+* Search, insert, remove will cost $O(m)$, m is the length of the string used in the operation.
+
+Routine:
+* Search hit and search miss: implemented by a node whose value was initially null and has a child set of 26 letters. If there was a word in the trie, the ending letter will a value rather than null.
+* Remove: find the node for that key, set its value to null. Check if its references are null, if yes, remove it and back up the trie.
+* No collision to deal with, but take a lot of memory and space with empty null pointers
+
+
+## Heap
 A heap is a specialized `tree-based` data structure which is a completed tree that satisfies heap properties:
 * Max heap: In a max heap, the value of the root node must be **greatest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
 * Min heap: In a max heap, the value of the root node must be **smallest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
