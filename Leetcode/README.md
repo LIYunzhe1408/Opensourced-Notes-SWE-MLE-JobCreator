@@ -26,7 +26,38 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Trie
+## Interval
+Interval questions are a subset of array questions where you are given an array of two-element arrays (an interval) and the two values represent a start and an end value.
+* An example interval array: `[[1, 2], [4, 7]]`.
+* It will be tricky to those who have not tried them before because of the sheer number of cases to consider when they overlap
+
+Things to look out:
+* Clarify with the interviewer whether [1, 2] and [2, 3] are considered overlapping intervals as it affects how you will write your equality checks.
+* Clarify whether an interval of [a, b] will strictly follow a < b (a is smaller than b)
+* No intervals
+* Single interval
+* Two intervals
+* No-overlapping intervals
+* An interval totally consumed within another interval
+* Duplicate intervals(exact the same start and end)
+* Intervals which start right where another interval ends: `[[1, 2], [2, 3]]`
+
+Techniques:
+* Sort the array of intervals by its starting point
+* Check if two intervals overlap
+  ```python
+  def check_overlap(a, b):
+    return a[0] < b[1] and b[0] < a[1]
+  ```
+* Merging two intervals
+  ```python
+  def merge_overlapping_intervals(a, b):
+    return [min(a[0], b[0]), max(a[1], b[1])]
+  ```
+  
+
+
+## Trie
 A trie is a special tree(prefix tree) that makes searching and sorting strings more efficient.
 * Conduct searches
 * Provide autocomplete
