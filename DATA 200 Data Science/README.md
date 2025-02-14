@@ -290,3 +290,19 @@ Several visualization methods
   * Quartiles
   * interesting: the whisker in a box plot is not exactly the maximum or minimum value. They indicate the expected upper or lower bound of the data points, the points outside of them are outliers.
 * Histograms
+
+
+## Lecture 8
+Apply transformation can make it clear seeing the distribution of data.
+* log
+* power
+* root
+
+Encoded variable
+* x
+* y
+* color
+* area
+
+
+Avoid Area charts! Length bar is better. Avoid jiggling the baseline. Line plot is much easier to understand.
