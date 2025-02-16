@@ -26,6 +26,27 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
+## [New] Dynamic programming
+1. Recognize a DP problem
+   DP is a method for solving problems by breaking them down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions. The next time the same subproblem occurs, instead of recomputing its solution, you simply look up the previously computed solution.
+   Can the problem solution be expressed as a function of solutions to similar smaller problems?
+2. Identify problem variables
+   A way to determine the number of changing parameters is to list examples of several subproblems and compare the parameters. Counting the number of changing parameters is valuable to determine the number of subproblems we have to solve
+3. Clearly express the recurrence relation
+  Assuming you have computed the subproblems, how would you compute the main problem? A sample recurrence relation in the example:
+  `canStop(S, P) = canStop(S, P + S) || canStop(S — 1, P + S — 1) || canStop(S + 1, P + S + 1)`, which can be explained by pure english that If we can find a way to stop in any of the subproblems above, then we can also stop from (S, P). This is because we can transition from (S, P) to any of the above three options.
+4. Identify the base case
+   A base case is a subproblem that doesn’t depend on any other subproblem. The reason a problem cannot be simplified further is that one of the parameters would become a value that is not possible given the constraints of the problem. In the example, the base case would be:
+   * P should be within the bounds of the given runway
+   * P cannot be such that runway[P] is false because that would mean that we’re standing on a spike
+   * S cannot be negative, and a S==0 indicates that we’re done
+5. Decide if you want to implement it iteratively or recursively.
+   Stack overflow issues are typically a deal breaker and a reason why you would not want to have recursion in a (backend) production system. However, for the purposes of the interview, as long as you mention the trade-offs, you should typically be fine with either of the implementations.
+6. Add memoization
+   * Store your function result into your memory before every return statement
+   * Look up the memory for the function result before you start doing any other computation
+7. Determine Time Complexity
+
 ## Interval
 Interval questions are a subset of array questions where you are given an array of two-element arrays (an interval) and the two values represent a start and an end value.
 * An example interval array: `[[1, 2], [4, 7]]`.
