@@ -306,3 +306,36 @@ Encoded variable
 
 
 Avoid Area charts! Length bar is better. Avoid jiggling the baseline. Line plot is much easier to understand.
+
+
+## Lecture 9: Sampling
+Sampling is to take information from the population and then get inference.
+
+Errors(Variances)
+* Random samples can vary from what is expected, in any direction. -> Increase size of random sample
+
+
+Common Biases
+* Selection biases: Literary Digest poll excluded people not in phone books.
+* Response biases: very depend on how you question. -> improve questions
+* Non-responsive biases: result varies between those who response and those not response
+
+Probability Sample:
+* If we know the probability that any subset of individuals in the sampling frame will be selected, our sample is a probability sample
+
+Simple Random Sample:
+* Without replacement
+* Same chance for every possible group to be selected
+  * Like (3, 13) is 1/10, while (3, 4) is 0 not 1/10
+
+Stratified Random Sampling
+* Split dataset into stratums.
+* The strata is not overlapping with others.
+* Then Simple random sample can be performed on each strata.
+* Benefit: guarantee the proportional representation; reduced chance error.
+* Limitation: add a layer of complexity; population proportions of group is not always known.
+
+Post-stratification:
+1. Divide your sample and population
+2. Calculate the overall response in each sample cell
+3. Aggregate over the sample cells, proportionally weighing each sample cell by the size of the corresponding cell.
