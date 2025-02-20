@@ -26,7 +26,40 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Dynamic programming
+## [New] Binary
+Binary means the binary number system and bit manipulation, which is more commonly used when dealing with lower level systems and programming languages.
+* Convert a number from decimal form into binary form (and vice versa).
+* Techniques
+  * Positive number to Negative number: invert all number ono every position and then add 1
+  * Multiply a number by $2^k$: left shift. `num << k`
+  * Divide a number by $2^k$: right shift `num >> k`
+    * Will the negative number be the same? Specifically, the negative sign `1` will shift?
+    * Arithmetic shift: Shift the sign bit and fill the sign bit with the same value.
+    * Will result in divide number by 2.
+  * Mask:
+    * `&`: `0&0=0`, `0&1=0`, `1&1=1`
+    * `|`: `0|0=0`, `0|1=1`, `1|1=1`
+    * `^`(XOR): `0^0=0`, `0^1=1`, `1^1=0`
+    * Test kth bit is set: `num&(1 << k)!=0`
+    * Set kth bit: `num | (1 << k)`
+    * Clear(Turn off) the kth bit: `num & ~(1 << k)` invert the previous mask
+    * Toggle the kth bit: `num ^ (1 << k)`
+    * Check if a number is a power of 2： Exactly has one `1` in the num. `num & (num-1) == 0` or `num & (-num) == num`
+    * Swapping two variables: XOR is reversible.
+      * `num1 ^= num2` -> `num1 = num1 ^ num2`
+      * `num2 ^= num1` -> `num2 = num2 ^ num1 ^ num2 = num2 ^ num2 ^ num1 = 0 ^ num1 = num1`
+      * `num1 ^= num2` -> `num1 = num1 ^ num2 ^ num1 = num1 ^ num1 ^ num2 = num2` 
+
+Corner cases:
+* Negative numbers
+* Check for overflow or underflow
+
+
+
+
+
+
+## Dynamic programming
 1. Recognize a DP problem
    DP is a method for solving problems by breaking them down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions. The next time the same subproblem occurs, instead of recomputing its solution, you simply look up the previously computed solution.
    Can the problem solution be expressed as a function of solutions to similar smaller problems?
