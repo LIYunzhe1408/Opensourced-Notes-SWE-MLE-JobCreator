@@ -339,3 +339,51 @@ Post-stratification:
 1. Divide your sample and population
 2. Calculate the overall response in each sample cell
 3. Aggregate over the sample cells, proportionally weighing each sample cell by the size of the corresponding cell.
+
+
+## Lecture 10: Introduction to Modeling
+Simple linear regression is introduced today.
+
+What is a model:
+* an idealized representation of a system: The fall of an object on Earth as subject to a constant acceleration due to gravity.
+* a good estimation
+* All models are wrong, but some are useful. None of models are perfect.
+
+Why build a model
+* To explain a complex system or a phenomena, have a simple and interpretable model.
+* To make accurate predictions.
+* To make casual inference about if one thing causes another thing.
+
+What is the regression line
+* The regression line is a unique straight line that minimize the mean squared error
+* Residual value = observed y - regression estimate. $y_i-\hat{y_i}$
+* ![](./questions.png)
+
+What is the correlation
+* the average of the product of x and y, both measured in standard units.
+* Different from the covariance which not divided by $\sigma$ but equals $r\sigma{_x}\sigma{_y}$
+* Measures the strength of a linear association between two variables. r=1 is perfect linear association r=-1 is negative association(it has correlation, but when x increases, y decreases).
+* Increase x, can or cannot predict the value of y.
+* One thing to mention, On a parabola, the correlation between x and y is considered "non-linear" because while there is a clear relationship between the variables, it is not a straight line, meaning a standard correlation coefficient (which measures linear relationships) would be close to zero, even though the data clearly shows a pattern; the relationship is quadratic, where y is proportional to x squared. 
+* Rearrange the correlation, it can be a regression line equation.(slope + intercept)
+
+The modeling process:
+* Dataset is the observation. 
+* x is independent variable, called the input, feature, or the attribute.
+* y is dependent variable, called the output, outcome, or response
+* Use x to predict y, the prediction is denoted as $\hat{y}$
+* Parametric model: $\hat{y_i}=\theta{_0}+\theta{_1}x_i$
+* We will pick the parameters that appears best according to some criterion we choose. So the performance of different $\theta$ to fit a model will be estimated to be evaluated.
+* kNN classifier is not a parametric model.
+
+When build a model:
+1. Choose a model
+2. Choose a loss function
+   * Evaluate how bad the prediction is.
+   * L2 and L1 loss.
+   * Why averaging but not summing up? We want the value to be affected by the dataset size. We wanna normalize.
+   * Empirical risk is the average loss of a model over a given training dataset, depending on $\theta$. It's the risk that we wanna minimize.
+3. Fit the model. Choose the best parameters of the model given our data.
+   * For linear, take derivatives to solve.
+4. Evaluate the model
+
