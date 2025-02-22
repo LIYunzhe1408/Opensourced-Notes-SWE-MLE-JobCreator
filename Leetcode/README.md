@@ -27,7 +27,22 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Math
+## Geometry
+Geometry is a branch of mathematics that is concerned with properties of space that are related with distance, shape, size, and relative position of figures.
+* Only 2D geometry is considered
+
+Corner cases to look out:
+* zero values.
+
+Techniques:
+* Distance between two points: When **comparing** the distance between two points, using dx2 + dy2 is sufficient. It is unnecessary to square root the value
+* Overlapping circles: To find out if two circles overlap, check that the **distance between the two centers** of the circles is less than **the sum of their radii**
+* Overlapping rectangles: 
+  * each one's left should lefter than the other's right; `rect_a.left < rect_b.right and rect_b.left < rect_a.right`
+  * each one's top should higher than the other's bottom; `rect_a.top < rect_b.bottom and rect_b.top < rect_a.bottom`
+
+
+## Math
 Some basic math techniques is helpful to know as you may be asked to implement mathematical operations.
 
 Corner cases to look out:
