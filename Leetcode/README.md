@@ -4,8 +4,9 @@ Email: liyunzhe.jonas@berkeley.edu
 
 
 ## Syntax tips
-1. Uppercase to lowercase for string: `s.lower()`. 
-2. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
+1. `count = {}, count[i] = 1 + count.get(i, 0)`
+2. Uppercase to lowercase for string: `s.lower()`. 
+3. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
     ```python
     sfiltered = ''
 
@@ -13,12 +14,12 @@ Email: liyunzhe.jonas@berkeley.edu
         if (ord(char) >= 97 and ord(char) <= 122):
             sfiltered += char
     ```
-3. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
-4. `list` to `string`: `''.join(list)`
-5. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
-6. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
-7. Use `ord(character)` to convert a single character to integer.
-8. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
+4. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
+5. `list` to `string`: `''.join(list)`
+6. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
+7. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
+8. Use `ord(character)` to convert a single character to integer.
+9. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
    1. `ordered_dict.move_to_end('c', last=True)`
    2. `ordered_dict.popitem(last=True)`: pop the most recently added element
    3. It's a `list` that combines the features of `dict` and order-preserving behavior of a `list`
@@ -26,7 +27,33 @@ Email: liyunzhe.jonas@berkeley.edu
       1. Efficient Lookups
       2. Easy Modification
 
-## [New] Binary
+## [New] Math
+Some basic math techniques is helpful to know as you may be asked to implement mathematical operations.
+
+Corner cases to look out:
+1. If code involves division or modulo, remember to check for division or modulo by 0 case.
+2. Check for and handle overflow/underflow
+3. Negative numbers
+4. Floating point numbers
+5. Multiplication by 1
+
+Common formula
+* check if a number is even: `num % 2 == 0`
+* sum of 1 to N: `(N+1)*N/2`
+* Sum of Geometric Progression: `2^(n+1)-1`
+* Permutation of N: `N!/(N-K)!`
+* Combination of N: `N!/(K!*(N-K)!)`
+
+Techniques:
+* When a question involves "whether a number is a multiple of X", the **modulo** operator would be useful.
+* When dealing with floating point numbers, take note of rounding mistakes. Consider using epsilon comparisons instead of equality checks. E.g. `abs(x - y) <= 1e-6` instead of `x == y`.
+* Implement an operator such as power, square root or division and want it to be faster than O(n)
+  * Doubling(fast exponentiation)
+  * Halving(binary search)
+
+
+
+## Binary
 Binary means the binary number system and bit manipulation, which is more commonly used when dealing with lower level systems and programming languages.
 * Convert a number from decimal form into binary form (and vice versa).
 * Techniques
