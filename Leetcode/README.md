@@ -4,14 +4,15 @@ Email: liyunzhe.jonas@berkeley.edu
 
 
 ## Syntax tips
-1. Be familiar with `OrderedDict`, `move_to_end(key)` and `popitem(last=False)`
-2. Delete last element of a list: `list.pop()`; delete an element in a dict: `del dict[key]`
-3. `random.choices(list, weight=[], k=)`, the return value is a list.
-4. Set the default data type of a dict by `defaultdict(list)`
-5. `list(dict.values())` to fast convert values into a list.
-6. `count = {}, count[i] = 1 + count.get(i, 0)`
-7. Uppercase to lowercase for string: `s.lower()`. 
-8. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
+1. Using mid = left + (right - left) // 2 instead of (left + right) // 2 prevents integer overflow in languages like C++ and Java (where integers are bounded).
+2. Be familiar with `OrderedDict`, `move_to_end(key)` and `popitem(last=False)`
+3. Delete last element of a list: `list.pop()`; delete an element in a dict: `del dict[key]`
+4. `random.choices(list, weight=[], k=)`, the return value is a list.
+5. Set the default data type of a dict by `defaultdict(list)`
+6. `list(dict.values())` to fast convert values into a list.
+7. `count = {}, count[i] = 1 + count.get(i, 0)`
+8. Uppercase to lowercase for string: `s.lower()`. 
+9. Keep only lowercase letters in string. `''.join(str.isalpha, s)` or 
     ```python
     sfiltered = ''
 
@@ -19,12 +20,12 @@ Email: liyunzhe.jonas@berkeley.edu
         if (ord(char) >= 97 and ord(char) <= 122):
             sfiltered += char
     ```
-9. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
-10. `list` to `string`: `''.join(list)`
-11. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
-12. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
-13. Use `ord(character)` to convert a single character to integer.
-14. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
+10. Keep lowercase letters and numbers in string: `[val for val in s.lower() if val.isalpha() or val.isnumeric()]` or `val.isalnum()`
+11. `list` to `string`: `''.join(list)`
+12. Create a dict(hashmap) with default `value` value. `hashmap = defaultdict(int)`
+13. Use `Counter(string)` to create a hashmap with appearance time count, replacing `for` loop.
+14. Use `ord(character)` to convert a single character to integer.
+15. The `OrderedDict` class from Python's `collections` module is a dictionary that remembers the order of key-value pairs in which items are inserted.
    1. `ordered_dict.move_to_end('c', last=True)`
    2. `ordered_dict.popitem(last=True)`: pop the most recently added element
    3. It's a `list` that combines the features of `dict` and order-preserving behavior of a `list`
