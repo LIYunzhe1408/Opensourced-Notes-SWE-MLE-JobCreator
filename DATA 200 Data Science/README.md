@@ -387,3 +387,14 @@ When build a model:
    * For linear, take derivatives to solve.
 4. Evaluate the model
 
+## Lecture 11
+Choose a Model -> Choose a loss function -> Fit the model(minimize the loss) -> Evaluate the model performance
+
+MAbsoluteE and MSquareE
+
+1.Define the objective function as average loss
+* plug in L1 or L2 loss
+2. Find the minimum of the objective function
+   * Differentiate with respect to $\theta$
+   * Set equal to 0
+   * Solve for $\hat{\theta}$
