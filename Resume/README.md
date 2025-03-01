@@ -1,9 +1,18 @@
 #### Tell me about yourself
-**I**: I’m Jonas, a Master’s student in EECS at UC Berkeley with a strong background in robotics and computer vision. \
+**I**: I’m Jonas, a Master’s student in EECS at UC Berkeley with a background in robotics and computer vision. \
 **E**: Over the past 7 years, I have developed real-time perception pipelines and object detection/tracking systems for mobile robots with omnidirectional chassis. \
 **R**: My experience spans both research and industry, during undergrad, I worked on explainable AI for image classification and data mining in materials science, supported by the National Natural Science Foundation of China.
 **W**: Before graduating, I interned at Momenta as a Software Engineer, helping to deliver the first version of the autonomous reversing feature in 6 months. 
-**C**: I feel like I think it's dope to build something with a team, but it's even more dope to bring it to the real world. I really enjoy working in fast-paced environments, where things move quickly and ideas turn into real impact. After talking with Zhengtao at the career fair, I feel like MaxInsight is exactly the kind of place where I can make a real contribution and grow.
+**C[For Research]**: Although I have engaged several computer vision based project, I'm kinda an entry level in VlA model which I think would be the key to any intelligent agents no matter robots or avs. So the project you will launch this summer aligns well with my interest and motivation as I mentioned, so I’m determined to engage with every phase of this project, from design to deployment, and contribute even small yet meaningful advances in this field. Professor Hao Su also did well in bridging industry and research, that's the reason
+
+why interest？
+* My passion for robotics began in middle school and continued through high school FIRST Tech challenges, where I recognized the limitations of human perception. This led me to focus on computer vision during my undergraduate studies, and later—after an industry internship—I discovered how VLA models can overcome many of the downsides of vision-only approaches.
+
+follow-up questions
+* “What benchmarks or metrics do you use to measure success? Are there standardized test scenarios for open-vocabulary, real-world manipulation tasks?”
+* “Do you leverage edge computing or GPU clusters, and how do you balance accuracy with the computational constraints of a real robot system?”
+* “Beyond the immediate project goals, what are your thoughts on scaling up VLA systems to handle even more complex tasks and environments?”
+* I have scheduled a trip to sd this spring recess, Is it possible to visit
 
 ## Momenta
 #### Can you walk me through your experience at Momenta and your role in improving the reversing feature for GM Cadillac Lyriq?
@@ -69,7 +78,10 @@ R (Result):
 * Improved real-world simulation reliability, ensuring the system behaves more naturally in real urban scenarios.
 
 
-stremhtj: engage people
-weekness
+strength: engage people
+weakness
 the person i wanna work with: passion not sleep
 tech trend
+
+
+**C[For Industry]**: I feel like I think it's dope to build something with a team, but it's even more dope to bring it to the real world. I really enjoy working in fast-paced environments, where things move quickly and ideas turn into real impact. After talking with Zhengtao at the career fair, I feel like MaxInsight is exactly the kind of place where I can make a real contribution and grow.
