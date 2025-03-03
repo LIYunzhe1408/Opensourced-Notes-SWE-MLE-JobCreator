@@ -446,5 +446,85 @@ Evaluate the model performance
   * If large values appear unconstrained, squish difference with **log transform**
 * After prediction, we need to transform it back by a inverse function
   * e.g. $\hat{\log(Age)}=\theta_0+\theta_1Length$ -> $\hat{Age}=\exp^{\theta_0+\theta_1Length}$
-![alt text](image-2.png)
+![alt text](lect-11-data%20transformation.png)
 * The reason why we use it is to deal with the initial feature points are not linear, instead of changing a non-linear model, we transform data
+
+
+## Lecture 12: Ordinary Least Square
+### Choose a Model $\hat{Y} = X\theta$
+Multiple linear regression model: A linear combination to predict an output: $\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_px_p$ where $\theta_0$ is the intercept and $\theta_i$ is the slope term for every feature.
+* this multiple linear regression and MSE loss function is called Ordinary Least Squares in statistics.
+* Then to represent in matrix: $\hat{Y}=X\theta$
+
+From one feature to many features:
+![alt text](lect-12-one%20feature%20to%20many%20features.png)
+* Rows represent observation i: $\{x_{i1}, x_{i2}, ..., x_{ip}, y_i\}$
+* Columns represent feature 2: $\{x_{12}, x_{22}, ..., x_{n2}\}$
+
+> What is **Vector Dot Product** or Inner product
+> * Sums up the products of the corresponding entries of the two vectors, return a single number.
+> * $\vec{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ and $\vec{v} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$, what is the $\vec{u}\cdot\vec{v}$
+>   * $\vec{u}\cdot\vec{v}=\vec{u}^T\vec{v}=\vec{v}^T\vec{u} \\ =1\cdot1+2\cdot1+3\cdot1 \\ =6$
+
+Then the representation $\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_px_p$ can be written as
+* $=\theta_0 + \begin{bmatrix}\theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix} \cdot \begin{bmatrix}x_1 \\ x_2 \\ ... \\ x_p \end{bmatrix}$ = $\theta_0\cdot1+\theta_1x_1+\theta_2x_2+...+\theta_px_p$ where 1 is the added column.
+* Then the intercept or bias term is condensed into the vector: $=\begin{bmatrix}\theta_0 \\ \theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix} \cdot \begin{bmatrix}1 \\ x_1 \\ x_2 \\ ... \\ x_p \end{bmatrix}=x^T\theta=\begin{bmatrix}1, x_1, x_2, ... x_p\end{bmatrix} \begin{bmatrix}\theta_0 \\ \theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix}$
+* Dimension check: $x \in \real^{p+1}$, $\theta \in \real^{p+1}$, but $y\in\real$ and $\hat{y}\in\real$. They are scalars
+
+Then we can have a matrix notation. As
+$$\hat{y_1}=\begin{bmatrix}1, x_{11}, x_{12}, ... x_{1p}\end{bmatrix}\theta=x^T_1\theta$$
+$$\hat{y_2}=\begin{bmatrix}1, x_{21}, x_{22}, ... x_{2p}\end{bmatrix}\theta=x^T_2\theta$$
+$$...$$
+$$\hat{y_n}=\begin{bmatrix}1, x_{n1}, x_{n2}, ... x_{np}\end{bmatrix}\theta=x^T_n\theta$$
+
+$$\begin{bmatrix}\hat{y_1} \\ \hat{y_2} \\ \hat{y_3} \\ ... \\ \hat{y_n}\end{bmatrix}=\begin{bmatrix}1, x_{11}, x_{12}, ... x_{1p} \\ 1, x_{21}, x_{22}, ... x_{2p} \\ 1, x_{31}, x_{32}, ... x_{3p} \\ ... \\ 1, x_{n1}, x_{n2}, ... x_{np}\end{bmatrix}\begin{bmatrix}\theta_0 \\ \theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix}$$
+
+$\hat{Y} = X\theta$ where prediction vector $Y\in\real^n$, design matrix $X\in\real^{n\times(p+1)}$, and parameter matrix $\theta\in\real^{(p+1)}$
+
+* The design matrix is different from the observation which include the outcome, but it has the bias column
+
+### Choose a loss function $R(\theta)=\frac{1}{n}(||Y-\hat{Y}||_2)^2$
+> Vector norms and L2 vector norm
+>  * The norm of a vector is some measure of that vector's size
+>  * For the n-dimensional vector $\vec{x}=\begin{bmatrix}x_1 \\ x_2 \\ ... \\ x_n\end{bmatrix}$, the L2 norm is $||\vec{x}||_2=\sqrt{x^2_1+x^2_2+...+x^2_n}=\sqrt{\sum^n_{i=1}(x^2_i)}$
+>  * It can be used to measure the distance of two tips of the vectors $d=||\vec{a}-\vec{b}||_2$
+
+Rewrite mean squared error as squared L2 norm:
+$$R(\theta)=\frac{1}{n}\sum^n_{i=1}(y_i-\hat{y_i})^2 \\ =\frac{1}{n}(||Y-\hat{Y}||_2)^2$$
+It represents the sum of squared error of each element vector
+
+### Geometric Derivation
+It's used as a way to minimize the average loss to fit the model. Instead of plotting points, we are plotting each column as a vector.
+
+> Span
+>   * The set of all possible linear combinations of the columns of $X$ is called the span of $X$
+>   * For two vectors $x_1, x_2$, the span of them is the entire plane the are at.
+
+Instead of using the matrix-vector multiplication regarding $x_i$ as rows like
+$$\begin{bmatrix}\hat{y_1} \\ \hat{y_2} \\ \hat{y_3} \\ ... \\ \hat{y_n}\end{bmatrix}=\begin{bmatrix}1, x_{11}, x_{12}, ... x_{1p} \\ 1, x_{21}, x_{22}, ... x_{2p} \\ 1, x_{31}, x_{32}, ... x_{3p} \\ ... \\ 1, x_{n1}, x_{n2}, ... x_{np}\end{bmatrix}\begin{bmatrix}\theta_0 \\ \theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix}$$
+
+We now think of $\hat{Y}$ as a linear combination of feature vectors, scaled by parameters: 
+$$\begin{bmatrix}\hat{y_1} \\ \hat{y_2} \\ \hat{y_3} \\ ... \\ \hat{y_n}\end{bmatrix}=\begin{bmatrix}1, x_{11}, x_{12}, ... x_{1p} \\ 1, x_{21}, x_{22}, ... x_{2p} \\ 1, x_{31}, x_{32}, ... x_{3p} \\ ... \\ 1, x_{n1}, x_{n2}, ... x_{np}\end{bmatrix}\begin{bmatrix}\theta_0 \\ \theta_1 \\ \theta_2 \\ ... \\ \theta_p \end{bmatrix}=1\cdot\theta_{0}+\begin{bmatrix}x_{11} \\ x_{21} \\ ... \\ x_{n1}\end{bmatrix}\theta_1 + \begin{bmatrix}x_{12} \\ x_{22} \\ ... \\ x_{n2}\end{bmatrix}\theta_2...$$
+Interpret: the linear prediction $\hat{Y}$ will be in the span of $X$, while the true values $Y$ might not be. Then our goal is to **find the vector based on $\theta$ in the span of x that is closest to $Y$**
+
+The projection of Y on to the span of the columns
+![alt text](lect-12-geometry%20interpretion.png)
+![alt text](lect-12-geometry%20interpretation-2.png)
+Then how to minimize this error? Find the vector that is orthogonal.
+
+> Orthogonality
+>   * $\vec{a}$ and $\vec{b}$ are orthogonal if and only if their dot product is 0. $a^Tb=0$ This is the generalization of the notion of two vectors in 2D being perpendicular.
+>   * $\vec{v}$ is orthogonal to the span of the columns of a matrix $M$, if and only if $\vec{v}$ is orthogonal to **each column** in $M$. $M^Tv=\vec{0}$
+
+So in order to minimize the residual vector, then we need to make $X^T(Y-\hat{Y})=X^T(Y-X\hat{\theta})=0$ where $X^T$ is like the $M$ and $(Y-X\hat{\theta})$ is the $v$. We can rearrange
+$$X^TY-X^TX\hat{\theta}=0 \\ X^TX\hat{\theta}=X^TY \\ \hat{\theta}=(X^TX)^{-1}X^TY$$
+if $X^TX$ is invertible.
+
+**$\hat{\theta}=(X^TX)^{-1}X^TY$ is very very very important**
+
+### OLS properties
+![alt text](lect-12-OLSProperty.png)
+* Not full rank -> not invertible -> not solve the normal equation
+* Two scenarios where $X$ is **not full rank**
+  * $X$ is "wide", say only has one data point for $y=\theta_0+\theta_1x$, it can be any line
+  * Some features in $X$ are linear combination of other features. e.g. perimeter=2 * Width+2 * Height
