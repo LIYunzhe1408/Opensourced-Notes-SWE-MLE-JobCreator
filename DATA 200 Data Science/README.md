@@ -387,14 +387,64 @@ When build a model:
    * For linear, take derivatives to solve.
 4. Evaluate the model
 
-## Lecture 11
-Choose a Model -> Choose a loss function -> Fit the model(minimize the loss) -> Evaluate the model performance
+## Lecture 11: Constant Model
+### Modeling process
+Sum of squared error of simple linear regression
+* Just residual, the sum of them might be cancelled out
+* After square, we want to choose a line to make the total area of the boxes(squares) as small as possible.
+* Measure quality of linear model fit relative to constant model. $R^{2} = \frac{\Delta{area}}{ConstantModelArea}$. In other word, it's the fraction of variance in y as MSE_constant model is same as $\sigma^2$
 
-MAbsoluteE and MSquareE
+#### MSE
+Choose a Model
+  * The constant model is the one with only one parameter. $\hat{y}=\theta_{0}$
+    * e.g. You sell boba drink in a week. You want to predict the sale in the next day. For SLR, you may have variables like the day in the week, the weather, etc. But for constant model, you always predict the same amount.
+    * Ignoring these factors simplifies assumptions.
+    * Still a parametric model, but just one parameter
+    * Still determine the best $\theta_{0}$ that minimizes average loss
 
-1.Define the objective function as average loss
-* plug in L1 or L2 loss
+Choose a loss function
+  * Mean Square Error: $\hat{R}(\theta)=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y_i})^2$
+
+Fit the model(minimize the loss)
+  * For constant model, $\hat{R}(\theta)=\frac{1}{n}\sum_{i=1}^{n}(y_i-\theta_{0})^2$
+  * With calculus, the average loss is minimized by $\theta_0=mean(y)=\bar{y}$
+    * Take first derivative
+    * Set equal to 0, then can solve $\hat{\theta_0}$
+  * Conclusion: The mean of the outcomes($y$) achieves the minimum MSE of the constant model.
+    * How to interpret. The representation is the sample variance of the sample. $\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y_i})^2={\sigma^2_y}=R(\hat\theta_0)={R}(\bar{y})$. $\sigma$ is the standard deviation of the sample
+    * The value of the loss function when we plug in the optimal value to minimize the loss function(The minimum of MSE): $R(\hat{\theta_0})=minR(\theta_0)=\sigma^2_y$
+    * The argument that minimizes MSE: $\hat{\theta_0}=argminR(\theta_0)=\bar{y}$ 
+
+#### MAE
+Choose a loss function
+  * Mean Absolute Error: $\hat{R}(\theta)=\frac{1}{n}\sum_{i=1}^{n}(|y_i-\hat{y_i}|)$
+
+Fit the model(minimize the loss)
+  * For constant model, $\hat{R}(\theta)=\frac{1}{n}\sum_{i=1}^{n}(|y_i-\theta_0|)$
+  * Derived from the example, the minimum value is not the mean.
+  * With calculus, the number greater than $\hat{\theta_0}$ should be equal to the number smaller than $\hat{\theta_0}$. Then it is the median comes from.
+  * $\hat{\theta_0}=median(y)$
+
+#### Summary
+1. Define the objective function as average loss
+  * plug in L1 or L2 loss
 2. Find the minimum of the objective function
-   * Differentiate with respect to $\theta$
-   * Set equal to 0
-   * Solve for $\hat{\theta}$
+  * Differentiate with respect to $\theta$
+  * Set equal to 0
+  * Solve for $\hat{\theta}$
+
+
+Evaluate the model performance
+* rug plot and scatter plot
+* Finding minimizing values: MSE is smooth, while MAE is piecewise where at each kinks, it's not differentiable, hard to minimize.
+* Uniqueness: Add one more data point, then MSE still has a unique $\hat{\theta_0}$ while MAE has infinitely many $\hat{\theta_0}$ when the number of data points is even.
+* Sensitivity to outliers: MSE is sensitivity to outliers but MAE is more robust.
+
+### Transformation for linear models
+* See each axis
+  * If values appear compressed, magnify differences with **Square transform**
+  * If large values appear unconstrained, squish difference with **log transform**
+* After prediction, we need to transform it back by a inverse function
+  * e.g. $\hat{\log(Age)}=\theta_0+\theta_1Length$ -> $\hat{Age}=\exp^{\theta_0+\theta_1Length}$
+![alt text](image-2.png)
+* The reason why we use it is to deal with the initial feature points are not linear, instead of changing a non-linear model, we transform data
