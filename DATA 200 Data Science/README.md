@@ -528,3 +528,11 @@ if $X^TX$ is invertible.
 * Two scenarios where $X$ is **not full rank**
   * $X$ is "wide", say only has one data point for $y=\theta_0+\theta_1x$, it can be any line
   * Some features in $X$ are linear combination of other features. e.g. perimeter=2 * Width+2 * Height
+
+## Lecture 13: Sklearn
+Initialize a model -> Fit the model -> Predict
+
+Gradient Descent may be stuck in local minimum, but convexity can help.
+* For a convex function, any local minimum is a global minimum
+* That's why MSE is popular as it's convex
+
