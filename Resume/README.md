@@ -14,6 +14,16 @@ follow-up questions
 * “Beyond the immediate project goals, what are your thoughts on scaling up VLA systems to handle even more complex tasks and environments?”
 * I have scheduled a trip to sd this spring recess, Is it possible to visit
 
+## Outline
+1. Relation between Vision Language Action model and robot learning
+2. Which experience in my past is in the scope of robot learning and VLA, what is my shortcoming
+3. Dive deep into RoboMaster vision system, for different process in the pipeline, like get camera image, and send data to STM32, and infer the neural network, how to parallel and sync up
+4. How to train a YOLOv7 with PyTorch and infer in C++
+5. What is serial communication using UART
+6. Any question he might be interested about
+
+
+
 ## Momenta
 #### Can you walk me through your experience at Momenta and your role in improving the reversing feature for GM Cadillac Lyriq?
 **S:** At Momenta, I worked as a Software Engineer Intern, contributing to the development of an autonomous reversing feature for GM’s Cadillac Lyriq. \
