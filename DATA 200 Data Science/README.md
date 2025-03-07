@@ -529,10 +529,31 @@ if $X^TX$ is invertible.
   * $X$ is "wide", say only has one data point for $y=\theta_0+\theta_1x$, it can be any line
   * Some features in $X$ are linear combination of other features. e.g. perimeter=2 * Width+2 * Height
 
-## Lecture 13: Sklearn
+## Lecture 13: Sklearn & Gradient Descent
 Initialize a model -> Fit the model -> Predict
 
 Gradient Descent may be stuck in local minimum, but convexity can help.
 * For a convex function, any local minimum is a global minimum
 * That's why MSE is popular as it's convex
 
+## Lecture 14
+If gradient is negative, increasing the parameter a little bit will decrease the loss, while if the gradient is positive, decreasing the parameter a little bit will increase the loss.
+
+#### Mini-batch Gradient Decent
+Computing the gradient decent is expensive, then we use some methods to make it efficient.
+* Epoch: One pass through **all n** data points while updating the parameters.
+* Instead we sample `b` records to approximate the gradient. Big `b`, more accurate. Small `b`, faster.
+
+n/b times of updates in mini-batch, a lot more parameter updates. While the gradient decent just takes once.
+
+
+#### Stochastic Gradient Descent
+Sample just 1 record, it's basically the subset of mini-batch gradient descent.
+
+
+### Feature Engineering
+We can transform features to help linearize a dataset. It's the process of transforming raw features into more informative features of use in modeling.
+* A feature function is used to take the design matrix as input, output the engineered matrix.
+
+#### One-hot encoding
+Transform qualitative data into numeric features for modeling. Break, say "DAY" column into day_Sun, day_Sat, day_Mon, ...
