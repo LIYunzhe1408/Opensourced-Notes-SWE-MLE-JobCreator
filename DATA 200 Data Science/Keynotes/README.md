@@ -41,6 +41,36 @@ A stratified random sample, where random sampling is performed on strata (specif
 ![alt text](image.png)
 
 
+### Visualization
+* For distribution
+  * Histogram – a classic way to see the overall shape (bins of wait times).
+  * Kernel Density Estimate (KDE) plot – a smooth estimate of the distribution.
+  * Box plot – shows quartiles, median, and potential outliers.
+  * Violin plot – similar to box plot but shows a KDE shape on each side.
+* For categorical data
+  * Bar chart – generally for categorical data (counts per category).
+  * Count plot – also for categorical data, showing how many observations per category.
+* `sns.histplot(data=dataframe, x="Wait Time", rug=True, kde=True, stat="density")` where rug is small sticks on the graph
+* KDE
+  * The sum of KDE curve is 1
+  * Boxcar Kernel is a piecewise constant function with vertical jumps (no sloped or curved segments).
+  * Gaussian Kernel: A larger bandwidth makes each bump wider and thus produces a smoother, more gently varying curve (fewer lumps). A smaller bandwidth makes each bump narrower, often revealing **more** local peaks.
+* For side-by-side box:
+  * Median: the line split the box
+  * Interquartile range: the edges of the box marking the first (Q1) and third quartiles (Q3). 
+  * whiskers: The lines extending from the box, called whiskers, show the range of the data, typically extending to the minimum and maximum values that are not outliers. 
+
+
+
+### Data Transformation
+We expect the **residual** plot of a good-performing **linear model** to display **no clear trends**. However, there is a clear pattern present in the residual plot (the scatter points are in a roughly parabolic shape)
+
 ### Modeling
 1. If there's always a unique solution to the optimal parameters $\hat{\theta}$ that minimize MSE?
    * No. See if columns of the design matrix of the model is linearly independent. If so, $X^TX$ is invertible, and the optimal solution exists. Otherwise, not exist.
+   * Linearly dependent -> not full rank -> not invertible -> no unique optimal
+2. Why is the critical point found in Part (c) guaranteed to be a minimum and not a maximum?
+   * The critical point of a convex function is always a minimum. Because MSE is a convex function, the critical point occurring at the value of $\theta$ calculated in Part (c) is guaranteed to be a minimum.
+3. The design matrix contains a column of bias!!! So the number of features + 1
+4. The residual vector is a $n\times{1}$ vector where $n$ is the number of samples, representing the the errors in prediction per sample.
+5. The sum of the residuals $\sum_{i=1}^n{e_i}$ in Ordinary Least Squares regression is not necessarily when there's no intercept(all ones column)
