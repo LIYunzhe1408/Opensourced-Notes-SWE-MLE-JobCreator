@@ -38,6 +38,10 @@ A stratified random sample, where random sampling is performed on strata (specif
 4. The number of rows in the subframe after grouping is `len(sf)` or `sf.shape[0]`
 5. `sort_values(ascending=True)` while `value_counts(ascending=False)`
 6. `df.groupby("column").agg('sum')` is adding up number for each cell not counting!!! For counting, pick one column and `agg('count')`
+7. `pivot_table`
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
 
 
 ### Regex
