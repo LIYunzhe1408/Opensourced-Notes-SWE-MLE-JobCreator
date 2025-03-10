@@ -42,32 +42,44 @@ A stratified random sample, where random sampling is performed on strata (specif
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
-
+8. [Fall23]sum(Series) == Series.sum(), which adds up all cells together. However, for Series with True and False, it will return True counts.
+9. [Fall23]After `groupby`, to `agg` on different columns, use `{"Guess": "count", "Correct": "sum"}`
 
 ### Regex
 1. How to match multiple same pattern
-![alt text](image.png)
+    ![alt text](image.png)
 2. This problem tests the concept of capturing groups. To answer this question, we need to recognize that if capturing groups are present in the pattern, re.findall will return only the characters contained in the capturing group. Otherwise, it will return all matched characters.
-![alt text](image-3.png)
+
+    ![alt text](image-3.png)
+3. [Fall23] `[]` just matches specific letter in it rather than a word.
+4. [Fall23] The reason why a is not correct is because `,` will not stop the matching of `.*`. While, `\w+` will stop at `,`
+    ![alt text](image-7.png)
 
 ### Visualization
-* For distribution
-  * Histogram – a classic way to see the overall shape (bins of wait times).
-  * Kernel Density Estimate (KDE) plot – a smooth estimate of the distribution.
-  * Box plot – shows quartiles, median, and potential outliers.
-  * Violin plot – similar to box plot but shows a KDE shape on each side.
-* For categorical data
-  * Bar chart – generally for categorical data (counts per category).
-  * Count plot – also for categorical data, showing how many observations per category.
+* Single Numeric Distribution
+  * Histogram: Shows the frequency/count of values in bins.
+  * KDE Plot (1D): A smooth estimate of the distribution’s shape.
+  * Box Plot / Violin Plot: Shows quartiles, outliers, or distribution shape.
+* Relationship Between Two Numeric Variables
+  * Scatter Plot: Plots each observation in 2D space. Good for seeing correlation, clusters, outliers.
+  * Hexplot: Like a 2D histogram, bins the (x, y) plane into hexagons, showing density for large datasets.
+  * 2D KDE Plot: A smooth density estimate in 2D, often shown as contour lines or heatmaps.
+* Categorical vs. Numeric
+  * Bar Chart: For comparing averages or counts across categories.
+  * Box/Violin Plot by Category: For comparing distributions of a numeric variable across categories.
 * `sns.histplot(data=dataframe, x="Wait Time", rug=True, kde=True, stat="density")` where rug is small sticks on the graph
 * KDE
   * The sum of the area in KDE curve is 1. **Pay attention to the value on x-axis**
+  * Before scaling, each area is 1. After scaling, each area is $\frac{1}{n}$
+  * The kernel is centered at each individual point.
   * Boxcar Kernel is a piecewise constant function with vertical jumps (no sloped or curved segments).
   * Gaussian Kernel: A larger bandwidth makes each bump wider and thus produces a smoother, more gently varying curve (fewer lumps). A smaller bandwidth makes each bump narrower, often revealing **more** local peaks.
 * For side-by-side box:
   * Median: the line split the box
-  * Interquartile range: the edges of the box marking the first (Q1) and third quartiles (Q3). 
+  * Interquartile range: the edges of the box marking the first (Q1) and third quartiles (Q3).
   * whiskers: The lines extending from the box, called whiskers, show the range of the data, typically extending to the minimum and maximum values that are not outliers. 
+  * Left Whisker: $Q1 - 1.5\times(IQR)$ Right Whisker: $Q3 + 1.5\times(IQR)$
+* `Mode` is where the peak of the curve is.
 
 
 
@@ -87,3 +99,9 @@ We expect the **residual** plot of a good-performing **linear model** to display
 6. $H=X(X^TX)^{-1}X^T$, then $HH=X(X^TX)^{-1}X^TX(X^TX)^{-1}X^T=X(X^TX)^{-1}$ $(X^TX)$ $(X^TX)^{-1}X^T=X(X^TX)^{-1}X^T=H$
 7. C is ruled out, because the first, third, and fourth columns are not linearly independent in this case.
 ![alt text](image-1.png) 
+8. OLS only works with MSE
+9. $\hat{\theta}$ is not minimizing the sum of the residual of $Y-\hat{Y}$, but the MSE
+10. In the plot of residuals,
+    * if almost all points are above 0, meaning the $y$ is consistently higher than $\hat{y}$, which is underpredicting.
+    * if there's trend or pattern in the plot, indicating need linearization
+    * Sum of residuals not 0 may not mean an intercept term is missing. The model may just be biased. 
