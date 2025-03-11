@@ -32,6 +32,24 @@ A stratified random sample, where random sampling is performed on strata (specif
 * Response bias: occurs because people don’t always respond truthfully. Survey designers pay special detail to the nature and wording of questions to avoid this type of bias. for survey, those with strong feelings (positive or negative) are often more likely to respond.
 
 ### Pandas
+> Deal with `DataFrame`, `Series`, and `Index`
+> 
+> Accessors: 
+> * `df[columns]`
+> * Boolean filtering(Pass in an array of True/False or `Series.isin(values)`)
+> * `df.loc[]` (use row index and column name, include the end index) and `df.iloc[]` (use row/col position, exclude the end index)
+> 
+> Groupby:
+> * Return a temporary subDataFrame that group by colname
+> * Must use `agg` function to return a dataframe, the index will be the colname
+> * for `'count'`, it excludes missing values while `'size'` includes missing values
+> * `groupby(...).filter(f)` takes a DataFrame as argument, copying the original DataFrame and only returning all rows from groups that is True from `f`
+>
+> Pivot: returns a Dataframe that transforms the values in a column into column labels
+>
+> Merge: performs a merge on two data tables
+>
+> String Operation: `Series.str....`
 1. Get the mean of the `Height` column. `pandas_df["Height"].mean()`
 2. Check if the element in a column of a dataframe is in the given list. `pandas_df["Favorite Food"].isin(SELECT_FOODS)`
 3. Distinguish the difference between `agg` and `filter`. When we want to `only keep` rows or `remove` rows, use `filter` which is processing `x` in `lambda x` as DataFrame.
@@ -42,8 +60,8 @@ A stratified random sample, where random sampling is performed on strata (specif
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
-8. [Fall23]sum(Series) == Series.sum(), which adds up all cells together. However, for Series with True and False, it will return True counts.
-9. [Fall23]After `groupby`, to `agg` on different columns, use `{"Guess": "count", "Correct": "sum"}`
+1. [Fall23]sum(Series) == Series.sum(), which adds up all cells together. However, for Series with True and False, it will return True counts.
+2. [Fall23]After `groupby`, to `agg` on different columns, use `{"Guess": "count", "Correct": "sum"}`
 
 ### Regex
 1. How to match multiple same pattern
@@ -56,6 +74,7 @@ A stratified random sample, where random sampling is performed on strata (specif
     ![alt text](image-7.png)
 
 ### Visualization
+#### Distribution
 * Single Numeric Distribution
   * Histogram: Shows the frequency/count of values in bins.
   * KDE Plot (1D): A smooth estimate of the distribution’s shape.
@@ -68,26 +87,41 @@ A stratified random sample, where random sampling is performed on strata (specif
   * Bar Chart: For comparing averages or counts across categories.
   * Box/Violin Plot by Category: For comparing distributions of a numeric variable across categories.
 * `sns.histplot(data=dataframe, x="Wait Time", rug=True, kde=True, stat="density")` where rug is small sticks on the graph
-* KDE
+#### KDE
+  * Steps:
+    1. Locate the data point
+    2. Plot the Gaussian kernel for each point
+    3. Downscale the height
+    4. Sum the height
   * The sum of the area in KDE curve is 1. **Pay attention to the value on x-axis**
   * Before scaling, each area is 1. After scaling, each area is $\frac{1}{n}$
   * The kernel is centered at each individual point.
   * Boxcar Kernel is a piecewise constant function with vertical jumps (no sloped or curved segments).
   * Gaussian Kernel: A larger bandwidth makes each bump wider and thus produces a smoother, more gently varying curve (fewer lumps). A smaller bandwidth makes each bump narrower, often revealing **more** local peaks.
-* For side-by-side box:
+    * If $\alpha$ goes to 0, the plot will be many sticks, while $\alpha$ goes to infinity, it will be a plane aligning with x axis.
+#### Side-by-side box:
   * Median: the line split the box
   * Interquartile range: the edges of the box marking the first (Q1) and third quartiles (Q3).
   * whiskers: The lines extending from the box, called whiskers, show the range of the data, typically extending to the minimum and maximum values that are not outliers. 
   * Left Whisker: $Q1 - 1.5\times(IQR)$ Right Whisker: $Q3 + 1.5\times(IQR)$
 * `Mode` is where the peak of the curve is.
+#### Data Transformation
+1. We expect the **residual** plot of a good-performing **linear model** to display **no clear trends**. However, there is a clear pattern present in the residual plot (the scatter points are in a roughly parabolic shape)
+2. In the plot of residuals,
+    * if almost all points are above 0, meaning the $y$ is consistently higher than $\hat{y}$, which is underpredicting.
+     * if there's trend or pattern in the plot, indicating need linearization
+     * Sum of residuals not 0 may not mean an intercept term is missing. The model may just be biased. 
+3. Tuckey Mosteller Diagram
 
-
-
-### Data Transformation
-We expect the **residual** plot of a good-performing **linear model** to display **no clear trends**. However, there is a clear pattern present in the residual plot (the scatter points are in a roughly parabolic shape)
-![alt text](image-2.png)
+    ![alt text](image-2.png)
 
 ### Modeling
+> Linear regression, what is linear.
+> Loss Function: MAE, MSE
+> Minimizing loss: Derivative, set to 0, rearrange
+> For constant model, we will have the $\hat{\theta}=mean(y)$ using MSE and the $\hat{\theta}=median(y)$ using MAE
+>
+> Multiple Linear Regression
 1. If there's always a unique solution to the optimal parameters $\hat{\theta}$ that minimize MSE?
    * No. See if columns of the design matrix of the model is linearly independent. If so, **$X^TX$** is invertible(**Not $X$ itself**), and the optimal solution exists. Otherwise, not exist.
    * Linearly dependent -> not full rank -> not invertible -> no unique optimal
@@ -101,7 +135,3 @@ We expect the **residual** plot of a good-performing **linear model** to display
 ![alt text](image-1.png) 
 8. OLS only works with MSE
 9. $\hat{\theta}$ is not minimizing the sum of the residual of $Y-\hat{Y}$, but the MSE
-10. In the plot of residuals,
-    * if almost all points are above 0, meaning the $y$ is consistently higher than $\hat{y}$, which is underpredicting.
-    * if there's trend or pattern in the plot, indicating need linearization
-    * Sum of residuals not 0 may not mean an intercept term is missing. The model may just be biased. 
