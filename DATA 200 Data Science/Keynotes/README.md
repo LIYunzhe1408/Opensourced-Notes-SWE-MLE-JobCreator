@@ -60,8 +60,11 @@ A stratified random sample, where random sampling is performed on strata (specif
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
-1. [Fall23]sum(Series) == Series.sum(), which adds up all cells together. However, for Series with True and False, it will return True counts.
-2. [Fall23]After `groupby`, to `agg` on different columns, use `{"Guess": "count", "Correct": "sum"}`
+8. [Fall23]sum(Series) == Series.sum(), which adds up all cells together. However, for Series with True and False, it will return True counts.
+9. [Fall23]After `groupby`, to `agg` on different columns, use `{"Guess": "count", "Correct": "sum"}`
+10. [25 Prep] If we want to get the 'name' or something after `value_counts`, use `...value_counts().index`
+11. [25 Prep] `size()` include `NaN` while `count` not.
+12. [25 Prep] It helps to `groupby` after sorting.
 
 ### Regex
 1. How to match multiple same pattern
