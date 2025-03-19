@@ -557,3 +557,27 @@ We can transform features to help linearize a dataset. It's the process of trans
 
 #### One-hot encoding
 Transform qualitative data into numeric features for modeling. Break, say "DAY" column into day_Sun, day_Sat, day_Mon, ...
+
+
+## Lecture 16
+### Cross validation
+* How to find the sweet spot avoid under and overfitting.
+* How to simulate unseen test data.
+
+```python
+from sklearn.model_selection import train_test_split
+train_test_split(X, Y, test_size=0.2, random_state=100)
+```
+
+We can only use test set once, then we wil factoring info to refine our model. There will be no unseen data, how to adjust?
+* Have a Validation set.
+* k-fold cross validation
+![](./lect-16-dataset%20work%20flow.png)
+
+In k-fold cross-validation, we train the model k times, not just once.
+* So, select polynomial degrees out of 5 options, and do 4-fold cross validation, we will train the model for 20 times(one option 4 times). Then pick the best hyperparameter chosen from all validation. Wrap up everything and train the model on the entire training set with the best hyperparameter
+
+### Constraining the model parameters
+How to control complexity
+* $\theta$ should not be either too big or too small. Too big will be too complex, too small will return 0.
+* Use Lagrangian Duality to minimize the augmented objective function combining: $MSE+\lambda\sum_{i=1}^{p}\|\theta_i\|$
