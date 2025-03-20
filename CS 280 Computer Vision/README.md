@@ -1,3 +1,8 @@
+## Key takeaway
+1. The architecture of the `Transformer`.
+2. How ViT work in variation? `Masked AutoEncoder`, `DiNO`
+3. How different generative models work: Flow-based model, VAEs, GANs
+
 ## Camera Calibration
 Go from the pinhole model to real cameras imaging points in the 3D world. Understand the key behind algo, which can be called in most libraries.
 
