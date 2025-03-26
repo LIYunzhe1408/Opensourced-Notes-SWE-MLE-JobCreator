@@ -581,3 +581,60 @@ In k-fold cross-validation, we train the model k times, not just once.
 How to control complexity
 * $\theta$ should not be either too big or too small. Too big will be too complex, too small will return 0.
 * Use Lagrangian Duality to minimize the augmented objective function combining: $MSE+\lambda\sum_{i=1}^{p}\|\theta_i\|$
+
+
+## Lecture 17: Random variable
+Context: 1 million -> 90% fail and lose v.s. 10% succeed and get 10 million invest or not
+
+A random variable(RV) represents the outcome of a random event.($X_i$ represents the outcome of flipping a coin at i th time)
+* Can either be 
+  * discrete(finite: head or tail of a coin) or
+  * continuous(infinite: representing the number of seconds a coin in the air during the i-th flip)
+* For discrete RV, each possible outcome has an associated probability
+  * The probabilities associated with each outcome of a discrete RV sum to 1
+  * i.e. $\sum_x{P(X=x)=1}$
+* For continuous RV, individual outcomes have probability 0. **Ranges** of outcomes have probability > 0
+  * $P(Y=2.7123 sec)=0$ while $P(0<Y<2sec)=0.8$
+  * The total area under the density curve of the RV Y is 1.
+* Compute properties of the RV(mean, variance, median)
+
+### Named Distributions
+In real life, we don't exactly has a 0.5 v.s. 0.5 probability distribution but a empirical distribution like 0.57 v.s. 0.43. 
+* Bernoulli distribution$(p)$. We can use **Bernoulli** distribution which is parameterized by $p$. Then we will have $p$ v.s. $1-p$. e.g. $X_i\sim{Bern(0.5)}$ means $X_i$ is distributed Bernoulli parametrized by 0.5.
+* Binomial distribution$(n,p)$. $n$ coin flips where $P(Heads)=p$
+* Categorical distribution$(p_1, p_2,...,p_k)$
+* Uniform$(a,b)$: Any number between a and b have the same density (for continuous)
+* Normal$($means$=\mu$, variance$=\sigma^2$$)$
+
+### Expectation and Variance
+* Expectation is the average value of $X$. $E[X]$
+  * For the coin flip:
+    * The expected value is 0.5 which is a fixed value
+    * The sample average or empirical average is 0.57 which changes every sample.
+  * $E(X)=\sum_x{x\cdot{P(X=x)}}$
+  * Properties:
+    * Linear: $E[aX+b]=aE[X]+b$ and $E[X+Y]=E[X]+E[Y]$
+* Variance is the spread of $X$. $Var(X)$
+  * Suppose an RV $X$ has a mean of $\mu$, i.e. $E(X)=\mu$
+  * How much do we expect a random draw of $X$ to differ from $\mu$
+  * $Var(X)=E((X-\mu)^2)=E[(X-E(X))^2]=E[X^2]-(E[X])^2$
+  * SD$(X)=\sqrt{Var(X)}$
+  * Properties:
+    * Non-linear: $Var(ax+b)=a^2Var(X)$ -> Shifting $b$ does not change the spread.
+    * $SD(ax+b)=|a|SD(X)$
+    * $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
+    * $Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$
+
+A function of an RV is also an RV -> mean, summation
+* **Heads UP**: $E(X)$ and $Var(X)$ are operators and are fixed values of the RV, they are not RV
+
+
+### Identically distributed and i.i.d
+* $X$ and $Y$ are identically distributed if the distribution of $X$ is the same as the distribution of $Y$
+* $X$ and $Y$ are independent and identically distributed if
+  * $X$ and $Y$ are identically and
+  * Knowing the outcome of $X$ does not influence the outcome of $Y$
+
+### Real Use
+* Diversify investment for multiple stock -> reduce the variance
+* Pay for insurance -> greatly reduce the variance
