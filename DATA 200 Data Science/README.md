@@ -638,3 +638,18 @@ A function of an RV is also an RV -> mean, summation
 ### Real Use
 * Diversify investment for multiple stock -> reduce the variance
 * Pay for insurance -> greatly reduce the variance
+
+## Lecture 18: 
+Data generating process:
+* DGP is a model for how data are drawn from a true distribution or population. We canot always touch
+* We access a sample of data to estimate properties of a DGP
+
+What is a good estimator?
+* How variable
+* On average, how close to the center(average)
+* MSE
+
+Less complex a model is, less variance
+
+
+Model Risk = Irreducible error + Model Variance + (Model Bias)^2
