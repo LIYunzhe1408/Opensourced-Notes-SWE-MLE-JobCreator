@@ -653,3 +653,24 @@ Less complex a model is, less variance
 
 
 Model Risk = Irreducible error + Model Variance + (Model Bias)^2
+* Variance and Bias trade-off
+
+## Lecture 19:
+### Creating parallel universe with Bootstrap
+Bootstrap: Sampling with replacement.
+
+If the null hypothesis falls in the confidence interval, we will fail to reject the null hypothesis. Otherwise, we will reject it.
+
+Bootstrap works better:
+* Large random sample
+* The population distribution is not skewed, no bill gates living in Berkeley.
+* When the estimator is not extreme(maximum or minimum)
+
+### Prediction and inference
+1. Prediction problem: Get $\hat{Y}$ close to $Y$. 
+   * How much will the stock market go up?
+2. Inference problem: How and why does X relate to Y?
+   * What is the <u>effect</u> of getting a college degree on life outcomes?
+
+Is identifying the next word in sequence, akin to ChatGPT, primarily a prediction problem or an inference problem?
+* Primarily a prediction problem, though secondarily an inference problem.
