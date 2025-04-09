@@ -674,3 +674,25 @@ Bootstrap works better:
 
 Is identifying the next word in sequence, akin to ChatGPT, primarily a prediction problem or an inference problem?
 * Primarily a prediction problem, though secondarily an inference problem.
+
+
+## Lecture 20: SQL
+DBMS is beneficial in
+* Data storage:
+  * Reliable storage to survive sys crashes and disk failures
+  * Improve performance
+  * Compute data that does not fit in memory
+* Data Management
+  * Logically organized and who has access
+  * Safe concurrent operations on data(ATM transactions reading and writing simultaneously)
+
+Structured Query Language
+* Used for communicating with the database
+
+Constraints:
+* PRIMARY KEY
+  * Used to uniquely identify each record
+  * Foreign key is a column or set of columns that references a primary key in another table
+* CHECK (`condition`)
+* NOT NULL
+* DEFAULT (`value`)
