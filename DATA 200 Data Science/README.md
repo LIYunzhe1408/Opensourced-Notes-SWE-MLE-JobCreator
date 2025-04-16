@@ -696,3 +696,13 @@ Constraints:
 * CHECK (`condition`)
 * NOT NULL
 * DEFAULT (`value`)
+
+
+## Lecture 21
+Classification.
+* Input can be numeric features
+* Model: Linear combination transformed by `sigmoid`
+* Output: decision rule
+
+
+Find a function transferring numeric to category
