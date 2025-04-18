@@ -676,7 +676,7 @@ Is identifying the next word in sequence, akin to ChatGPT, primarily a predictio
 * Primarily a prediction problem, though secondarily an inference problem.
 
 
-## Lecture 20: SQL
+## Lecture 20 & 21: SQL
 DBMS is beneficial in
 * Data storage:
   * Reliable storage to survive sys crashes and disk failures
@@ -698,7 +698,7 @@ Constraints:
 * DEFAULT (`value`)
 
 
-## Lecture 21
+## Lecture 22
 Classification.
 * Input can be numeric features
 * Model: Linear combination transformed by `sigmoid`
@@ -706,3 +706,25 @@ Classification.
 
 
 Find a function transferring numeric to category
+
+
+## Lecture 23
+Cross entropy loss is used for logistic regression.
+
+Performance metric
+* Accuracy: # of points classified correctly / # points total
+  * (TP + TN) / n
+  * What proportion of all points were correctly classified
+* Positive: prediction of 1; Negative: prediction of 0
+  * used in confusion matrix
+* Precision: TP / (TP + FP)
+  * Of all positives(P), what proportion were correct(TP)
+* Recall: TP / (TP + FN)
+  * Of all actual 1s, what proportion did our model detect.
+* False positive rate
+* These are threshold-dependent metric, threshold increases, the TP will not increase but decrease or keep the same.
+
+The balance of recall and precision
+* F1 score = 2 / (1/precision + 1/recall) = 2 * Precision * Recall / (precision + recall)
+
+AUC and ROC is threshold independent.
