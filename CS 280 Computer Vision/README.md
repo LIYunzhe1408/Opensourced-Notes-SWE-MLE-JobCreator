@@ -146,3 +146,31 @@ Rotation part gives no information of the scene but just the rotation.
 * Steradians
 * Camera measures image irradiance which is proportional to scene radiance in the direction of the camera.
 * Take lots of photos surrounding the object to capture light field, This is the basis of NeRF(Neural Radiance Field) reconstructions
+
+
+## Vision and Language
+* Vision language navigation
+* Vision language locomotion
+* Vision language manipulation
+
+Efference copy as a form of prediction.
+
+### How human use vision for manipulation
+Imitation learning for robots
+
+How we see?
+* Eye movement
+* Head movement
+* Body movement
+
+What's the step?
+* Look at the object first, find a 3D map, got it location.
+* Issue a command without eyes.
+* Actual manipulation do not need vision. So eye can go to the next step.
+* Why vision is ahead of hand is because vision is slow for robot or machine.
+
+[Close eyes and touch the nose] Proprioception is the sense of self-movement, force, and body position. Proprioception is mediated by proprioceptors, a type of sensory receptor, located within muscles, tendons, and joints. Most animals possess multiple subtypes of proprioceptors, which detect distinct kinesthetic parameters, such as joint position, movement, and load. Although all mobile animals possess proprioceptors, the structure of the sensory organs can vary across species.
+We also have tactile sensing.
+
+How a child know its coordinate system? The robot knows it by URDF, while the child self calibrated itself by touching the its own body.This process can be without eyes. Second step is looking at his hands, it's the step of calibrating its eyes. We have a map in our brain.
+[dropping a paper on the floor, and going to it without your eyes, how would you do?]
