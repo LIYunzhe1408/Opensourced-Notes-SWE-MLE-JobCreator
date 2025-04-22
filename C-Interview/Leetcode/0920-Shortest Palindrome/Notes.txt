@@ -1,0 +1,14 @@
+Intuition:
+What ever this string is, we can always get a palindrome if we reverse this string.
+
+KMP: largest overlap of prefix and suffix.
+
+
+Pay attention that the letter is added at the beginning, but not at anywhere.
+In this way, the index 0 will be the middle part of the final result. To determine
+how many letters should be added, the solution is to find what's the length of palindrome we currently have.
+
+So, find the longest palindrome starting from the index 0, then adding the rest part reversely.
+
+Solutions:
+1. Reverse the string, then compare the original one and the reversed one from longest to shortest.

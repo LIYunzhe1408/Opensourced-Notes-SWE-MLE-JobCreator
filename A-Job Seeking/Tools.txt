@@ -1,0 +1,16 @@
+Job Search:
+- LinkedIn (open to any place)
+- Indeed (specific place)
+
+Extension:
+- Ultimate H1B sponsor checker
+- Teal (Job Mark and Collection)
+- Simplify ( Auto fill)
+
+Checker:
+- Past 24 hours + sorted by Most recent
+- Past week + under 10 applicants
+
+GPT:
+- Tell me about yourself emphasized by JD for my resume.
+
