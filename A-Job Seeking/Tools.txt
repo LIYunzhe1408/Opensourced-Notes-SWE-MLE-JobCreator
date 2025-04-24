@@ -7,10 +7,10 @@ Extension:
 - Teal (Job Mark and Collection)
 - Simplify ( Auto fill)
 
-Checker:
+Linkedin Filter:
 - Past 24 hours + sorted by Most recent
 - Past week + under 10 applicants
 
-GPT:
+[Optional] GPT for cover letter:
 - Tell me about yourself emphasized by JD for my resume.
 

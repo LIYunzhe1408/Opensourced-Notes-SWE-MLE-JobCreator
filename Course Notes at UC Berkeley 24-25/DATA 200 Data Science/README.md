@@ -728,3 +728,24 @@ The balance of recall and precision
 * F1 score = 2 / (1/precision + 1/recall) = 2 * Precision * Recall / (precision + recall)
 
 AUC and ROC is threshold independent.
+
+
+## Lecture 24
+Right now: Supervised Learning: Regression & Classification
+
+Today: Dimension Reduction
+We can also use the point shape, size, color, etc, to represent additional dimension. So we can represent more dimensions rather than 3 on a 2-D screen.
+
+Intrinsic Dimension is the minimal set of dimensions to approximately represent in the data.
+
+Dimension of the column space of A is the rank of matrix A
+
+Decomposition of the original matrix to get a reduced dimensional matrix.
+
+The variance in prediction should be minimized, while the one in features of PCA should be maximized.
+
+PCA is basically to Change frames of reference.
+
+
+## Lecture 25
+Clustering
