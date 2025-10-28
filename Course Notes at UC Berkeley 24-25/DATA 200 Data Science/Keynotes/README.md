@@ -66,6 +66,8 @@ A stratified random sample, where random sampling is performed on strata (specif
 11. [25 Prep] `size()` include `NaN` while `count` not.
 12. [25 Prep] It helps to `groupby` after sorting.
 13. [25 Prep] `Date` is quantitative, `chart_position` is qualitative(preferred) or quantitative
+14. [Spring 24] Count is for real value without missing. Size is for all values including missing ones.
+15. [Spring 24] 先sort_values再groupby
 
 ### Regex
 1. How to match multiple same pattern
@@ -139,3 +141,57 @@ A stratified random sample, where random sampling is performed on strata (specif
 ![alt text](image-1.png) 
 8. OLS only works with MSE
 9. $\hat{\theta}$ is not minimizing the sum of the residual of $Y-\hat{Y}$, but the MSE
+
+## Final
+### SQL
+* self join is cross join
+* NaN - int = Null
+* [25 Problem Solving] `SELECT COUNT(*) FROM ugrads WHERE sid IN (SELECT xxxx)` xx IN yy 的yy，也是从SELECT里来的
+
+### Regularization
+* LASSO and Ridge regularization
+  * LASSO has no close optimal solution. Used to find the minimal set of features(setting unimportant feature weighs to 0).
+  * Ridge: $\hat\theta=(X^TX+n\lambda{I})^{-1}X^TY$. (setting unimportant feature weighs to small values not necessarily to 0)
+* $\argmin_\theta\frac{1}{n}\sum^n_{i=1}Loss(y_i,f_\theta(x_i))+\lambda{R(\theta)}$
+  * $\lambda{R(\theta)}\le\beta$ where $\beta$ indicates the circle size. So $\lambda$越大，circle越小，越不复杂
+* [Spring 23] Penalties要是positive且large
+* [25 Problem Solving] Training error of LASSO is higher than OLS bc to avoid overfitting
+
+### Random variables and distributions
+* Expectation $E[X]=\sum{xP(X=x)}$
+* Variance $Var(X)=E[(X-E[X])^2]=E[X^2]-(E[X])^2$
+* Standard Deviation $SD(X)=\sqrt{E[(X-E[X])^2]}$
+* Covariance $COV(X, Y)=E[(X-E[X])(Y-E[Y])]$
+
+#### Bias Variance TradeOff
+* High Variance -> Overfitting
+* High Bias -> Underfitting
+* How to tradeoff to have low variance and low bias
+  * Model risk(the expectation of how far predictions from observed $Y$) $E[(Y-\hat{Y})^2]$
+  * Model variance $E[(E[\hat{Y}(x)]-\hat{Y}(x))^2]$
+  * Model bias squared 
+* [Spring 2024] Model risk -> make model more complex -> observation variance same & model variance increase & obs var + model var < model risk
+* [Spring 2024] Higher weights -> lower bias & high variance
+* [25 Problem Solving] More data -> reducing variance
+
+### Logistic Regression
+Predict whether a cancer is malignant or benign using the radius of the tumor. But tumors with a mean radius of 15 might be malignant or benign. Then how to quantify certainty of belonging to a class?
+* Find the probability a point belongs to class 1, given it's mean radius. $P(Y=1|x)$
+* Sigmoid Function: $\sigma(t)=\frac{1}{1+e^{-t}}$, where $t$ is a linear combination of features $t=f(x)=x^T\theta$
+* $\hat{Y}=P(Y=1|x)=\sigma(x^T\theta)$
+* [Spring 2023] 看清楚要预测的是哪个类，直接的sigmoid function预测的是class 1, i.e. $\hat{Y}=P(Y=1|x)=\sigma(x^T\theta)$
+* [Spring 2024] $\theta_0$ is intercept
+
+Then how to threshold to decide the class.
+* Precision will increase as threshold becoming larger, while Recall will decrease.
+
+### Gradient Descent
+* [Spring 2023] 2 local minima -> not convex -> not guarantee to converge to the optimal choice
+* [Spring 2023] Mini-batch gradient descent only uses a subset of the total training set to compute the gradient vector -> not guaranteed to find the direction of greatest descent towards the global minimum -> zig-zag away from the path
+
+
+### PCA
+Change coordinate system.
+The first principle component.
+
+* [Spring 2023] The variance is captured by $i$th component. So plot -> singular value scales
