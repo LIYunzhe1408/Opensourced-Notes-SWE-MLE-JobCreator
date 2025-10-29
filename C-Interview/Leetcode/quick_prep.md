@@ -51,3 +51,40 @@ Questions:
 * Best Time to Buy and Sell Stock
 * !!! Product of Array Except Self
 * !!! Maximum subarray: 看之前累加的stuff whether larger than current value
+
+## String
+TODO: KMP, bit manipulation
+
+* String is an array of characters.
+* Time complexity of accessing, inserting, and searching is the same as array. 
+* Search substring: $O(n\times{m})$
+* Concatenating: $O(n+m)$. Strings are immutable, a new one will be created.
+* Slicing: $O(m)$
+* Split by token:$O(m+n)$. Traverse the entire input string $n$. KMP avoid rescanning and build a LSP array using $O(n)$. 
+* Striping: $O(n)$. The string is entirely spaces.
+
+Heads-up:
+* Ask input character set and case sensitivity
+* Empty string
+* string with 1 or 2 characters
+* string with repeated characters
+* string with only distinct characters
+
+Technique:
+* counting characters: Use hash table, space complexity $O(1)$
+* string of unique characters: 26-bit mask.
+* Anagram: rearranging producing the same.
+  * sorting and see if the same. TC: $O(n\log{n})$
+  * Map character to a prime number and multiply them together too see if the same multiple.
+  * Frequency counting.
+* Palindrome: Read the same backward or forward
+  * Reverse the string and should be equal.
+  * two pointers at the start and the end. Move pointers inward till they meet. Every position, they should match
+  * Counting the number of palindromes
+    * Move two pointers outward away from the middle. Palindromes can be even or odd length. So for each middle position, you need to check it twice.
+
+Questions:
+* Valid Anagram
+* Valid Palindrome. Can compare characters at each position in-place.
+* !!! Longest Substring Without Repeating Characters. Shrinking window using `set()`
+* !!! KMP. The pointer pointing to the main string will never back trace. The characters we skip in the pattern string are the prefix/suffix shared in one substring. And the LPS should not be the entire pattern string.

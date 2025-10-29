@@ -195,3 +195,4 @@ Change coordinate system.
 The first principle component.
 
 * [Spring 2023] The variance is captured by $i$th component. So plot -> singular value scales
+* [25 Problem Solving] Variance by the 2nd latent vector. (Singular value)^2 / rows
