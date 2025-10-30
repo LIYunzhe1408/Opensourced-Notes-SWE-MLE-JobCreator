@@ -23,6 +23,14 @@ The purpose is to prepare for the coding interview in a short time when you alre
 
 ## Syntax and python trick
 1. Reverse the traverse is `for i in range(len(data), -1, -1)` where the interval `-1` should not be omitted.
+2. Usage of `set()`. `set.add()` and `set.remove()`
+3. Usage of `from collections import Counter`. If the key is not in counter, will return 0 rather than raising error.
+
+## Questions to be reviewed
+* !!! [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
+* !!! [Maximum subarray](https://leetcode.com/problems/maximum-subarray/): 看之前累加的stuff whether larger than current value
+* !!! [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/). Shrinking window using `set()`
+* !!! KMP. The pointer pointing to the main string will never back trace. The characters we skip in the pattern string are the prefix/suffix shared in one substring. And the LPS should not be the entire pattern string.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -88,3 +96,27 @@ Questions:
 * Valid Palindrome. Can compare characters at each position in-place.
 * !!! Longest Substring Without Repeating Characters. Shrinking window using `set()`
 * !!! KMP. The pointer pointing to the main string will never back trace. The characters we skip in the pattern string are the prefix/suffix shared in one substring. And the LPS should not be the entire pattern string.
+
+
+## Hash Table
+* A hash table uses a hash function on an element to compute an index into an array of buckets, from which the desired value can be found. 
+* Hashing is the most common example of a space-time tradeoff.
+* Resolve hash collision: 
+  * separate chaining: A linked list for each value
+  * open addressing
+* Search, insert, remove: $O(1)$
+* Hash function for string
+  ```python
+  unsigned long long stringHash(const string& s) {
+      const unsigned long long P = 131;     // prime base
+      const unsigned long long MOD = 1e9+9;
+      unsigned long long hash = 0;
+      for (char c : s)
+          hash = (hash * P + c) % MOD;
+      return hash;
+  }
+  ```
+
+Questions:
+* Ransom Note
+* 
