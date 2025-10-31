@@ -38,6 +38,9 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * !!! [LRU Cache](https://leetcode.com/problems/lru-cache/description/)
   * `OrderedDict`
   * More detailed: `Hashmap` + `doubly linked list`
+* !!! [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+  * Identify the rotated part and binary search respectively
+  * Identify which part is sorted and determine the next target half.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -132,3 +135,31 @@ Questions:
 * !!! [LRU Cache](https://leetcode.com/problems/lru-cache/description/)
   * `OrderedDict`
   * More detailed: `Hashmap` + `doubly linked list`
+
+## Sorting and Searching
+* Rearrange elements in a sequence in order, either numerical or lexicographical.
+* Binary search compares the target value with the middle element of the array, which informs the algorithm whether the target value lies in the left half or the right half, and this comparison proceeds on the remaining half until the target is found or the remaining half is empty.
+* On a sorted array of elements, searching can be done in $O(\log{n})$ by using binary search
+* Time complexity
+  * Python built-in sorting: $O(n\log{n})$. Timsort
+  * quick, merge, heapsort takes $O(n\log{n})$
+* sorting classification:(Bubble sort, selection sort, merge sort, quick sort, insertion sort, heap sort, counting sort)
+  * TC
+  * SC(in-place or not)
+  * recursive/Non-recursive (split a large dataset into a smaller or not)
+  * comparison/non-comparison
+  * internal/external (all on RAM or not)
+  * stability
+
+Heads-up:
+* Empty sequence
+* sequence with one/two elements
+* sequence with duplicate elements
+* Binary search should be the 1st thing that come to mind when given a sorted order.
+* Counting sort to deal to deal with known range of values.
+
+Questions:
+* Binary Search
+* !!! [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+  * Identify the rotated part and binary search respectively
+  * Identify which part is sorted and determine the next target half.
