@@ -41,6 +41,9 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * !!! [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
   * Identify the rotated part and binary search respectively
   * Identify which part is sorted and determine the next target half.
+* !!! [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
+* !!! [Combination](https://leetcode.com/problems/combinations/description/)
+* !!! [Subset](https://leetcode.com/problems/subsets/description/)
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -163,3 +166,20 @@ Questions:
 * !!! [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
   * Identify the rotated part and binary search respectively
   * Identify which part is sorted and determine the next target half.
+
+## Recursion
+* The solution depends on solutions to smaller instances of the same problem
+* All recursive function contains:
+  * A base case defined, which defines when the recursion is stopped - otherwise it will go on forever!
+  * Breaking down the problem into smaller subproblems and invoking the recursive call
+
+Heads-up:
+* Recursion implicitly uses a stack.
+* all recursive approaches can be rewritten iteratively using a stack.
+* Beware of cases where the recursion level goes too deep and causes a stack overflow.
+* The default limit in Python is 1000.
+
+Questions:
+* !!! [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
+* !!! [Combination](https://leetcode.com/problems/combinations/description/)
+* !!! [Subset](https://leetcode.com/problems/subsets/description/)
