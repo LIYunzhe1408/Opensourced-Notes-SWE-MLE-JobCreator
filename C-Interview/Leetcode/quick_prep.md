@@ -42,8 +42,15 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Identify the rotated part and binary search respectively
   * Identify which part is sorted and determine the next target half.
 * !!! [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
+  * Decision Tree: DFS or backtrack
 * !!! [Combination](https://leetcode.com/problems/combinations/description/)
+  * Decision tree with limit
 * !!! [Subset](https://leetcode.com/problems/subsets/description/)
+  * Backtrack or DFS(include or not include)
+* [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/): dfs(stack, recursion), bfs
+* BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
+  * Iterative
+  * Recursive
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -223,13 +230,15 @@ Techniques:
   * delete value
   * count number of nodes
   * whether a value is in the tree
-  * calculate depth/height
+  * calculate depth/height => in-order, dfs, bfs
   * binary search tree
     * determine if it's a valid BST
     * get maximum value
     * get minimum value
 
 Questions:
-* Maximum Depth of Binary Tree
+* [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/): dfs(stack, recursion), bfs
 * Invert/Flip Binary Tree
-* BST: Lowest Common Ancestor of a Binary Search Tree
+* BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
+  * Iterative
+  * Recursive
