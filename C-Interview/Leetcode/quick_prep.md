@@ -183,3 +183,53 @@ Questions:
 * !!! [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
 * !!! [Combination](https://leetcode.com/problems/combinations/description/)
 * !!! [Subset](https://leetcode.com/problems/subsets/description/)
+
+## Tree
+* Represent a hierarchical structure of a set of connected nodes.
+* Each node can be connected to many children, but must be connected to exactly one parent. Except for the root node that has no parent.
+* An undirected graph without cycles
+* Each node can be the root node of its subtree, so use recursion for tree traversal
+* Binary tree is often asked; Trie is more efficient for sorting and searching string.
+* Degree: Number of children of a node
+  * Level: Number of edges along the unique path between a node and the root.
+  * Distance: Number of edges along the shortest path between 2 nodes
+* Binary Tree
+  * Each node has a maximum of 2 children
+  * Complete binary tree: every level, except the last, is completely filled, and all nodes in the last level are as far left as possible
+  * Balanced binary tree: the left and the right subtrees of every node differ in height by no more than 1
+  * Traversal:
+    * In-order: left, root, right
+    * Pre-order: root, left, right
+    * Post-order: left, right, root
+* binary search tree
+  * Each node can have at most 2 children
+  * All values in its left subtree must be less than the value of the node
+  * All values in its right subtree must be greater than the value of the node
+  * Access, search, insert, remove: $O(\log{n})$
+  * In-order traversal gives all elements in order
+
+Heads-up:
+* Empty tree
+* single node
+* tree with two nodes
+* very skewed tree (like a linked list)
+
+Techniques:
+* recursion: when the subtree problem can be used to solve the entire problem. Check the base case where the node is null
+* Traversal by level: breadth-first search
+* summation of nodes: check whether nodes can be negative
+* routines:
+  * insert value
+  * delete value
+  * count number of nodes
+  * whether a value is in the tree
+  * calculate depth/height
+  * binary search tree
+    * determine if it's a valid BST
+    * get maximum value
+    * get minimum value
+
+Questions:
+* Maximum Depth of Binary Tree
+* Invert/Flip Binary Tree
+* BST: Lowest Common Ancestor of a Binary Search Tree
