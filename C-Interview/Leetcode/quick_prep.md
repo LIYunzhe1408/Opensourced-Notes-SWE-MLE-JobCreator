@@ -51,7 +51,13 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
   * Iterative
   * Recursive
-* * !!! [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
+* !!! [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
+  * Multi-source BFS: faster than running multiple single BFS
+  * Use single-source BFS when the problem focuses on one starting point: Shortest path in a maze, exploring a graph from one node
+  * Use multi-source BFS when multiple starting points are given, and results depend on finding the nearest or shortest distance to any of those starting points: Nearest distance from multiple 0 cells to all other cells, finding the closest fire station to all houses in a city grid.
+  * Difference: 
+    * Start queue with one node
+    * Start queue with all source nodes
 
 ## Array
 * Values of same type in contiguous memory locations
