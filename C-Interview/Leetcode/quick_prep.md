@@ -1,11 +1,11 @@
 The purpose is to prepare for the coding interview in a short time when you already have a full-time job and seek a better one. Topics you need to review:
 * High priority:
-  * Array
-  * String
+  * Array !!!
+  * String !!!
   * Sorting and searching
   * Matrix
   * Tree
-  * Graph
+  * Graph [Not google]
 * Mid priority
   * Hash Table
   * Recursion
@@ -51,6 +51,7 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
   * Iterative
   * Recursive
+* * !!! [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -242,3 +243,106 @@ Questions:
 * BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
   * Iterative
   * Recursive
+
+## Graph
+* Contain a set of nodes(vertices) where there can be edges between nodes.
+  * Edges can be directed or undirected, optionally having values as weight
+  * Trees are undirected graph which any nodes are connected by exactly one edge and there are no cycles.
+* Used to build relationship between unordered entities
+  * Friendship
+  * Distance between locations
+* Build graphs:
+  * Given a list of edges, build your own graph
+  * Adjacency matrix and list are rare to use
+  * During interview: Hashtable(simplest), 2D matrices
+  * In 2D matrices graph:
+    * Traverse up down left right
+    * always check current position within boundary
+    * always check current position is unvisited
+* TC: DFS, BFS, topological sort: $O(|V|+|E|)$
+
+Heads-up:
+* In a graph that allows for cycles, handle cycles and keep a set of visited vertices when traversing
+* Always keep track of visited nodes, otherwise the code could en up in an infinite loop
+* Empty graph
+* graph with one or two nodes
+* disconnected graph
+* graph with cycles
+
+Techniques:
+* Common: BFS, DFS
+* Uncommon: Topological sort, Dijkstra's Algo
+* Almost never: Bellman-Ford Algo, Floyd-Warshall Algo, Prim's Algo... ...
+
+DFS: recursive
+```python
+def dfs(matrix):
+    if not matrix:
+        return
+    
+    visited = set()
+    directions = ((1, 0), (-1, 0), (0, -1), (0, 1))
+    rows, cols = len(matrix), len(matrix[0])
+    
+    def traverse(i, j):
+        if (i, j) in visited:
+            return
+        # Previously (i, j) was added as next_i, next_j before traverse in the loop
+        visited.add((i, j))
+        for direction in directions:
+            next_i, next_j = i + direction[0], j + direction[1]
+            if 0 <= next_i <= rows and 0 <= next_j <= cols and CONDITION:
+                
+                traverse(next_i, next_j)
+
+    for i in range(rows):
+        for j in range(cols):
+            traverse(i, j)
+```
+
+BFS
+```python
+def bfs(matrix):
+    if not matrix:
+        return
+    
+    visited = set()
+    directions = ((1, 0), (-1, 0), (0, -1), (0, 1))
+    rows, cols = len(matrix), len(matrix[0])
+    
+    
+    def traverse(i, j):       
+        q = deque([(i, j)])
+        while q: 
+            i, j = q.popleft()
+            if (i, j) not in visited:
+                visited.add((i, j))
+            for direction in directions:
+                next_i, next_j = i + direction[0], j + direction[1]
+                if 0 <= next_i <= rows and 0 <= next_j <= cols and CONDITION:
+                    q.append((next_i, next_j))
+    for i in range(rows):
+        for j in range(cols):
+            traverse(i, j)
+```
+
+Topological sort
+* A topological sort is a graph traversal in which each node v is visited only after all its dependencies are visited.
+* Topological sorting is most commonly used for scheduling a sequence of jobs or tasks which has dependencies on other jobs/tasks. The jobs are represented by vertices, and there is an edge from x to y if job x must be completed before job y can be started.
+
+* Initialize a queue, a nodes dictionary to store in/out degree/nodes' set for each node, and a result order list.
+  * In degree is the condition to determine whether this node has no dependence and can be added into the queue
+* Process every node to record their in degree and out nodes' set
+* Append all nodes that have 0 in degree into the queue.
+* When the queue is not empty
+  * Pop out the front node, check if this node the dependence of other nodes
+  * Decrement the in degree by one for the nodes that depends on this popped out node
+  * Append all nodes that have 0 in degree right now in to the queue.
+  * Append current popped out node into result list.
+* Return the result list if the length of result list is equal to the number of nodes.
+
+Questions:
+* Number of Islands.
+  * The elements in the grid is not integer 0 and 1, but string '0' and '1'
+* Flood Fill: Watch out for the color == original_color
+* !!! [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
