@@ -1,11 +1,11 @@
 The purpose is to prepare for the coding interview in a short time when you already have a full-time job and seek a better one. Topics you need to review:
 * High priority:
-  * Array !!!
-  * String !!!
+  * Array !!! P0
+  * String !!! P0
   * Sorting and searching
-  * Matrix
-  * Tree
-  * Graph [Not google]
+  * Matrix !!! P0
+  * Tree [P2 Low priority]
+  * Graph [P3 Not google]
 * Mid priority
   * Hash Table
   * Recursion
@@ -58,6 +58,11 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Difference: 
     * Start queue with one node
     * Start queue with all source nodes
+* !! [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)
+  * $O(m\times{n})$ space complexity to record every 0 position
+  * $O(m+n)$ space complexity to record the row/col index
+  * $O(1)$ to record 0 row/col in-place.
+* !!! [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -352,3 +357,30 @@ Questions:
   * The elements in the grid is not integer 0 and 1, but string '0' and '1'
 * Flood Fill: Watch out for the color == original_color
 * !!! [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
+
+
+## Matrix
+* A matrix is a 2-dimensional array.
+
+Heads-up:
+* Empty matrix: Check that none of the arrays are 0 length
+* $1\times{1}$ Matrix
+* Matrix with only one row or column
+
+Techniques:
+* Create an initialized matrix: 
+  * column first then row outer
+  * `zero_matrix = [[0 for _ in range(len(matrix[0]))] for _ in range(len(matrix))]`
+* Copy a matrix
+  * `copied_matrix = [row[:] for row in matrix]`
+* Transpose a matrix:
+  * For grid game that need to verify vertically and horizontally, one trick is to write code to verify the matrix for the horizontal cells.
+  * Transpose the matrix and reuse the logic.
+  * `transposed_matrix = zip(*matrix)`
+
+Questions:
+* !! [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)
+  * $O(m\times{n})$ space complexity to record every 0 position
+  * $O(m+n)$ space complexity to record the row/col index
+  * $O(1)$ to record 0 row/col in-place.
+* !!! [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
