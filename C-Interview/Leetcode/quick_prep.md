@@ -9,7 +9,7 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * Mid priority
   * Hash Table
   * Recursion
-  * Linked list
+  * Linked list !!! P0
   * queue
   * stack
   * heap
@@ -63,6 +63,10 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * $O(m+n)$ space complexity to record the row/col index
   * $O(1)$ to record 0 row/col in-place.
 * !!! [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
+* !!! [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+  * Iterative and recursive(!!!!)
+* !!! [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
+  * Easy but watch out the condition to stop.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -384,3 +388,34 @@ Questions:
   * $O(m+n)$ space complexity to record the row/col index
   * $O(1)$ to record 0 row/col in-place.
 * !!! [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
+
+## Linked List
+* A linear collection of nodes where data and a reference to next element (address) are stored
+* Used to represent sequential data that stored in discrete physical placement in memory(Array is in continuous memory)
+* Access: $O(n)$
+* Insert/Delete: $O(1)$
+* Singly linked list, Doubly linked list, Circular linked list.
+
+Heads-up:
+* Empty linked list where the head points to null
+* single node linked list
+* two nodes linked list
+* linked list has cycles: Clarify beforehand whether there can be a cycle in the list.
+
+Techniques:
+* Dummy head
+* Two pointers:
+  * Get the $k^{th}$ from the last node. One pointer is k nodes ahead of the other, when it reaches the end, the other pointer is K nodes behind
+  * Detect cycles. One pointer increments twice as much as the other, if two pointers meet, meaning there's a cycle.
+  * Get the middle node. One pointer increments twice as much as the other, if the faster pointer reaches the end, the other slower pointer will be at the middle.
+* Using space: used for modifying the linked list in-place rather than creating a new linked list. `Reverse a linked list`
+* Shorten/Cut-off a list: Set the `next` to `null` at the last element.
+* Swap values of node: just swap value of the nodes as array, no need to swap the `next` pointer.
+* Combine two lists: attach the head of the second list to the tail of the first list.
+
+Questions:
+* !!! [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+  * Iterative and recursive(!!!!)
+* !!! [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
+  * Easy but watch out the condition to stop.
+
