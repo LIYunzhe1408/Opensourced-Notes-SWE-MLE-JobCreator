@@ -1,25 +1,25 @@
 The purpose is to prepare for the coding interview in a short time when you already have a full-time job and seek a better one. Topics you need to review:
 * High priority:
-  * Array !!! P0
-  * String !!! P0
-  * Sorting and searching
-  * Matrix !!! P0
-  * Tree [P2 Low priority]
-  * Graph [P3 Not google]
+  * !!! Array P0
+  * !!! String !!! P0
+  * Sorting and searching [P1 Mid priority]
+  * !!! Matrix !!! P0
+  * Tree [P1 Mid priority]
+  * Graph [P2 Low priority]
 * Mid priority
-  * Hash Table
-  * Recursion
-  * Linked list !!! P0
-  * queue
-  * stack
-  * heap
-  * tire
-  * interval
+  * Hash Table [P1 Mid priority]
+  * Recursion [P1 Mid priority]
+  * !!! Linked list !!! P0
+  * queue [P2 Low priority]
+  * stack [P2 Low priority] but trapping rain water is top!!!!
+  * heap [P1 Mid priority]
+  * tire [P2 Low priority]
+  * interval [P1 Mid priority]
 * Low priority
-  * DP
-  * Binary
-  * Math
-  * Geometry
+  * !!! DP P0
+  * Binary [P1 Mid priority]
+  * Math [P1 Mid priority]
+  * Geometry [P2 Low priority]
 
 ## Syntax and python trick
 1. Reverse the traverse is `for i in range(len(data), -1, -1)` where the interval `-1` should not be omitted.
@@ -32,20 +32,20 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * !!! [Maximum subarray](https://leetcode.com/problems/maximum-subarray/): 看之前累加的stuff whether larger than current value
 * !!! [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/). Shrinking window using `set()`
 * !!! KMP. The pointer pointing to the main string will never back trace. The characters we skip in the pattern string are the prefix/suffix shared in one substring. And the LPS should not be the entire pattern string.
-* !!! [First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
+* [First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
   * In-place solution: indexing sort
   * Quick solution: set() + linear search based on nums length
 * !!! [LRU Cache](https://leetcode.com/problems/lru-cache/description/)
   * `OrderedDict`
   * More detailed: `Hashmap` + `doubly linked list`
-* !!! [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+* [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
   * Identify the rotated part and binary search respectively
   * Identify which part is sorted and determine the next target half.
-* !!! [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
+* [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
   * Decision Tree: DFS or backtrack
-* !!! [Combination](https://leetcode.com/problems/combinations/description/)
+* [Combination](https://leetcode.com/problems/combinations/description/)
   * Decision tree with limit
-* !!! [Subset](https://leetcode.com/problems/subsets/description/)
+* [Subset](https://leetcode.com/problems/subsets/description/)
   * Backtrack or DFS(include or not include)
 * [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/): dfs(stack, recursion), bfs
 * BST: [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
@@ -67,6 +67,7 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Iterative and recursive(!!!!)
 * !!! [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
   * Easy but watch out the condition to stop.
+* !!! [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -419,3 +420,19 @@ Questions:
 * !!! [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
   * Easy but watch out the condition to stop.
 
+## Queue
+* A linear collection of elements, like array and linked list, that maintain elements in a sequence.
+* Addition of elements at one end of the sequence(enqueue operation), called tail, rear, or back of the queue.
+* Removal of elements from the other end (dequeue operation), called head or front of the queue.
+* This is an abstract data type and can be implemented using array or singly linked list.
+* The behavior is called FIFO(First In First Out). Analogy to people lining up in real life to wait for service or food.
+* Breadth-first search is commonly implemented using queues.
+* [Flag this to interviewer] If using array or list to implement queue, dequeueing will take $O(n)$ as it requires shifting all elements left by one
+
+Heads-up:
+* empty queue
+* queue with 1 / 2 items
+
+
+Questions:
+* !!! [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
