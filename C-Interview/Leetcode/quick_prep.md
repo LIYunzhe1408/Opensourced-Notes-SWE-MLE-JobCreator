@@ -68,6 +68,10 @@ The purpose is to prepare for the coding interview in a short time when you alre
 * !!! [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
   * Easy but watch out the condition to stop.
 * !!! [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
+* !!! [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+  * Easy but need to consider all corner cases like 1 single close bracket, only open brackets...
+* !!! [implement queue using stacks]()
+  * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -427,6 +431,7 @@ Questions:
 * This is an abstract data type and can be implemented using array or singly linked list.
 * The behavior is called FIFO(First In First Out). Analogy to people lining up in real life to wait for service or food.
 * Breadth-first search is commonly implemented using queues.
+* enqueue, dequeue, front, back, isEmpty are all $O(1)$
 * [Flag this to interviewer] If using array or list to implement queue, dequeueing will take $O(n)$ as it requires shifting all elements left by one
 
 Heads-up:
@@ -436,3 +441,25 @@ Heads-up:
 
 Questions:
 * !!! [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
+
+## Stack
+* An abstract data type:
+  * push: insert a new element on the top of the stack
+  * pop: remove and return the most recently added element, which is the top of the stack
+* Can be implemented using array or singly linked list
+* The behavior is LIFO(Last In First Out)
+* It's important because it supports:
+  * nested or recursive function calls
+  * used to implement depth-first search
+  * DFS can be implemented using either recursion(implicit stack) or a manual stack
+* TC: top, push, pop, isEmpty are all $O(1)$; Search is $O(n)$
+
+Heads-up:
+* Empty stack: popping from an empty stack
+* stack with 1/2 item(s)
+
+Questions:
+* !!! [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+  * Easy but need to consider all corner cases like 1 single close bracket, only open brackets...
+* !!! [implement queue using stacks]()
+  * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
