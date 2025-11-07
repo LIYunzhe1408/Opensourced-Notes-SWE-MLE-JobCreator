@@ -72,6 +72,8 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Easy but need to consider all corner cases like 1 single close bracket, only open brackets...
 * !!! [implement queue using stacks]()
   * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
+* !!! [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
+  * High frequency problem
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -463,3 +465,5 @@ Questions:
   * Easy but need to consider all corner cases like 1 single close bracket, only open brackets...
 * !!! [implement queue using stacks]()
   * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
+* !!! [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
+  * High frequency problem
