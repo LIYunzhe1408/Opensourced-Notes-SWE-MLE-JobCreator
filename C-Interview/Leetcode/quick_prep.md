@@ -74,6 +74,10 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
 * !!! [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
   * High frequency problem
+* [Merge K Sorted List](https://leetcode.com/problems/merge-k-sorted-lists/description/)
+  * Solved but way too much time spent
+  * Also should be familiar with the merge sort solution.
+  * Min-heap is fine and better handling dynamic coming stream.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -467,3 +471,37 @@ Questions:
   * Easy and succeeded, but for efficient TC, `push` should not frequently pop and append.
 * !!! [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
   * High frequency problem
+
+
+## Heap
+* A heap is a specialized tree-based data structure which is a completed tree that satisfies heap properties:
+  * Max heap: In a max heap, the value of the root node must be **greatest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
+  * Min heap: In a min heap, the value of the root node must be **smallest** among the node values of the entire tree, the same property must be recursively true for all node s in the tree
+* In algo interviews, `heaps` and `priority queue` can be treated as the same. It's useful when
+  * Repeatedly remove the obj with the highest/lowest(biggest/smallest) priority/value.
+* TC:
+  * Find max/min: $O(1)$
+  * Insert/remove: $O(\log{n})$
+  * Heapify: $O(n)$
+
+Techniques:
+* **Top K** or **Lowest K** being mentioned, usually a signal that a heap can be used.
+  * Iterate through each element, pushing element into the heap(invert the value before pushing to find the max). Whenever the heap size exceeds `k`, remove the minimum element, that will guarantee that you have the k largest elements.
+  ```python
+  heap = []
+  heappush(h, (value, index, (pointx, pointy)))
+  heappop(h)
+  ```
+
+When to use
+* When elements arrive dynamically and need to be processed incrementally
+* Need frequent access to the smallest/largest element
+* Only the top K elements are required
+* Construct the finalist dynamically instead of sorting all elements at once
+
+Questions:
+* [Merge K Sorted List](https://leetcode.com/problems/merge-k-sorted-lists/description/)
+  * Solved but way too much time spent
+  * Also should be familiar with the merge sort solution.
+  * Min-heap is fine and better handling dynamic coming stream.
+* K Closet Points to Origin
