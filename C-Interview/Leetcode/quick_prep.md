@@ -78,6 +78,13 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Solved but way too much time spent
   * Also should be familiar with the merge sort solution.
   * Min-heap is fine and better handling dynamic coming stream.
+* Common DP problem can use DFS+memorization or bottom-up DP, which are the same
+  * [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+    * Brute-force: $O(2^n)$
+    * DP: $O(n)$
+  * [Coin Change](https://leetcode.com/problems/coin-change/description/)
+    * Brute-force: $O(coin^{amount})$
+    * DP: $O(coin*amount)$
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -505,3 +512,40 @@ Questions:
   * Also should be familiar with the merge sort solution.
   * Min-heap is fine and better handling dynamic coming stream.
 * K Closet Points to Origin
+
+## Dynamic Programming
+* Recognize a DP problem: DP is a method for solving problems by 
+  * Breaking them down into a collection of simpler subproblems
+  * Solving each of those subproblems just once
+  * Storing their solutions and reuse when the same subproblem occurs **instead of recomputing its solution**
+  * Ask yourself: Can the problem solution be expressed as a function of solutions to similar smaller problems?
+* Identify problem variables: List examples of several subproblems and determine changing parameters.
+* Clearly express the recurrence relation.
+  * Assume you have computed the subproblems, how would you compute the main problem
+  * The recurrence relation should be explained by English
+  ```python
+  canStop(S, P) = canStop(S, P+S) || canStop(S-1, P+S-1) || canStop(S+1, P+S+1)
+  ```
+  If we can find a way to stop in any of the subproblems above, then we can also stop from (S,P).
+* Identify the base case.
+  * A subproblem that doesn’t depend on any other subproblem
+  * The reason a subproblem can not be further simplified is that one of the parameters would become a value that is not possible given the constraints of the problem
+* Decide if you want to implement iteratively or recursively. 
+  * DFS + memorization(dict or array), recursive
+    * Stack overflow issues are typically a deal breaker and a reason why you would not want to have recursion in a (backend) production system. However, for the purposes of the interview, as long as you mention the trade-offs, you should typically be fine with either of the implementations.
+  * bottom-up DP, iterative
+* Add memorization:
+  * Store your function result into your memory before every return statement.
+  * Look up the memory for the function result before you start doing any computation
+* Determine time complexity
+
+Questions:
+* Common DP problem can use DFS+memorization or bottom-up DP, which are the same
+  * [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+    * Brute-force: $O(2^n)$
+    * DP: $O(n)$
+  * [Coin Change](https://leetcode.com/problems/coin-change/description/)
+    * Brute-force: $O(coin^{amount})$
+    * DP: $O(coin*amount)$
+* [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+* [House Robber](https://leetcode.com/problems/house-robber/description/)
