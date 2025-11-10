@@ -85,6 +85,11 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * [Coin Change](https://leetcode.com/problems/coin-change/description/)
     * Brute-force: $O(coin^{amount})$
     * DP: $O(coin*amount)$
+* [Insert Interval](https://leetcode.com/problems/insert-interval/description/)
+  * Solution 1: Sorted it to one interval then one pass to give answer: TC $O(n\log{n})$ as sorting happens
+  * Solution 2: One pass, dynamically update `newInterval`
+* [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/description/)
+  * See which room ends the earliest, if next meeting starts after that time, then the room is reusable.
 
 ## Array
 * Values of same type in contiguous memory locations
@@ -549,3 +554,39 @@ Questions:
     * DP: $O(coin*amount)$
 * [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
 * [House Robber](https://leetcode.com/problems/house-robber/description/)
+
+## Intervals
+
+
+Heads-up:
+* Clarify with the interviewer whether [1, 2] and [2, 3] are considered overlapping intervals as it affects how you will write your equality checks.
+* Clarify whether an interval of [a, b] will strictly follow a < b (a is smaller than b)
+* No intervals
+* Single intervals
+* Two intervals
+* No-Overlapping intervals
+* An interval totally consumed within another interval
+* Duplicate intervals(exact the same start and end)
+* Intervals which start right where another interval ends: `[[1,2], [2,3]]`
+
+Techniques:
+* Sort the array intervals by its starting point
+* Check if two intervals overlap
+* Merge two intervals
+```python
+sorted(intervals, key=lambda x: x[0])
+
+def overlap(a, b):
+    return a[0] < b[1] and b[0] < a[1]
+
+def merge(a, b):
+    return [min(a[0], b[0]), max(a[1], b[1])]
+```
+
+Questions:
+* [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+* [Insert Interval](https://leetcode.com/problems/insert-interval/description/)
+  * Solution 1: Sorted it to one interval then one pass to give answer: TC $O(n\log{n})$ as sorting happens
+  * Solution 2: One pass, dynamically update `newInterval`
+* [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/description/)
+  * See which room ends the earliest, if next meeting starts after that time, then the room is reusable.
