@@ -556,7 +556,9 @@ Questions:
 * [House Robber](https://leetcode.com/problems/house-robber/description/)
 
 ## Intervals
-
+* A subset of array questions where you are given an array of two-element arrays and the two values represent a start and an end value.
+  * Example interval array: [[1, 2], [4, 7]].
+* It will be tricky because of the sheer number of cases to consider when they overlap
 
 Heads-up:
 * Clarify with the interviewer whether [1, 2] and [2, 3] are considered overlapping intervals as it affects how you will write your equality checks.

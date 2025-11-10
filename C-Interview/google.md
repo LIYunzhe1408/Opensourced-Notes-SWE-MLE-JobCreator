@@ -25,6 +25,9 @@ Reference: https://docs.google.com/document/d/112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrp
 
 
 * Customer Obsession
+  * Customer interaction: When you are working with a large number of customers(requirements), it's tricky to deliver excellent service to them all. So how do you go about prioritizing your customers' needs?
+    * 问的是明白用户想要什么并且prioritize你的我work来满足用户需求
+  * Go beyond: Tell me a time when you went above and beyond for a client.
 * Are Right, A Lot
   * Work with incomplete data
   * Disagree with a colleague and you are wrong/right
@@ -54,3 +57,43 @@ Reference: https://docs.google.com/document/d/112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrp
   * Do you collaborate well
 * Deliver results
   * What's the project you are most proud of. challenges and resolve.
+
+## Stories
+At Momenta, one of our product managers asked me to generate raw reversing simulation logs daily so they could manually review stuck cases.
+
+I realized that what they really wanted wasn’t the raw data—it was a summary of success/failure and some insight into why a reversing maneuver failed. They just didn’t know how to ask for it differently.
+
+Instead of just dumping the logs, I built an automated report pipeline. It extracted results from 36,000+ simulation records per day, analyzed stuck states using classification outputs, and generated a clean summary, including success rate, failure causes, and SVM confidence scores.
+
+When I showed it to the PM, they were thrilled—it saved them hours per day and gave them the insights they truly needed. They later shared the tool with other PMs across 4 vehicle lines. So instead of delivering what they asked for, I gave them what they actually needed to make decisions faster.
+
+1.  Tell me a time when you went above and beyond for a client.[Customer Obsession]
+2.  Tell me about a time when you took on something significant outside your area of responsibility.[Ownership]
+
+
+Sure. At WeRide, I supported multiple internal teams that all depended on our auto-labeling system, including perception, QA, and data management. One time, the perception team requested that we fully prioritize a new traffic light model because it was blocking their L3 release.
+
+But at the same time, the QA team urgently needed updates on uncertainty filtering to handle an annotation backlog. The two requests conflicted—running both would exceed GPU limits and delay processing for everyone.
+
+So I scheduled a short sync with both teams. I prepared performance estimates, system bottlenecks, and trade-off charts in advance. We walked through the impact of each request, and I proposed a compromise: we’d prioritize traffic light model upgrades this week while rolling out a lightweight uncertainty filter that wouldn’t slow down throughput.
+
+It wasn’t easy—both teams felt their needs were urgent—but by showing transparency and backing up trade-offs with data, we reached alignment. The model launched on time, and the QA backlog dropped the following week.
+
+1. When you are working with a large number of customers(requirements), it's tricky to deliver excellent service to them all. So how do you go about prioritizing your customers' needs? [Customer]
+2. Tell me a time you had to leave a task unfinished [Ownership]
+3. Did you have to push back a request [Ownership]
+4. If you have conflict goals, how do you make trade-offs?[Ownership]
+
+   
+* Optibot: mesh file -> assembly no sense -> key info is param in mesh file -> meet with 2 memebers in HW Team
+* Neuralmap model improvement: improve metric -> intuition is enlarge model size -> latency requirement -> experiment focuses on parameter increasing while latency not increasing much -> determine some ways. -> latency and safety should always be the priority
+
+1. Tell me a time when you had to work with incomplete data or information
+2. Tell me a time you made a bad decision and learning from the experience enabled you to make a good decision later.(Model perf & latency -> first version release with perf improve but latency ++ -> Find myself when testing the new model on vehicle -> Can not even detect obstacle)
+
+    
+* Optibot: I propose one solution -> one proposed and let me use his -> no data evidance -> not pushing back but impelment within a hard ddl -> discuss and choose one.
+* **Same logic but in traffic sign autolabeling. One is quick and dirty(short term gain), another is systematic(long-term gain) but may miss deadline. break down tasks and reduce dev time result is prioritize work and make it before deadline**
+
+1. Tell me a time when you disagreed with a colleague.
+2. Tell me a time when you had to work on a project with unclear responsibility[Ownership]
