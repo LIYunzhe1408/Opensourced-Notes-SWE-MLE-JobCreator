@@ -26,6 +26,7 @@ The purpose is to prepare for the coding interview in a short time when you alre
 2. Usage of `set()`. `set.add()` and `set.remove()`
 3. Usage of `from collections import Counter`. If the key is not in counter, will return 0 rather than raising error.
 4. Usage of `OrderedDict` for LRU. `move_to_end(key)` and `popitem(last=False)`
+5. Turn off the rightmost bit 1:  `x & (x-1)`
 
 ## Questions to be reviewed
 * !!! [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
@@ -592,3 +593,30 @@ Questions:
   * Solution 2: One pass, dynamically update `newInterval`
 * [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/description/)
   * See which room ends the earliest, if next meeting starts after that time, then the room is reusable.
+
+## Binary
+* Binary number system and bit manipulation
+* Convert a number from decimal form into binary form(and vice versa)
+* Representations
+* Addition(negative&positive)
+* shifting
+* masks
+
+Techniques:
+* Positive number to negative number: invert all number on every position and then add 1
+* Shift:
+  * Multiply a number by $2^k$: left shift. `num << k`
+  * Divide a number by $2^k$: right shift. `num >> k`
+  * For negative numbers, the sign bit should be filled as the original one
+* Mask:
+  * Get `ith` bit: `(x & (1<<i)) != 0`
+  * Set `ith` bit: `x | (1<<i)`
+  * Clear `ith` bit: `x & (~(1<<i))`. Clear the right most: `x & (x-1)`
+  * Toggle `ith` bit: `x ^ (1<<i)`
+* Check if a number is a power of 2: `num & (num-1) == 0` or `num & (-num) == num`
+* Swapping two variables: `num1 ^= num2; num2 ^= num1; num1 ^= num2`
+
+Questions:
+* [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)
+  * Turn off the rightmost bit 1:  `x & (x-1)`
+* [Counting Bits](https://leetcode.com/problems/counting-bits/description/)
