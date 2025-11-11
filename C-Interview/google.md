@@ -11,13 +11,13 @@ Those team experiences taught me how exciting it is to build something meaningfu
 ## Why leave and Why google
 “That’s a great question.”
 
-I’ve really appreciated my time at WeRide, where I’ve learned a lot about developing production-level perception systems, optimizing large-scale data pipelines, and working in fast-paced engineering teams. These experiences have taught me how to build machine learning systems that handle complex, real-world data under real-time constraints.
+I’ve really appreciated my time at WeRide, where I have opportunities to develop production-level autonomous driving systems and work in fast-paced engineering teams. These experiences have taught me how to build machine learning systems that handle complex, real-world data under real-time constraints.
 
 But over time, I’ve realized I want to work on problems with even broader impact, especially where ML models can directly shape products used by millions of people. That’s what draws me to Google.
 
-I’m particularly inspired by how Google applies large-scale machine to everyday products like Maps, Search, and Gemini. Acutally, using Gemini in Colab has been eye-opening for me, i think it's not only a powerful debugging tool for engineers, but it also serves as a great learning resource for coding beginners. Like, my younger brother, who’s just starting to learn programming in high school, can simply ask Gemini questions in the Colab notebook itself instead of googling across websites like we used to. I’d love to contribute to that kind of meaningful product.
+I’m particularly inspired by how Google applies large-scale machine learning to everyday products like Maps, Search, and Gemini. Acutally, using Gemini in Colab has been eye-opening for me, i think it's not only a powerful debugging tool for engineers, but it also serves as a great learning resource for coding beginners. Like, my younger brother, who’s just starting to learn programming in high school, can simply ask Gemini questions in the Colab notebook itself instead of googling across websites like we used to. I’d love to contribute to that kind of meaningful product.
 
-What also excites me is Google’s engineering excellence and its diverse culture. I believe that when people from different backgrounds come together, innovative ideas emerge more naturally. With my background in autonomous driving and real-time perception, I hope to bring a unique perspective to the team and contribute meaningfully to Google’s mission.
+What also excites me is Google’s engineering excellence and its diverse engineer community. I believe that when people from different backgrounds come together, innovative ideas emerge more naturally. With my background in autonomous driving and real-time perception, I hope to bring a unique perspective to the team and contribute meaningfully to Google’s mission.
 
 
 ## Leadership principles
@@ -59,13 +59,15 @@ Reference: https://docs.google.com/document/d/112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrp
   * What's the project you are most proud of. challenges and resolve.
 
 ## Stories
-At Momenta, one of our product managers asked me to generate raw reversing simulation logs daily so they could manually review stuck cases.
+The situation was that I was a software engineering intern at Momenta, working on the reversing feature for GM Cadillac vehicles. I collaborated closely with the product manager on daily simulation testing and reporting.
 
-I realized that what they really wanted wasn’t the raw data—it was a summary of success/failure and some insight into why a reversing maneuver failed. They just didn’t know how to ask for it differently.
+The task was that she asked me to export raw reversing simulation logs every day so they could manually review stuck cases and prepare reports for daily stand-ups with the GM team.
 
-Instead of just dumping the logs, I built an automated report pipeline. It extracted results from 36,000+ simulation records per day, analyzed stuck states using classification outputs, and generated a clean summary, including success rate, failure causes, and SVM confidence scores.
+Initially, I followed the request and sent her the raw logs, but I started thinking about the downstream effort. I asked her how the data was used and realized that what they truly needed wasn't just the raw logs, but a summary of pass/fail statistics in different scenarios and the gap with previous benchmarks, formatted into a Word report. She mentioned it took over 2 hours a day, often delegated to her interns, just to aggregate metrics and fill out the same template.
 
-When I showed it to the PM, they were thrilled—it saved them hours per day and gave them the insights they truly needed. They later shared the tool with other PMs across 4 vehicle lines. So instead of delivering what they asked for, I gave them what they actually needed to make decisions faster.
+Since the data structure was consistent and the output format was fixed, I proposed and built an automated reporting pipeline that parsed the simulation logs, calculated key metrics like success rate and metric differences, and exported everything directly into a Word document using python libraries. It didn't take a long time for development.
+
+The result was a one-click reporting tool that reduced her work from 2 hours to seconds. She was thrilled and shared it with other PMs across 4 vehicle projects. Eventually, the tool was integrated into our internal platform. So instead of just delivering what was asked, I delivered what was actually needed and enable faster, insight-driven decision-making.
 
 1.  Tell me a time when you went above and beyond for a client.[Customer Obsession]
 2.  Tell me about a time when you took on something significant outside your area of responsibility.[Ownership]
