@@ -63,7 +63,7 @@ The situation was that I was a software engineering intern at Momenta, working o
 
 The task was that she asked me to export raw reversing simulation logs every day so they could manually review stuck cases and prepare reports for daily stand-ups with the GM team.
 
-Initially, I followed the request and sent her the raw logs, but I started thinking about the downstream effort. I asked her how the data was used and realized that what they truly needed wasn't just the raw logs, but a summary of pass/fail statistics in different scenarios and the gap with previous benchmarks, formatted into a Word report. She mentioned it took over 2 hours a day, often delegated to her interns, just to aggregate metrics and fill out the same template.
+Initially, I followed the request and sent her the raw logs, but I started thinking about the downstream effort. I asked her how the data was used and realized that what they truly needed wasn't just the raw logs, but a summary of pass/fail statistics and the gap with previous benchmarks, formatted into a Word report. She mentioned it took over 2 hours a day, often delegated to her interns, just to aggregate metrics and fill out the same template.
 
 Since the data structure was consistent and the output format was fixed, I proposed and built an automated reporting pipeline that parsed the simulation logs, calculated key metrics like success rate and metric differences, and exported everything directly into a Word document using python libraries. It didn't take a long time for development.
 
@@ -73,18 +73,21 @@ The result was a one-click reporting tool that reduced her work from 2 hours to 
 2.  Tell me about a time when you took on something significant outside your area of responsibility.[Ownership]
 
 
-Sure. At WeRide, I supported multiple internal teams that all depended on our auto-labeling system, including perception, QA, and data management. One time, the perception team requested that we fully prioritize a new traffic light model because it was blocking their L3 release.
+The situation was at my current role at WeRide, where I supported two key projects: an onboard traffic sign detection model for vehicle deployment, and an offboard road marker auto-labeling model used by the data team to generate pseudo labels.
 
-But at the same time, the QA team urgently needed updates on uncertainty filtering to handle an annotation backlog. The two requests conflicted—running both would exceed GPU limits and delay processing for everyone.
+At one point, the onboard team requested that we fully prioritize a new traffic sign model since it was blocking their L3 release. At the same time, the data team urgently needed updates to our uncertainty filtering module to improve label quality. However, running both requests concurrently would exceed GPU capacity and delay processing across the board.
 
-So I scheduled a short sync with both teams. I prepared performance estimates, system bottlenecks, and trade-off charts in advance. We walked through the impact of each request, and I proposed a compromise: we’d prioritize traffic light model upgrades this week while rolling out a lightweight uncertainty filter that wouldn’t slow down throughput.
+My task was to prioritize these competing requests.
 
-It wasn’t easy—both teams felt their needs were urgent—but by showing transparency and backing up trade-offs with data, we reached alignment. The model launched on time, and the QA backlog dropped the following week.
+So I scheduled a sync with both teams, came prepared with performance benchmarks, GPU usage projections, and a trade-off analysis. I proposed a compromise: prioritize the traffic sign model upgrade for that week to meet the mass production deadline, while rolling out a lightweight threshold-based uncertainty filter in parallel, then allocate full attention to the data team’s needs the following week.
+
+The result was successful: the traffic sign model launched on time, and the improved uncertainty filter was released the following week. While both teams had urgent needs, by being transparent and data-driven, we reached alignment and avoided resource conflicts.
 
 1. When you are working with a large number of customers(requirements), it's tricky to deliver excellent service to them all. So how do you go about prioritizing your customers' needs? [Customer]
 2. Tell me a time you had to leave a task unfinished [Ownership]
 3. Did you have to push back a request [Ownership]
 4. If you have conflict goals, how do you make trade-offs?[Ownership]
+5. Multitask, prioritize, time management
 
    
 * Optibot: mesh file -> assembly no sense -> key info is param in mesh file -> meet with 2 memebers in HW Team
