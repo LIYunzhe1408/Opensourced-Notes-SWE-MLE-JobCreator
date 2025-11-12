@@ -59,6 +59,22 @@ Reference: https://docs.google.com/document/d/112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrp
   * What's the project you are most proud of. challenges and resolve.
 
 ## Stories
+1. Momenta: collaborate PM -> export raw log -> build reporting pipeline -> reduce work from 2 h to seconds
+2. WeRide: support 2 projects -> block release & label quality improvement -> prioritize requests -> sync with perf benchmark, GPU usage, trade-off -> launch on time and the other release following
+3. Capstone: select piece for robo arm -> assemble robo joints in simulation -> limited tutorial, out of knowledge, meeting -> get the point and make it 
+4. WeRide: Neuralmap for road topology -> improve model perf -> replace image backbone -> issue occur, cross stopline bc latency -> tweak components -> reduce latency & maintain perf gains.
+5. WeRide: Traffic sign detection & huge data -> dev auto label model 
+   1. search -> quick but no maintainability or systematic but take more effort miss ddl -> break down tasks -> before ddl
+   2. propose reuse & suggest alternative -> implement respective in shared ddl -> review -> combine solution
+6. WeRide: road marker autolabeling, left behind master 2 month but work -> dependencies are in hacky way, can be removed and easier maintain -> 1 week decoupling modules -> make it back to master and more efficient by reusing master infra updates.
+
+Optionals:
+* innovative: traffic signs auto labeling  -> 10K+ video / day, save $30K/month
+* Complex project: drive GPT: from data collection annotation and model fine-tuning
+* **TODO** Achievements & Challenges: SRM[need thinking]
+* Negative feedback: not focus on metrics like in academic focus but product-oriented. 
+![alt text](image.png)
+
 ### Story one
 The situation was that I was a software engineering intern at Momenta, working on the reversing feature for GM Cadillac vehicles. I collaborated closely with the product manager on daily simulation testing and reporting.
 
@@ -92,7 +108,7 @@ The result was successful: the traffic sign model launched on time, and the impr
 
    
 ### Story three
-**Incomplete Data**
+**Incomplete Data** \
 The situation was during my master's at UC Berkeley, I'm a member of the capstone project that developed an ai-driven system that can automatically choose the best modular pieces to build the most efficient robotic arm for specific tasks where a single rigid design is insufficient.
 
 My task was to assemble different robot joints with linkages in simulation and make it an assembled robotic arm for further optimization. The simulation library i used was called timor-python, which provided limited tutorial for importing customized mesh file.
@@ -101,8 +117,16 @@ So my first action was to try some simple assemblies that only include two joint
 
 As a result, I quickly get the point and refine the code to get it assembled in just one day after the meeting.
 
-**Incomplete data & Bad decision**
-* Neuralmap model improvement: improve metric -> intuition is enlarge model size -> latency requirement -> experiment focuses on parameter increasing while latency not increasing much -> determine some ways. -> latency and safety should always be the priority
+**Incomplete data & Bad decision** \
+The situation was on my first project at WeRide, where I worked on a perception model called NeuralMap, used for detecting road markers and lanes to determine road topology for autonomous driving.
+
+My task was to improve the model’s performance by optimizing the model architecture or key components.
+
+Since the input was primarily camera images, and the system used an image backbone for feature extraction, my action was to replace the existing ResNet backbone with a transformer-based one, inspired by models I had used during grad school. The evaluation metrics improved significantly, so I deployed the new model to the vehicle.
+
+However, in vehicle testing, I noticed a serious issue: the system's response was delayed, and in one case, the ego vehicle crossed a stop line during a red light. I realized the transformer backbone introduced significant latency, which I hadn’t considered at all during model design, I had been entirely focused on improving accuracy. Fortunately, it was just a demo testing, and the safety drive take it over.  I immediately paused the rollout and started profiling the latency across various configurations. Instead of using a larger image backbone, I launched a series of experiments tweaking components, such as adding decoder layers and reordering attention modules, to strike a better balance between performance and real-time efficiency.
+
+As a result, I was able to reduce latency while maintaining most of the performance gains. More importantly, I learned that in real-world, safety-critical systems like autonomous driving, model metrics are not the only priority, system latency and reliability are just as critical. That experience fundamentally shifted my mindset from an academic focus on benchmarks to a product-oriented approach rooted in end-user safety and real-time constraints.
 
 1. Tell me a time when you had to work with incomplete data or information
 2. Tell me a time you made a bad decision and learning from the experience enabled you to make a good decision later.(Model perf & latency -> first version release with perf improve but latency ++ -> Find myself when testing the new model on vehicle -> Can not even detect obstacle)
