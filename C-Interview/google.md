@@ -168,3 +168,14 @@ one week, Made it. As come back to master, many performance improvement on maste
 
 1. Take risk
 2. Improve an already good system
+
+### Story Six
+The situation was during my first year as a member of the computer vision team in the RoboMaster robotics competition. We were approaching the regional finals, and my task was to develop an object detection system within three weeks to enable our robot to automatically aim at enemy robots.
+
+At the time, I researched other teams' approaches and found that using a deep learning model like YOLO was likely the most effective solution. However, I was just a freshman and had no prior experience with neural networks, and I knew that diving into deep learning without the necessary background could risk missing the competition deadline.
+
+To ensure the system would be ready in time, I chose a more traditional approach using OpenCV and image processing techniques. I spent the first week designing and implementing the detection algorithm, and the second week focused on deployment and stability testing on the actual robot. The system achieved solid accuracy and ran reliably in real-time.
+
+As a result, our auto-aim feature played a key role in helping our team win third place in the regional competition. Interestingly, we outperformed several teams that had tried to use deep learning but couldn’t stabilize their models in time. However, I also observed that the top two teams, who used YOLO effectively, had a noticeable performance edge.
+
+That experience motivated me to dedicate the following two years to learning deep learning, and eventually, I developed a stable detection model based on YOLO that performed well in later competitions. This taught me how to balance risk and delivery under time pressure, while still making room for long-term growth and improvement.
