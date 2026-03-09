@@ -21,13 +21,21 @@ The purpose is to prepare for the coding interview in a short time when you alre
   * Math [P1 Mid priority]
   * Geometry [P2 Low priority]
 
-## Syntax and python trick
+# Syntax and python trick
 1. Reverse the traverse is `for i in range(len(data), -1, -1)` where the interval `-1` should not be omitted.
 2. Usage of `set()`. `set.add()` and `set.remove()`
 3. Usage of `from collections import Counter`. If the key is not in counter, will return 0 rather than raising error.
 4. Usage of `OrderedDict` for LRU. `move_to_end(key)` and `popitem(last=False)`
 5. Turn off the rightmost bit 1:  `x & (x-1)`
 
+# Round 2
+1. [Majority Element](https://leetcode.com/problems/majority-element/description/)
+   1. The naive solution counts frequencies using a hash map, which is simple but needs O(n) extra space.
+   2. Using the Boyer–Moore Voting Algorithm, we keep a running candidate and cancel it against different elements—majority will survive because it outnumbers all others combined.
+   3. Use this “cancellation / majority voting” idea whenever one element must appear more than half (or more than n/k) of the array.
+2. 
+
+# Round 1
 ## Questions to be reviewed
 * !!! [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
 * !!! [Maximum subarray](https://leetcode.com/problems/maximum-subarray/): 看之前累加的stuff whether larger than current value

@@ -179,3 +179,14 @@ To ensure the system would be ready in time, I chose a more traditional approach
 As a result, our auto-aim feature played a key role in helping our team win third place in the regional competition. Interestingly, we outperformed several teams that had tried to use deep learning but couldn’t stabilize their models in time. However, I also observed that the top two teams, who used YOLO effectively, had a noticeable performance edge.
 
 That experience motivated me to dedicate the following two years to learning deep learning, and eventually, I developed a stable detection model based on YOLO that performed well in later competitions. This taught me how to balance risk and delivery under time pressure, while still making room for long-term growth and improvement.
+
+
+
+## Questions to ask:
+**BQ** 
+1. Based on your experience, if you have a time machine and can go back to the year that you are an entry-level engineer, what advice would you give to yourself to grow in the industry?
+2. If you think about a couple of folks who have been successful in your team, what are some of their traits they have in common?
+
+**Coding round**
+1. How does your team strike a balance between delivering fast and maintaining technical quality or long-term scalability?
+2. Think forward to a year from now, what would I have done this 1st year that would make you refer to me as your “best ever hiring decision”? 
